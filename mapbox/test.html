@@ -28,18 +28,16 @@ map = L.mapbox.map('map', 'mapbox.streets', {
     // and restrict the zooms to zoom levels 14 through 18
     scrollWheelZoom: false,
     maxZoom: 20,
-    minZoom: 10,
-    attributionControl: false
+    minZoom: 10
 }).setView([37.4240412,-122.1754616], 17);
 
 /* Various layers */
-campusTrails = L.mapbox.featureLayer('bhnascar.p9c980ek');
+lagTrail = L.mapbox.featureLayer('bhnascar.p9c980ek');
+funLayer = L.mapbox.featureLayer('bhnascar.opbomn72');
 
 /* Add all layers */
-map.addLayer(campusTrails);
-
-/* Remove zoom contorol */
-map.zoomControl.removeFrom(map);
+map.addLayer(lagTrail);
+map.addLayer(funLayer);
 
 </script>
 </body> 
