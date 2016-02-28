@@ -15,7 +15,7 @@ $base-line-height: 1.5;
 $spacing-unit:     30px;
 
 $text-color:       #111;
-$background-color: #fdfdfd;
+$background-color: #fff; /*fdfdfd*/
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
@@ -31,6 +31,13 @@ $on-laptop:        800px;
 $filter-menu-color: #dfdfdf;
 
 $action-button-color: #dfdfdf;
+
+$accent-color: #4EBB8F;
+$color-on-accent: #fff;
+
+$filter-cell-divider-color:#979797;
+
+$paths-cell-divider-color: #cdcdcd;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -138,7 +145,7 @@ ul {
 
 .table-view-cell {
 	background-color: $filter-menu-color; 
-	border-bottom: 1px solid #97979;
+	border-bottom: 1px solid $filter-cell-divider-color;
 }
 
 .table-view-cell {
@@ -156,7 +163,25 @@ ul {
 	height: 50px;
 }
 
-/**** MODIFY RATCHET ****/
+/**** My Paths ****/
+
+.paths-header {
+	background-color: $accent-color;
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	color: $color-on-accent;
+	line-height: 50px;
+}
+
+#back-button {
+    position: absolute;
+    margin-top: 13px;
+    left: 15px;
+    margin-bottom: 13px;
+}
+
+/**** MODIFY RATCHET: MapView ****/
 
 .toggle {
 	width: 50px;
@@ -185,4 +210,15 @@ ul {
 
 .table-view .table-view-cell .badge {
 	background-color: none important;
+}
+
+/**** MODIFY RATCHET: My Paths View ****/
+
+#path-items-container .table-view-cell {
+	background-color: $background-color;
+	border-bottom: 1px solid $paths-cell-divider-color;
+}
+
+.table-view {
+	border: none;
 }
