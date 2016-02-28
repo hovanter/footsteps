@@ -52,17 +52,22 @@ $on-laptop:        800px;
         "syntax-highlighting"
 ;
 
+header {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+ul {
+	margin: 0px;
+}
+
+
 .footstep-button {
 	height: 50px;
 	width: 50px;
 	font-size: 50px;
 	display: block;
-}
-
-header {
-	position: absolute;
-	top: 15px;
-	left: 15px;
 }
 
 .actions {
@@ -98,8 +103,8 @@ header {
 .filter-bar {
 	position: fixed;
 	border-top: 1px solid #999;
-	width: 600px;
-	height: 240px;
+	height: 218px;
+	width: 100%;
 	bottom: -500px;
 	background-color: #888;
 }
@@ -116,4 +121,31 @@ header {
 .slide-down
 {
     bottom: -500px;
+}
+
+.filter-menu-icon {
+	height: 30px;
+	width: 30px;
+	font-size: 30px;
+	margin-right: 10px;
+}
+
+#filter-items-container {
+	background-color: #dfdfdf;
+}
+
+.table-view-cell {
+	border-bottom: 1px solid #979;
+}
+/**** MODIFY RATCHET ****/
+.toggle {
+	width: 50px;
+}
+
+.toggle:before {
+	content: "";
+}
+
+.toggle.active:before {
+	content: "";
 }
