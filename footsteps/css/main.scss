@@ -129,7 +129,7 @@ ul {
 
 .slide-up
 {
-    bottom: 0px;
+    bottom: 15px;
 }
 
 .slide-down
@@ -166,6 +166,28 @@ ul {
 	border-radius: 50%;
 	width: 50px;
 	height: 50px;
+}
+
+/**** Slick Paging style ****/
+
+ul.slick-dots {
+	max-width: 200px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+ul.slick-dots li {
+	display: inline-block;
+	list-style-type: none;
+	border-radius: 5px;
+	width: 10px;
+	height: 10px;
+	margin: 5px;
+	background: $grey-color-dark;
+}
+
+ul.slick-dots li.slick-active {
+	background: $accent-color;
 }
 
 /**** My Paths ****/
