@@ -28,7 +28,7 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
+$filter-menu-color: #dfdfdf;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -106,7 +106,7 @@ ul {
 	height: 218px;
 	width: 100%;
 	bottom: -500px;
-	background-color: #888;
+	background-color: $filter-menu-color;
 }
 
 .slide-up-container {
@@ -131,13 +131,24 @@ ul {
 }
 
 #filter-items-container {
-	background-color: #dfdfdf;
+	background-color: $filter-menu-color;
 }
 
 .table-view-cell {
-	border-bottom: 1px solid #979;
+	background-color: $filter-menu-color; 
+	border-bottom: 1px solid #97979;
 }
+
+.table-view-cell {
+	border-bottom: none;
+}
+
+.route-header {
+	text-align: center;
+}
+
 /**** MODIFY RATCHET ****/
+
 .toggle {
 	width: 50px;
 }
@@ -148,4 +159,21 @@ ul {
 
 .toggle.active:before {
 	content: "";
+}
+
+.slider {
+	background-color: $filter-menu-color; 
+}
+
+.navigate-right:after, .push-right:after {
+    right: "";
+    content: "";
+}
+
+.table-view-cell .navigate-right > .badge {
+	right: 20px;
+}
+
+.table-view .table-view-cell .badge {
+	background-color: none important;
 }

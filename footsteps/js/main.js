@@ -20,4 +20,7 @@ $(document).ready(function() {
   	 		$('.filter-icon').addClass('icon-down-nav');
   	 	}
   });
+
+  $('.slide-group').slick();
+  $('.slide-group button').remove();
 });
