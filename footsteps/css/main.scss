@@ -118,6 +118,11 @@ ul {
 	background-color: $filter-menu-color;
 }
 
+.animated {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease
+}
+
 .slide-up-container {
 	bottom: 240px;
 }
