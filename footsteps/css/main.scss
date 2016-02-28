@@ -82,10 +82,38 @@ header {
 }
 
 .filter-icon {
-	position:relative;
-	margin: 0px auto;
 	height: 50px;
 	width: 50px;
 	font-size: 50px;
 	display: block;
+}
+
+.filter-subcontainer {
+	position:relative;
+	margin: 0px auto;
+	height: 50px;
+	width: 50px;
+}
+
+.filter-bar {
+	position: fixed;
+	border-top: 1px solid #999;
+	width: 600px;
+	height: 240px;
+	bottom: -500px;
+	background-color: #888;
+}
+
+.slide-up-container {
+	bottom: 240px;
+}
+
+.slide-up
+{
+    bottom: 0px;
+}
+
+.slide-down
+{
+    bottom: -500px;
 }
