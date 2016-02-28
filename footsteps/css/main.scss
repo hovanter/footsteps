@@ -30,6 +30,8 @@ $on-laptop:        800px;
 
 $filter-menu-color: #dfdfdf;
 
+$action-button-color: #dfdfdf;
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -145,6 +147,13 @@ ul {
 
 .route-header {
 	text-align: center;
+}
+
+.action-container {
+	background-color: $action-button-color;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
 }
 
 /**** MODIFY RATCHET ****/

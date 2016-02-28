@@ -22,5 +22,13 @@ $(document).ready(function() {
   });
 
   $('.slide-group').slick();
-  $('.slide-group button').remove();
+  $('.slide-group button').remove(); 
+
+  $('#recording-icon').click(function() {
+  	if($('.filter-bar').hasClass('slide-up')) {
+  		
+  	} else {
+
+  	}
+  });
 });
