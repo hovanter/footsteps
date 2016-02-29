@@ -34,6 +34,10 @@ function hideSidebar() {
         bottom: "0px",
         height: "0px"
     });
+    $('#sidebar-handle').css({
+        bottom: "15px",
+        transform: "none"
+    });
 }
 
 // Shows the sidebar.
@@ -42,6 +46,10 @@ function showSidebar(height) {
         bottom: "15px",
         height: height + "px",
         width: ($(window).width() - 30) + "px"
+    });
+    $('#sidebar-handle').css({
+        bottom: (height + 30) + "px",
+        transform: "rotate(180deg)"
     });
 }
 
@@ -55,13 +63,3 @@ function isSidebarVisible() {
 function setSidebarContent(html_file) {
     $('#sidebar').load(html_file);
 }
-
-/*
-// cssSelector indicates the CSS ID of the sidebar content
-// that you would like to display. All other content is
-// hidden.
-function setSidebarContent(cssSelector) {
-    $('#sidebar-content').not('#sidebar ' + cssSelector).hide();
-    $('#sidebar ' + cssSelector).show();
-}
-*/

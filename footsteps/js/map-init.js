@@ -17,7 +17,7 @@ $(document).ready(function() {
     campusTrails.on("ready", function(e) {
       this.eachLayer(function(marker) {
           marker.on("click", function(e) {
-              setSidebarContent('#route-info')
+              setSidebarContent('route-info.html')
               showSidebar(300);
           })
       });

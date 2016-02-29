@@ -106,26 +106,6 @@ ul {
 	margin-bottom: 15px;
 }
 
-.filter-container {
-	position: absolute;
-	bottom: 15px;
-	width: 100%;
-}
-
-.filter-icon {
-	height: 50px;
-	width: 50px;
-	font-size: 50px;
-	display: block;
-}
-
-.filter-subcontainer {
-	position:relative;
-	margin: 0px auto;
-	height: 50px;
-	width: 50px;
-}
-
 .animated {
     -webkit-transition: all $ui-transition-speed ease;
     transition: all $ui-transition-speed ease
@@ -152,19 +132,6 @@ ul {
 	margin-right: 10px;
 }
 
-#filter-items-container {
-	background-color: $sidebar-menu-color;
-}
-
-.table-view-cell {
-	background-color: $sidebar-menu-color; 
-	border-bottom: 1px solid $filter-cell-divider-color;
-}
-
-.table-view-cell {
-	border-bottom: none;
-}
-
 .route-header {
 	text-align: center;
 }
@@ -178,41 +145,6 @@ ul {
 
 #isRecording {
 	background-color: red;
-}
-
-/**** Sidebar styles ****/
-
-#sidebar {
-	z-index: 15;
-	position: fixed;
-	border-radius: 5px;
-	height: 0px;
-	left: 15px;
-	bottom: 0px;
-	background-color: $sidebar-menu-color;
-	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
-	overflow: hidden;
-}
-
-#sidebar h1, h2, h3, h4, h5, h6, h7 {
-	text-align: center;
-}
-
-/**** Popup styles ****/
-
-#popup {
-	z-index: 15;
-	position: fixed;
-	border-radius: 5px;
-	height: 0px;
-	left: 15px;
-	background-color: $sidebar-menu-color;
-	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
-	overflow: hidden;
-}
-
-#sidebar h1, h2, h3, h4, h5, h6, h7 {
-	text-align: center;
 }
 
 /**** Mapbox map styles ****/

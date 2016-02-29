@@ -105,6 +105,11 @@ $content-background-color: #eeeeee;
 	background-color: none important;
 }
 
+.table-view-cell {
+	background-color: $sidebar-menu-color; 
+	border-bottom: none;
+}
+
 .table-view-cell-style-card {
 	margin: 15px 15px 0px;
 	border-radius: 5px;
