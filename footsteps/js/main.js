@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  /* Wire up interface button actions. */
   $('.filter-icon').click(function() {
   		if($('.filter-bar').hasClass('slide-up')) {
   	 		$('.filter-bar').addClass('slide-down', 1000, 'easeOutExpo');
@@ -21,6 +22,7 @@ $(document).ready(function() {
   	 	}
   });
 
+  /* Slack init scripts. */
   $('.slide-group').slick({dots: true});
   $('.slide-group button').remove(); 
 
@@ -32,6 +34,7 @@ $(document).ready(function() {
   	}
   });
 
+  /* Mapbox init scripts below. */
   L.mapbox.accessToken = 'pk.eyJ1IjoiYmhuYXNjYXIiLCJhIjoiY2lqa3NzaTc3MDAwNHQ5a29ibXgxOWllbyJ9.PwtqGI5Rbwewn2sbw5cgVw';
   map = L.mapbox.map('footstep-map', 'mapbox.streets', {
       // the options here prevent mouse wheel or trackpad scrolling
@@ -42,13 +45,29 @@ $(document).ready(function() {
       attributionControl: false
   }).setView([37.4240412,-122.1754616], 17);
 
-  /* Various layers */
   campusTrails = L.mapbox.featureLayer('bhnascar.p9c980ek');
-
-  /* Add all layers */
   map.addLayer(campusTrails);
-
-  /* Remove zoom contorol */
   map.zoomControl.removeFrom(map);
+
+  /* Find user location. */
+  /*
+  map.locate();
+  map.on('locationerror', null);
+  map.on('locationfound', function(e) {
+      map.fitBounds(e.bounds);
+      var userLocationLayer = L.mapbox.featureLayer().addTo(map);
+      userLocationLayer.setGeoJSON({
+          type: 'Feature',
+          geometry: {
+              type: 'Point',
+              coordinates: [e.latlng.lng, e.latlng.lat]
+          },
+          properties: {
+              'title': 'Here you are!',
+              'marker-color': '#ff8888',
+              'marker-symbol': 'star'
+          }
+      });
+  });*/
 
 });
