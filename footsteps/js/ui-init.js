@@ -30,6 +30,14 @@ $(document).ready(function() {
         }
     });
 
+    var dropButton = $('.action-container:nth-child(2)');
+    console.log(dropButton)
+    dropButton.click(function() {
+        console.log('helloooo')
+        setPopupContent('drop-options.html')
+        showPopup(200);
+    });
+
     // Slick init scripts.
     $('.slide-group').slick({dots: true});
     $('.slide-group button').remove(); 
