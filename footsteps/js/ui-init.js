@@ -1,17 +1,11 @@
 $(document).ready(function() {
 
     // Wire up chevron to show/hide filter menu.
-    $('.filter-icon').click(function() {
-		if (isSidebarVisible()) {
-            $('.filter-icon').removeClass('icon-down-nav');
-            $('.filter-icon').addClass('icon-up-nav');
-            $('.filter-container').removeClass('slide-up-container', 1000, 'easeOutExpo'); 
+    $('#sidebar-handle').click(function() {
+		if (isSidebarVisible()) { 
 	 		hideSidebar();
 	 	} else {
             setSidebarContent('filters.html');
-            $('.filter-icon').removeClass('icon-up-nav');
-            $('.filter-icon').addClass('icon-down-nav');
-            $('.filter-container').addClass('slide-up-container', 1000, 'easeOutExpo');
 	 		showSidebar(260);
 	 	}
     });
