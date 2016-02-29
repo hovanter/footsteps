@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // Wire up chevron to show/hide filter menu.
-    $('#sidebar-handle').click(function() {
+    $('#sidebar-handle-icon').click(function() {
 		if (isSidebarVisible()) { 
 	 		hideSidebar();
 	 	} else {
