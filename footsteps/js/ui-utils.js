@@ -8,6 +8,11 @@ function hidePopup() {
 // Shows the popup.
 function showPopup(height) {
     $('#popup').height(height);
+    $('#popup').css({
+        left: "15px",
+        top: ($(window).height() / 2.0 - height) + "px",
+        width: ($(window).width() - 30) + "px"
+    });
 }
 
 // Returns whether or not the popup is currently visible.
@@ -25,12 +30,19 @@ function setPopupContent(html_file) {
 
 // Hides the sidebar.
 function hideSidebar() {
-    $('#sidebar').height(0);
+    $('#sidebar').css({
+        bottom: "0px",
+        height: "0px"
+    });
 }
 
 // Shows the sidebar.
 function showSidebar(height) {
-    $('#sidebar').height(height);
+    $('#sidebar').css({
+        bottom: "15px",
+        height: height + "px",
+        width: ($(window).width() - 30) + "px"
+    });
 }
 
 // Returns whether or not the sidebar is currently visible.

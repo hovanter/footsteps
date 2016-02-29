@@ -59,6 +59,13 @@ $content-background-color: #eeeeee;
 	background: transparent;
 }
 
+.bar-content {
+	height: 44px;
+	padding: 0px 10px;
+	border-bottom: 1px solid #ddd;
+	backface-visibility: hiden;
+}
+
 /**** Button styles ****/
 
 .btn-primary {
@@ -72,6 +79,7 @@ $content-background-color: #eeeeee;
 
 .toggle.active {
 	background-color: $accent-color;
+	border-color: $accent-color;
 }
 
 .toggle.active .toggle-handle {
