@@ -182,7 +182,7 @@ ul {
 
 /**** Sidebar styles ****/
 
-.sidebar {
+#sidebar {
 	position: fixed;
 	border-top: 2px solid $accent-color;
 	height: 0px;
@@ -191,18 +191,8 @@ ul {
 	background-color: $sidebar-menu-color;
 }
 
-.sidebar h1, h2, h3, h4, h5, h6, h7 {
+#sidebar h1, h2, h3, h4, h5, h6, h7 {
 	text-align: center;
-}
-
-/**** MODIFY RATCHET: My Paths View ****/
-
-#path-items-container .table-view-cell {
-	background-color: $background-color;
-}
-
-.table-view {
-	border: none;
 }
 
 /**** Mapbox map styles ****/

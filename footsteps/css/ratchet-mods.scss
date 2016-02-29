@@ -74,6 +74,10 @@ $content-background-color: #eeeeee;
 	background-color: $accent-color;
 }
 
+.toggle.active .toggle-handle {
+	border-color: $accent-color;
+}
+
 .toggle:before {
 	content: "";
 }
@@ -85,7 +89,8 @@ $content-background-color: #eeeeee;
 /**** Table view styles ****/
 
 .table-view {
-	background-color: $content-background-color;
+	border: none;
+	background-color: transparent;
 }
 
 .table-view .table-view-cell .badge {
