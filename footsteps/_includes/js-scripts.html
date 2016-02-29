@@ -1,7 +1,11 @@
-<!-- Include the compiled Ratchet JS -->
-<script src="lib/ratchet-v2.0.2/js/ratchet.js"></script>
-<script src="js/jquery-1.12.1.min.js"></script>
-<script type="text/javascript" src="lib/slick-1.5.9/slick/slick.min.js"></script>
-<!-- Include js plugin -->
-<!-- <script src="lib/owl.carousel/owl-carousel/owl.carousel.js"></script> -->
-<script src="js/main.js"></script>
+<!-- Explanation of js-custom hack and why scripts must be here
+	instead of the header: http://stackoverflow.com/questions/23207741/-->
+<script src="js/jquery-1.12.1.min.js" class="js-custom"></script>
+<script src="lib/ratchet-v2.0.2/js/ratchet.js" class="js-custom"></script>
+<script type="text/javascript" src="lib/slick-1.5.9/slick/slick.min.js" class="js-custom"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.js' class="js-custom"></script>
+
+<!-- Our scripts -->
+<script src="js/main.js" class="js-custom"></script>
+<script src="js/ui-utils.js" class="js-custom"></script>
+<script src="js/ui-init.js" class="js-custom"></script>

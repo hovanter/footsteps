@@ -5,16 +5,28 @@
 
   <body>
 
+    <header class="bar bar-nav">
     {% include header-mapview.html %}
+    </header>
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
+    <div class="content">
     {% include mapview.html %}
     {% include js-scripts.html %}
+    <script src="js/map-init.js"></script>
+    </div>
+
+    <!-- Hack to make scripts work after transitioning back -->
+    <!-- http://stackoverflow.com/questions/23207741/ -->
+    <script>
+    window.addEventListener('push', function() {
+        var scriptsList = document.querySelectorAll('script.js-custom');
+        for(var i = 0; i < scriptsList.length; ++i) {
+            var script = scriptsList[i];
+            $.getScript(script.src);
+        }
+    });
+    </script>
+
   </body>
 
 </html>
