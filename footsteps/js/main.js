@@ -31,4 +31,24 @@ $(document).ready(function() {
 
   	}
   });
+
+  L.mapbox.accessToken = 'pk.eyJ1IjoiYmhuYXNjYXIiLCJhIjoiY2lqa3NzaTc3MDAwNHQ5a29ibXgxOWllbyJ9.PwtqGI5Rbwewn2sbw5cgVw';
+  map = L.mapbox.map('footstep-map', 'mapbox.streets', {
+      // the options here prevent mouse wheel or trackpad scrolling
+      // and restrict the zooms to zoom levels 14 through 18
+      scrollWheelZoom: false,
+      maxZoom: 20,
+      minZoom: 10,
+      attributionControl: false
+  }).setView([37.4240412,-122.1754616], 17);
+
+  /* Various layers */
+  campusTrails = L.mapbox.featureLayer('bhnascar.p9c980ek');
+
+  /* Add all layers */
+  map.addLayer(campusTrails);
+
+  /* Remove zoom contorol */
+  map.zoomControl.removeFrom(map);
+
 });
