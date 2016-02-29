@@ -3,7 +3,7 @@ $(document).ready(function() {
     /* Wire up interface button actions. */
     $('.filter-icon').click(function() {
         setSidebarContent('#filters')
-		if ($('.filter-bar').hasClass('slide-up')) {
+		if (isSidebarVisible()) {
             $('.filter-icon').removeClass('icon-down-nav');
             $('.filter-icon').addClass('icon-up-nav');
             $('.filter-container').removeClass('slide-up-container', 1000, 'easeOutExpo'); 
@@ -12,7 +12,7 @@ $(document).ready(function() {
             $('.filter-icon').removeClass('icon-up-nav');
             $('.filter-icon').addClass('icon-down-nav');
             $('.filter-container').addClass('slide-up-container', 1000, 'easeOutExpo');
-	 		showSidebar();
+	 		showSidebar(260);
 	 	}
     });
 

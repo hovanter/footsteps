@@ -28,7 +28,7 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-$filter-menu-color: #dfdfdf;
+$sidebar-menu-color: #ffffff;
 
 $action-button-color: #dfdfdf;
 
@@ -38,6 +38,8 @@ $color-on-accent: #fff;
 $filter-cell-divider-color:#979797;
 
 $paths-cell-divider-color: #cdcdcd;
+
+$ui-transition-speed: 0.3s;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -75,7 +77,7 @@ ul {
 .footstep-button {
 	height: 50px;
 	width: 50px;
-	font-size: 50px;
+	font-size: 50px !important;
 	display: block;
 }
 
@@ -90,6 +92,8 @@ ul {
 	line-height: 50px;
 	text-align: center;
 	color: white;
+	border-radius: 25px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .actions {
@@ -122,18 +126,9 @@ ul {
 	width: 50px;
 }
 
-.filter-bar {
-	position: fixed;
-	border-top: 1px solid #999;
-	height: 218px;
-	width: 100%;
-	bottom: -500px;
-	background-color: $filter-menu-color;
-}
-
 .animated {
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease
+    -webkit-transition: all $ui-transition-speed ease;
+    transition: all $ui-transition-speed ease
 }
 
 .slide-up-container {
@@ -158,11 +153,11 @@ ul {
 }
 
 #filter-items-container {
-	background-color: $filter-menu-color;
+	background-color: $sidebar-menu-color;
 }
 
 .table-view-cell {
-	background-color: $filter-menu-color; 
+	background-color: $sidebar-menu-color; 
 	border-bottom: 1px solid $filter-cell-divider-color;
 }
 
@@ -185,60 +180,25 @@ ul {
 	background-color: red;
 }
 
-/**** My Paths ****/
+/**** Sidebar styles ****/
 
-.paths-header {
-	background-color: $accent-color;
-	height: 50px;
+.sidebar {
+	position: fixed;
+	border-top: 2px solid $accent-color;
+	height: 0px;
 	width: 100%;
+	bottom: 0px;
+	background-color: $sidebar-menu-color;
+}
+
+.sidebar h1, h2, h3, h4, h5, h6, h7 {
 	text-align: center;
-	color: $color-on-accent;
-	line-height: 50px;
-}
-
-#back-button {
-    position: absolute;
-    margin-top: 13px;
-    left: 15px;
-    margin-bottom: 13px;
-}
-
-/**** MODIFY RATCHET: MapView ****/
-
-.toggle {
-	width: 50px;
-}
-
-.toggle:before {
-	content: "";
-}
-
-.toggle.active:before {
-	content: "";
-}
-
-.slider {
-	background-color: $filter-menu-color; 
-}
-
-.navigate-right:after, .push-right:after {
-    right: "";
-    content: "";
-}
-
-.table-view-cell .navigate-right > .badge {
-	right: 20px;
-}
-
-.table-view .table-view-cell .badge {
-	background-color: none important;
 }
 
 /**** MODIFY RATCHET: My Paths View ****/
 
 #path-items-container .table-view-cell {
 	background-color: $background-color;
-	border-bottom: 1px solid $paths-cell-divider-color;
 }
 
 .table-view {
@@ -247,27 +207,8 @@ ul {
 
 /**** Mapbox map styles ****/
 
-body, html {
-	width: 100%;
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
-}
-
 #footstep-map {
 	width: 100%;
 	height: 100%;
 	z-index: -1;
-}
-
-/**** Core app content layout ****/
-
-.bar {
-	z-index: 10;
-}
-
-.content {
-	z-index: 5;
-	width: 100%;
-	height: 100%;
 }

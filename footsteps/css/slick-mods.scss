@@ -1,0 +1,42 @@
+---
+# Footstep-specific theme modifications for Slick.
+---
+@charset "utf-8";
+
+$accent-color: #4EBB8F;
+$sidebar-menu-color: #ffffff;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+.slider {
+	background-color: $sidebar-menu-color; 
+}
+
+.navigate-right:after, .push-right:after {
+    right: "";
+    content: "";
+}
+
+/**** Pager (dots) style ****/
+
+ul.slick-dots {
+	max-width: 200px;
+	margin: 0px auto 10px;
+	text-align: center;
+}
+
+ul.slick-dots li {
+	display: inline-block;
+	list-style-type: none;
+	border-radius: 5px;
+	width: 10px;
+	height: 10px;
+	margin: 5px;
+	background: $grey-color-dark;
+}
+
+ul.slick-dots li.slick-active {
+	background: $accent-color;
+}

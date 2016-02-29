@@ -7,7 +7,7 @@ $(document).ready(function() {
       maxZoom: 20,
       minZoom: 10,
       attributionControl: false
-    }).setView([37.4240412,-122.1754616], 17);
+    }).setView([37.4260422,-122.170671], 17);
 
     campusTrails = L.mapbox.featureLayer('bhnascar.p9c980ek');
     map.addLayer(campusTrails);
@@ -18,7 +18,7 @@ $(document).ready(function() {
       this.eachLayer(function(marker) {
           marker.on("click", function(e) {
               setSidebarContent('#route-info')
-              showSidebar();
+              showSidebar(300);
           })
       });
     });

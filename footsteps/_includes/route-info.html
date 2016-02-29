@@ -1,20 +1,18 @@
 <div id="route-info" class="sidebar-content">
-    <ul class="table-view">
-        <li class="table-view-cell">
-            <span class="badge">388</span>
-            Num Travels
-        </li>
-        <li class="table-view-cell">
-            <span class="badge">25</span>
-            Num Markers
-        </li>
-        <li class="table-view-cell">
-            <span class="badge">1</span>
-            Num Locations
-        </li>
-        <li class="table-view-cell">
-            <span class="badge">1.5m</span>
-            Distance
-        </li>
-    </ul>
+    <div class="slider" id="mySlider">
+        <div class="slide-group">
+            <div class="slide">
+                {% include route-info-panel.html title="Route 1" %}
+            </div>
+            <div class="slide">
+                {% include route-info-panel.html title="Route 2" %}
+            </div>
+            <div class="slide">
+                {% include route-info-panel.html title="Route 3" %}
+            </div>
+        </div>
+    </div>
+    <div>
+        <button class="btn btn-primary btn-block">Follow</button> 
+    </div>
 </div>

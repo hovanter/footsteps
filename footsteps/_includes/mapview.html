@@ -1,20 +1,28 @@
+<!-- Main map -->
 <div id="footstep-map">
 </div>
 
 <div class="actions">
+    <!-- Record/stop button -->
 	<div class="action-container" >
-	  <div class="action-button icon icon-play"></div>
+	   <div class="action-button icon icon-play"></div>
 	</div>
+
+    <!-- Drop item button -->
 	<div class="action-container">
-  		<div class="action-button icon icon-download"></div>
-  	</div>
+        <div class="action-button icon icon-download"></div>
+    </div>
 </div>
+
+<!-- Chevron -->
 <div class="filter-container animated">
-  <div style="width: 50px; height: 50px" class="filter-subcontainer">
-    <div class="filter-icon icon icon-up-nav"></div>
-  </div>
+    <div style="width: 50px; height: 50px" class="filter-subcontainer">
+        <div class="filter-icon icon icon-up-nav"></div>
+    </div>
 </div>
-<div class="filter-bar animated">
+
+<!-- Sidebar -->
+<div class="sidebar animated">
     {% include filters.html %}
     {% include route-info.html %}
 </div>
