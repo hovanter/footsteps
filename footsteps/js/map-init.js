@@ -24,11 +24,10 @@ $(document).ready(function() {
     });
 
     /* Find user location. */
-    /*
     map.locate();
     map.on('locationerror', null);
     map.on('locationfound', function(e) {
-      map.fitBounds(e.bounds);
+      //map.setView([e.latlng.lng, e.latlng.lat], map.getZoom(), {reset: true});
       var userLocationLayer = L.mapbox.featureLayer().addTo(map);
       userLocationLayer.setGeoJSON({
           type: 'Feature',
@@ -42,5 +41,5 @@ $(document).ready(function() {
               'marker-symbol': 'star'
           }
       });
-    });*/
+    });
 });
