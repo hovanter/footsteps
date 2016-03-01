@@ -155,3 +155,13 @@ ul {
 	height: 100%;
 	z-index: -1;
 }
+
+/**** Markers bar ****/
+.drop-bar {
+	height: 50px;
+	width: 290px;
+	background: url(../assets/markers-bar.png) no-repeat;
+	background-size: contain;
+	margin: 7px auto;
+
+}

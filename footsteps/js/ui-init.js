@@ -24,6 +24,12 @@ $(document).ready(function() {
         }
     });
 
+    var dropButton = $('.action-container:nth-child(2)');
+    dropButton.click(function() {
+        setPopupContent('drop-options.html')
+        showPopup(70);
+    });
+
     // Slick init scripts.
     $('.slide-group').slick({dots: true});
     $('.slide-group button').remove(); 
