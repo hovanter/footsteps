@@ -28,6 +28,8 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+$profile-icon-size: 30px;
+
 $sidebar-menu-color: #ffffff;
 
 $action-button-color: #dfdfdf;
@@ -73,12 +75,35 @@ ul {
 	margin: 0px;
 }
 
+/**** Top bar ****/
 
-.footstep-button {
-	height: 50px;
+.profile-button {
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-right: 10px;
+	height: $profile-icon-size;
+	width: $profile-icon-size;
+	float: left;
+	font-size: $profile-icon-size !important;
+}
+
+#dest-search-bar {
+	float: left;
+	margin-top: 5px;
+}
+
+#dest-search-input {
+	float: left;
+	width: 290px;
+}
+
+/**** Action items ****/
+
+.action-container {
+	background-color: $accent-color;
+	border-radius: 50%;
 	width: 50px;
-	font-size: 50px !important;
-	display: block;
+	height: 50px;
 }
 
 .action-container:first-child {
@@ -97,6 +122,13 @@ ul {
 	cursor: pointer;
 }
 
+.footstep-button {
+	height: 50px;
+	width: 50px;
+	font-size: 50px !important;
+	display: block;
+}
+
 .actions {
 	position: absolute;
 	bottom: 15px;
@@ -107,6 +139,11 @@ ul {
 	margin-bottom: 15px;
 }
 
+#isRecording {
+	background-color: red;
+}
+
+/**** Filters / Path info box ****/
 .animated {
     -webkit-transition: all $ui-transition-speed ease;
     transition: all $ui-transition-speed ease
@@ -137,17 +174,6 @@ ul {
 	text-align: center;
 }
 
-.action-container {
-	background-color: $accent-color;
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-}
-
-#isRecording {
-	background-color: red;
-}
-
 /**** Mapbox map styles ****/
 
 #footstep-map {
@@ -163,5 +189,4 @@ ul {
 	background: url(../assets/markers-bar.png) no-repeat;
 	background-size: contain;
 	margin: 7px auto;
-
 }

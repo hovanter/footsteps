@@ -11,6 +11,7 @@ $content-background-color: #eeeeee;
 
 .bar {
 	z-index: 10;
+	border-bottom: none;
 }
 
 .content {
@@ -64,6 +65,11 @@ $content-background-color: #eeeeee;
 	padding: 0px 10px;
 	border-bottom: 1px solid #ddd;
 	backface-visibility: hiden;
+}
+
+.bar .icon {
+	padding-top: 5px;
+	height: 32px;
 }
 
 /**** Button styles ****/
