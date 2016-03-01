@@ -7,6 +7,7 @@ function hidePopup() {
 
 // Shows the popup.
 function showPopup(height) {
+    $('#overlay').height(110)
     $('#popup').height(height);
     $('#popup').css({
         left: "15px",

@@ -25,11 +25,9 @@ $(document).ready(function() {
     });
 
     var dropButton = $('.action-container:nth-child(2)');
-    console.log(dropButton)
     dropButton.click(function() {
-        console.log('helloooo')
         setPopupContent('drop-options.html')
-        showPopup(200);
+        showPopup(70);
     });
 
     // Slick init scripts.
