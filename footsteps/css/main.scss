@@ -136,12 +136,16 @@ ul {
 }
 
 #recording-icon {
-	margin-bottom: 15px;
+	background: url('../assets/dropMarkerIcon.png') no-repeat;
+	background-size: 25px 32px;
+    background-position: 50% 50%;
 }
 
 #isRecording {
 	background-color: red;
 }
+
+
 
 /**** Filters / Path info box ****/
 .animated {
