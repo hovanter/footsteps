@@ -9,12 +9,14 @@ $(document).ready(function() {
       attributionControl: false
     }).setView([37.4260422,-122.170671], 17);
 
-    campusTrails = L.mapbox.featureLayer('bhnascar.p9c980ek');
-    map.addLayer(campusTrails);
+    /* Load hard-coded layers. */
+    peopleLayer = L.mapbox.featureLayer('bhnascar.p9c980ek');
+    friendsLayer = L.mapbox.featureLayer('bhnascar.pa5h76d8');
+    placesLayer = L.mapbox.featureLayer('bhnascar.pa5806m2');
     map.zoomControl.removeFrom(map);
 
     /* Wire up clicks for map markers and polylines. (Show sidebar) */
-    campusTrails.on("ready", function(e) {
+    placesLayer.on("ready", function(e) {
       this.eachLayer(function(marker) {
           marker.on("click", function(e) {
               setSidebarContent('route-info.html')
@@ -28,7 +30,7 @@ $(document).ready(function() {
     map.on('locationerror', null);
     map.on('locationfound', function(e) {
       map.panTo(new L.LatLng(e.latlng.lat, e.latlng.lng));
-      var userLocationLayer = L.mapbox.featureLayer().addTo(map);
+      userLocationLayer = L.mapbox.featureLayer().addTo(map);
       userLocationLayer.setGeoJSON({
           type: 'Feature',
           geometry: {
@@ -42,4 +44,19 @@ $(document).ready(function() {
           }
       });
     });
+
+    /* Filter functions */
+
+    filterLayer = function(layer, show) {
+      if (show) {
+        map.addLayer(layer);
+      }
+      else {
+        map.removeLayer(layer);
+      }
+    }
+
+    isLayerVisible = function(layer) {
+      return map.hasLayer(layer);
+    }
 });

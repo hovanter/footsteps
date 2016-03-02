@@ -1,35 +1,71 @@
 <div id="filters" class="sidebar-content">
     <div class="bar-content bar-inverted">
-        <h1 class="title">Path filters</h1>
+        <h1 class="title">Map filters</h1>
     </div>
     <ul class="table-view">
         <li class="table-view-cell">
             <div class="filter-menu-icon icon icon-person"></div>
             Friends
-            <div class="toggle">
+            <div id="friends-toggle" class="toggle">
                 <div class="toggle-handle"></div>
             </div>
+            <script>
+            var toggle = document.querySelector("#friends-toggle");
+            toggle.addEventListener('toggle', function(e) {
+                filterLayer(friendsLayer, e.detail.isActive);
+            });
+            if (isLayerVisible(friendsLayer)) {
+                $("#friends-toggle").addClass("active");
+            }
+            </script>
         </li>
         <li class="table-view-cell">
             <div class="filter-menu-icon icon icon-person"></div>
             Places
-            <div class="toggle">
+            <div id="places-toggle" class="toggle">
                 <div class="toggle-handle"></div>
             </div>
+            <script>
+            var toggle = document.querySelector("#places-toggle");
+            toggle.addEventListener('toggle', function(e) {
+                filterLayer(placesLayer, e.detail.isActive);
+            });
+            if (isLayerVisible(placesLayer)) {
+                $("#places-toggle").addClass("active");
+            }
+            </script>
         </li>
         <li class="table-view-cell">
             <div class="filter-menu-icon icon icon-person"></div>
             Relevant People
-            <div class="toggle">
+            <div id="people-toggle" class="toggle">
                 <div class="toggle-handle"></div>
             </div>
+            <script>
+            var toggle = document.querySelector("#people-toggle");
+            toggle.addEventListener('toggle', function(e) {
+                filterLayer(peopleLayer, e.detail.isActive);
+            });
+            if (isLayerVisible(peopleLayer)) {
+                $("#people-toggle").addClass("active");
+            }
+            </script>
         </li>
         <li class="table-view-cell">
             <div class="filter-menu-icon icon icon-person"></div>
             Your Paths
-            <div class="toggle">
+            <div id="paths-toggle" class="toggle">
                 <div class="toggle-handle"></div>
             </div>
+            <script>
+            var toggle = document.querySelector("#paths-toggle");
+            toggle.addEventListener('toggle', function(e) {
+                filterLayer(userLocationLayer, e.detail.isActive);
+            });
+            if (isLayerVisible(userLocationLayer)) {
+                $("#paths-toggle").addClass("active");
+            }
+            </script>
         </li>
     </ul>
 </div>
