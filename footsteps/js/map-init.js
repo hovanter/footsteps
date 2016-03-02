@@ -38,7 +38,7 @@ $(document).ready(function() {
           properties: {
               'title': 'Here you are!',
               'marker-color': '#ff8888',
-              'marker-symbol': 'star'
+              'marker-symbol': 'pitch'
           }
       });
     });
