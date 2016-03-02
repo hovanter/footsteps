@@ -78,23 +78,18 @@ ul {
 /**** Top bar ****/
 
 .profile-button {
-	margin-top: 2px;
-	margin-left: 5px;
+	color: #fff;
+	padding: 0px !important;
 	margin-right: 10px;
-	height: $profile-icon-size;
-	width: $profile-icon-size;
-	float: left;
+	line-height: 44px;
 	font-size: $profile-icon-size !important;
-}
-
-#dest-search-bar {
-	float: left;
-	margin-top: 5px;
 }
 
 #dest-search-input {
 	float: left;
 	width: 290px;
+	margin: 7px 0px;
+	color: $grey-color-dark;
 }
 
 /**** Action items ****/

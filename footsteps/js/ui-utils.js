@@ -2,20 +2,31 @@
 
 // Hides the popup.
 function hidePopup() {
-    $('#popup-overlay').hide();
-    $('#popup').height(0);
+    $('#popup-overlay').css({
+        background: "transparent",
+        "z-index": -3
+    });
+    $('#popup').css({
+        height: "0px",
+        left: "15px",
+        top: ($(window).height() / 2.0) + "px",
+        width: ($(window).width() - 30) + "px"
+    });
 }
 
 // Shows the popup.
 function showPopup(height) {
-    $('#popup-overlay').show();
+    $('#popup-overlay').css({
+        background: "rgba(0, 0, 0, 0.5)",
+        "z-index": "14"
+    });
     $('#popup-overlay').click(function(e) {
         hidePopup();
     });
-    $('#popup').height(height);
     $('#popup').css({
+        height: height + "px",
         left: "15px",
-        top: ($(window).height() / 2.0 - height) + "px",
+        top: ($(window).height() / 2.0 - height / 2.0) + "px",
         width: ($(window).width() - 30) + "px"
     });
 }

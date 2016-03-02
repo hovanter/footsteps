@@ -62,13 +62,12 @@ $sidebar-menu-color: #ffffff;
 }
 
 #popup-overlay {
-	display: none;
 	position: fixed;
+	z-index: -5;
 	top: 0px;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 14;
 }
 
 #popup h1, 
