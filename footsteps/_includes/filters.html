@@ -10,13 +10,7 @@
                 <div class="toggle-handle"></div>
             </div>
             <script>
-            var toggle = document.querySelector("#friends-toggle");
-            toggle.addEventListener('toggle', function(e) {
-                filterLayer(friendsLayer, e.detail.isActive);
-            });
-            if (isLayerVisible(friendsLayer)) {
-                $("#friends-toggle").addClass("active");
-            }
+            addLayerToggle(friendsLayer, "#friends-toggle");
             </script>
         </li>
         <li class="table-view-cell">
@@ -26,13 +20,7 @@
                 <div class="toggle-handle"></div>
             </div>
             <script>
-            var toggle = document.querySelector("#places-toggle");
-            toggle.addEventListener('toggle', function(e) {
-                filterLayer(placesLayer, e.detail.isActive);
-            });
-            if (isLayerVisible(placesLayer)) {
-                $("#places-toggle").addClass("active");
-            }
+            addLayerToggle(placesLayer, "#places-toggle");
             </script>
         </li>
         <li class="table-view-cell">
@@ -42,13 +30,7 @@
                 <div class="toggle-handle"></div>
             </div>
             <script>
-            var toggle = document.querySelector("#people-toggle");
-            toggle.addEventListener('toggle', function(e) {
-                filterLayer(peopleLayer, e.detail.isActive);
-            });
-            if (isLayerVisible(peopleLayer)) {
-                $("#people-toggle").addClass("active");
-            }
+            addLayerToggle(peopleLayer, "#people-toggle");
             </script>
         </li>
         <li class="table-view-cell">
@@ -58,13 +40,7 @@
                 <div class="toggle-handle"></div>
             </div>
             <script>
-            var toggle = document.querySelector("#paths-toggle");
-            toggle.addEventListener('toggle', function(e) {
-                filterLayer(userLocationLayer, e.detail.isActive);
-            });
-            if (isLayerVisible(userLocationLayer)) {
-                $("#paths-toggle").addClass("active");
-            }
+            addLayerToggle(userLocationLayer, "#paths-toggle");
             </script>
         </li>
     </ul>

@@ -47,6 +47,8 @@ $(document).ready(function() {
 
     /* Filter functions */
 
+    // Shows the given layer if |show| is true,
+    // hides it otherwise.
     filterLayer = function(layer, show) {
       if (show) {
         map.addLayer(layer);
@@ -56,7 +58,21 @@ $(document).ready(function() {
       }
     }
 
+    // Returns whether or not the given layer is
+    // curently displayed.
     isLayerVisible = function(layer) {
       return map.hasLayer(layer);
+    }
+
+    // The layer will be toggled by clicks on the
+    // element with the given CSS ID.
+    addLayerToggle = function(layer, cssID) {
+      var toggle = document.querySelector(cssID);
+      toggle.addEventListener('toggle', function(e) {
+        filterLayer(layer, e.detail.isActive);
+      });
+      if (isLayerVisible(layer)) {
+        $(cssID).addClass("active");
+      }
     }
 });
