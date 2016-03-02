@@ -27,7 +27,7 @@ $(document).ready(function() {
     map.locate();
     map.on('locationerror', null);
     map.on('locationfound', function(e) {
-      //map.setView([e.latlng.lng, e.latlng.lat], map.getZoom(), {reset: true});
+      map.panTo(new L.LatLng(e.latlng.lat, e.latlng.lng));
       var userLocationLayer = L.mapbox.featureLayer().addTo(map);
       userLocationLayer.setGeoJSON({
           type: 'Feature',
