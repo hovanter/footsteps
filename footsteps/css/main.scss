@@ -175,6 +175,17 @@ ul {
 	text-align: center;
 }
 
+.traveller-profile-pic {
+	background: url('../assets/empty-profile.png') no-repeat;
+	height: $profile-icon-size;
+    width: $profile-icon-size;
+    background-size: contain;
+    border-radius: 50%;  
+    border: 2px solid white;
+    float: right;
+    margin-top: 7px;
+}
+
 /**** Mapbox map styles ****/
 
 #footstep-map {
