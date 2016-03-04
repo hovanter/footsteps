@@ -192,8 +192,8 @@ ul {
 
 .traveller-profile-pic {
 	background: url('../assets/empty-profile.png') no-repeat;
-	height: 120px;
-    width: 120px;
+	height: 110px;
+    width: 110px;
     background-size: contain;
     border-radius: 50%; 
     margin: 0 auto; 
@@ -202,6 +202,7 @@ ul {
 
 .traveller-profile-pic-container {
 	background-color: $accent-color;
+	padding-bottom: 20px;
 }
 
 .traveller-header-info {
@@ -217,6 +218,31 @@ ul {
 
 .traveller-home-text {
 	text-align: center;
+	font-size: 12px;
+	font-weight: lighter;
+}
+
+.traveller-snapshot-info-container {
+	height: 50px;
+	width: 100%;
+	background: rgba(78, 187, 142, 0.65);
+
+	display: table;
+	table-layout: fixed;
+}
+
+.traveller-snapshot-info-item {
+	display: table-cell;
+	height: 100%;
+	text-align: center;
+	color: $color-on-accent;
+	font-size: 12px;
+	padding: 5px;
+	padding-top: 10px;
+}
+
+.traveller-details-container {
+	padding: 20px
 }
 
 /**** Mapbox map styles ****/
