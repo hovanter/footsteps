@@ -38,6 +38,11 @@ $(document).ready(function() {
         }
     });
 
+    // Wire up traveller profile pic (route info panel) to profile page
+    $('.traveller-profile-pic').click(function() {
+        
+    });
+
     // Slick init scripts.
     $('.slide-group').slick({dots: true});
     $('.slide-group button').remove(); 

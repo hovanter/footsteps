@@ -78,7 +78,7 @@ ul {
 /**** Top bar ****/
 
 .profile-button {
-	color: #fff;
+	color: $color-on-accent;
 	padding: 0px !important;
 	margin-right: 10px;
 	line-height: 44px;
@@ -175,15 +175,48 @@ ul {
 	text-align: center;
 }
 
-.traveller-profile-pic {
+.traveller-profile-pic-thumbnail {
 	background: url('../assets/empty-profile.png') no-repeat;
 	height: $profile-icon-size;
     width: $profile-icon-size;
     background-size: contain;
     border-radius: 50%;  
-    border: 2px solid white;
+    border: 2px solid $color-on-accent;
     float: right;
     margin-top: 7px;
+    position: relative;
+    z-index: 10;
+}
+
+/**** Traveller Page ****/
+
+.traveller-profile-pic {
+	background: url('../assets/empty-profile.png') no-repeat;
+	height: 120px;
+    width: 120px;
+    background-size: contain;
+    border-radius: 50%; 
+    margin: 0 auto; 
+	border: 3px solid $color-on-accent;
+}
+
+.traveller-profile-pic-container {
+	background-color: $accent-color;
+}
+
+.traveller-header-info {
+    margin: 0 auto; 
+	color: $color-on-accent;
+	margin-top: 10px;
+}
+
+.traveller-name-text {
+	text-align: center;
+	font-weight: bold;
+}
+
+.traveller-home-text {
+	text-align: center;
 }
 
 /**** Mapbox map styles ****/
