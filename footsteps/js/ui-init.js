@@ -38,6 +38,11 @@ $(document).ready(function() {
         }
     });
 
+    var locateUserButton = $('#locate-user-button');
+    locateUserButton.click(function() {
+        panToUserLocation();
+    });
+
     // Slick init scripts.
     $('.slide-group').slick({dots: true});
     $('.slide-group button').remove(); 
