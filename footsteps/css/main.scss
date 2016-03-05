@@ -228,6 +228,10 @@ ul {
 	margin-left: 10px;
 }
 
+.follow-button-container {
+	padding: 0px 15px;
+}
+
 /**** Traveller Page ****/
 
 .catherine-pic {
@@ -379,6 +383,31 @@ ul {
 .marker-info {
 	
 }*/
+
+/**** Search results ****/
+
+#search-results {
+	position: fixed;
+	top: 44px;
+	width: 100%;
+}
+
+#search-results ul {
+	width: 100%;
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#search-results ul li {
+	width: 100%;
+	display: block;
+	height: 44px;
+	line-height: 44px;
+	padding: 0px 15px;
+	background: #FFFFFF;
+	border-bottom: 1px solid #CCCCCC;
+}
 
 /**** Mapbox map styles ****/
 

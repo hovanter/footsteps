@@ -35,4 +35,28 @@ $(document).ready(function() {
     $('#locate-user-button').click(function() {
         panToUserLocation();
     });
+
+    // Wire up follow button on route info card
+    $('#route-info button').click(function() {
+       console.log('Hi');
+       hideSidebar();
+    });
+
+    // Wire up search bar to Mapbox geocoding API....
+    // Probably more fancy than we need...
+    $('#dest-search-input').on("change paste keyup", function() {
+        var search_text = $('#dest-search-input').val();
+        if (!search_text || search_text == null || search_text.slice(-1) != " ") {
+            return;
+        }
+        lookupLocation(search_text, function(results) {
+            resultHTML = geoJSONToList(results);
+            if (results.length > 0) {
+                $('#search-results').html(resultHTML);
+            }
+            else {
+                $('#search-results').html("");
+            }
+        });
+    })
 });
