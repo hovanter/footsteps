@@ -20,4 +20,10 @@ $('.slider').slick({
     dots: true
 });
 $('.slider button').remove(); 
+
+// Wire up follow button on route info card
+$('#route-info button').click(function() {
+    setSidebarContent('follow-instructions.html');
+    showSidebar(270);
+});
 </script>
