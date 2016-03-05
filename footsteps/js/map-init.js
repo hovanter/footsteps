@@ -10,20 +10,45 @@ $(document).ready(function() {
     }).setView([37.4260422,-122.170671], 17);
     map.zoomControl.removeFrom(map);
 
-    /* Load hard-coded layers. */
-    peopleLayer = L.mapbox.featureLayer('bhnascar.p9c980ek');
-    friendsLayer = L.mapbox.featureLayer('bhnascar.pa5h76d8');
-    placesLayer = L.mapbox.featureLayer('bhnascar.pa5806m2');
+    /* Load data layers. */
+    layers = {
+      "paths": L.mapbox.featureLayer('bhnascar.p9c980ek'),
+      "friends": L.mapbox.featureLayer('bhnascar.pa5h76d8'),
+      "places": L.mapbox.featureLayer('bhnascar.pa5806m2')
+    };
+
+    /* Load the initial layers that you want here. */
+    map.addLayer(layers["friends"]);
 
     /* Wire up clicks for map markers and polylines. (Show sidebar) */
-    placesLayer.on("ready", function(e) {
-      this.eachLayer(function(marker) {
-          marker.on("click", function(e) {
+    for (var key in layers) {
+      var layer = layers[key];
+      layer.on("ready", function(e) {
+        this.eachLayer(function(marker) {
+          if (marker.feature.geometry.type == "LineString") {
+            marker.on("popupopen", function(e) {
               setSidebarContent('route-info.html')
               showSidebar(300);
-          })
+              this.setStyle({color: '#f66', opacity: 0.8});
+              fitMapToMarker(this);
+            });
+            marker.on("popupclose", function(e) {
+              this.setStyle({color: this.feature.properties.stroke});
+            });
+          }
+        });
       });
-    });
+    }
+
+    /* Custom map utilities. */ 
+    fitMapToMarker = function(marker) {
+      var bounds = marker.getBounds();
+      var adjusted_lat = bounds._southWest.lat - (bounds._northEast.lat - bounds._southWest.lat)
+      map.fitBounds([
+        [adjusted_lat, bounds._southWest.lng],
+        [bounds._northEast.lat, bounds._northEast.lng]
+      ]);
+    }
 
     /* Find user location. */
     panToUserLocation = function() {
@@ -48,7 +73,7 @@ $(document).ready(function() {
         });
       });
     }
-    panToUserLocation();
+    //panToUserLocation();
 
     /* Filter functions */
 
@@ -71,12 +96,12 @@ $(document).ready(function() {
 
     // The layer will be toggled by clicks on the
     // element with the given CSS ID.
-    addLayerToggle = function(layer, cssID) {
+    addLayerToggle = function(layerName, cssID) {
       var toggle = document.querySelector(cssID);
       toggle.addEventListener('toggle', function(e) {
-        filterLayer(layer, e.detail.isActive);
+        filterLayer(layers[layerName], e.detail.isActive);
       });
-      if (isLayerVisible(layer)) {
+      if (isLayerVisible(layers[layerName])) {
         $(cssID).addClass("active");
       }
     }
