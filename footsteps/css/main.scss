@@ -65,6 +65,25 @@ $ui-transition-speed: 0.3s;
         "syntax-highlighting"
 ;
 
+@font-face {
+	font-family: AvenirWeb_bold;
+	src: url("../fonts/avenir-next-lt-pro/AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: AvenirWeb_demi;
+	src: url("../fonts/avenir-next-lt-pro/AvenirNextLTPro-Demi.otf") format("opentype"); 
+}
+
+@font-face {
+	font-family: AvenirWeb_regular;
+	src: url("../fonts/avenir-next-lt-pro/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+body {
+	font-family: AvenirWeb_regular;
+}
+
 header {
 	position: absolute;
 	top: 15px;
@@ -177,24 +196,27 @@ ul {
 
 .traveller-profile-pic-thumbnail {
 	background: url('../assets/empty-profile.png') no-repeat;
-	height: $profile-icon-size;
-    width: $profile-icon-size;
+	height: 39px; /*$profile-icon-size;*/
+    width: 39px; /*$profile-icon-size;*/
     background-size: contain;
     border-radius: 50%;  
     border: 2px solid $color-on-accent;
     float: right;
-    margin-top: 7px;
+    margin-top: 2px; /*7px;*/
     position: relative;
     z-index: 10;
 }
 
 /**** Traveller Page ****/
 
+.catherine-pic {
+	background: url('../assets/catherine-profile.jpg') no-repeat;
+    background-size: contain;
+}
+
 .traveller-profile-pic {
-	background: url('../assets/empty-profile.png') no-repeat;
 	height: 110px;
     width: 110px;
-    background-size: contain;
     border-radius: 50%; 
     margin: 0 auto; 
 	border: 3px solid $color-on-accent;
@@ -213,7 +235,8 @@ ul {
 
 .traveller-name-text {
 	text-align: center;
-	font-weight: bold;
+	font-family: AvenirWeb_demi;
+	font-size: 20px;
 }
 
 .traveller-home-text {
@@ -242,8 +265,70 @@ ul {
 }
 
 .traveller-details-container {
-	padding: 20px
+	padding: 20px;
 }
+
+.metric-value {
+	font-size: 15px;
+	color: #3D3D3D	;
+    font-weight: bold;
+    font-family: AvenirWeb_demi;
+}
+
+.metric-name {
+	color: #eee;
+}
+
+
+/**** My Paths page ****/ 
+
+.path-details-container {
+	margin: 0px;
+	padding-top: 11px;
+}
+
+#paris-image-2 {
+	background: url('../assets/paris-thumbnail.jpg') no-repeat;
+	background-size: cover;
+    background-position: -50px;
+}
+
+#paris-image-1 {
+	background: url('../assets/paris-cheese-thumbnail.jpg') no-repeat;
+	background-size: cover;
+    background-position: -19px;
+}
+
+#ireland-image {
+	background: url('../assets/ireland-thumbnail.jpg') no-repeat;
+	background-size: cover;
+}
+
+#tokyo-image {
+	background: url('../assets/tokyo.jpg') no-repeat;
+	background-size: cover;
+}
+
+.path-thumbnail {
+    height: 100%;
+    width: 90px;
+	float: left;
+	margin-right: 14px;
+}
+
+/*#church-pic-marker {
+	background: url('../assets/stanford-chapel.jpg') no-repeat;
+	background-size: contain;
+}*/
+
+/*.image-marker {
+	width: 20%;
+	height: 208px;
+}
+
+.marker-info {
+	
+}*/
 
 /**** Mapbox map styles ****/
 
