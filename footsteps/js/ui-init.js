@@ -6,7 +6,7 @@ $(document).ready(function() {
 	 		hideSidebar();
 	 	} else {
             setSidebarContent('filters.html');
-	 		showSidebar(260);
+	 		showSidebar(270);
 	 	}
     });
 
@@ -35,13 +35,4 @@ $(document).ready(function() {
     $('#locate-user-button').click(function() {
         panToUserLocation();
     });
-
-    // Wire up traveller profile pic (route info panel) to profile page.
-    $('.traveller-profile-pic').click(function() {
-
-    });
-
-    // Slick init scripts.
-    $('.slide-group').slick({dots: true});
-    $('.slide-group button').remove(); 
 });

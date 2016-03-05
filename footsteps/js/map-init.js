@@ -27,6 +27,11 @@ function panToUserLocation() {
     getUserLocation(function(lat, lng) {
         map.panTo([lat, lng]);
     });
+    layers["user"].eachLayer(function(marker) {
+        if (marker.feature.geometry.type == "Point") {
+            marker.openPopup();
+        }
+    });
 }
 
 // Turns the element identified by cssID into a
@@ -54,6 +59,9 @@ $(document).ready(function() {
     });
     map.setView([37.4260422, -122.170671], 17);
     map.zoomControl.removeFrom(map);
+    map.on("click", function(e) {
+        hideSidebar();
+    });
 
     // Load data layers. Store them into a dictionary of
     // layer ID --> Mapbox layer object.
@@ -118,5 +126,4 @@ function _selectPath(path) {
 // Deselects a given path (marker).
 function _deselectPath(path) {
     path.setStyle({color: path.feature.properties.stroke});
-    hideSidebar();
 }
