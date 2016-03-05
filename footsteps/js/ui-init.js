@@ -46,7 +46,11 @@ $(document).ready(function() {
     // Probably more fancy than we need...
     $('#dest-search-input').on("change paste keyup", function() {
         var search_text = $('#dest-search-input').val();
-        if (!search_text || search_text == null || search_text.slice(-1) != " ") {
+        if (!search_text || search_text == null) {
+            $('#search-results').html("");
+            return;
+        }
+        else if (search_text.slice(-1) != " ") {
             return;
         }
         lookupLocation(search_text, function(results) {
