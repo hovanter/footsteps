@@ -78,7 +78,7 @@ ul {
 /**** Top bar ****/
 
 .profile-button {
-	color: #fff;
+	color: $color-on-accent;
 	padding: 0px !important;
 	margin-right: 10px;
 	font-size: $profile-icon-size !important;
@@ -172,15 +172,74 @@ ul {
 	text-align: center;
 }
 
-.traveller-profile-pic {
+.traveller-profile-pic-thumbnail {
 	background: url('../assets/empty-profile.png') no-repeat;
 	height: $profile-icon-size;
     width: $profile-icon-size;
     background-size: contain;
     border-radius: 50%;  
-    border: 2px solid white;
+    border: 2px solid $color-on-accent;
     float: right;
     margin-top: 7px;
+    position: relative;
+    z-index: 10;
+}
+
+/**** Traveller Page ****/
+
+.traveller-profile-pic {
+	background: url('../assets/empty-profile.png') no-repeat;
+	height: 110px;
+    width: 110px;
+    background-size: contain;
+    border-radius: 50%; 
+    margin: 0 auto; 
+	border: 3px solid $color-on-accent;
+}
+
+.traveller-profile-pic-container {
+	background-color: $accent-color;
+	padding-bottom: 20px;
+}
+
+.traveller-header-info {
+    margin: 0 auto; 
+	color: $color-on-accent;
+	margin-top: 10px;
+}
+
+.traveller-name-text {
+	text-align: center;
+	font-weight: bold;
+}
+
+.traveller-home-text {
+	text-align: center;
+	font-size: 12px;
+	font-weight: lighter;
+}
+
+.traveller-snapshot-info-container {
+	height: 50px;
+	width: 100%;
+	background: rgba(78, 187, 142, 0.65);
+
+	display: table;
+	table-layout: fixed;
+}
+
+.traveller-snapshot-info-item {
+	display: table-cell;
+	height: 100%;
+	text-align: center;
+	color: $color-on-accent;
+	font-size: 12px;
+	padding: 5px;
+	padding-top: 10px;
+}
+
+.traveller-details-container {
+	padding: 20px
 }
 
 /**** Mapbox map styles ****/
