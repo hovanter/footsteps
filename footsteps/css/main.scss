@@ -221,6 +221,8 @@ ul {
 	height: 75px;
 	margin-bottom: 30px;
 }
+.photo-track::-webkit-scrollbar { width: 0 !important }
+
 
 .path-preview {
 	max-height: 100%;
@@ -433,4 +435,36 @@ ul {
 	background: url(../assets/markers-bar.png) no-repeat;
 	background-size: contain;
 	margin: 7px auto;
+}
+
+/**** My Markers ****/
+.paris-marker-image{
+	background: url('../assets/paris-thumbnail.jpg') no-repeat;
+	background-size: cover;
+  height: 80%;
+  width: 100%;
+	float: left;
+	margin-right: 14px;
+}
+
+.photo-marker-text{
+	margin-left: 10px;
+}
+
+.sound-wave-image{
+	background: url('../assets/sound-wave.png') no-repeat;
+	background-size: cover;
+  height: 60%;
+  width: 100%;
+	float: left;
+	margin-right: 14px;
+}
+
+.extra-margin{
+	margin-top:10px;
+}
+
+.last-marker{
+   margin-bottom: 75px;
+   clear: both;
 }

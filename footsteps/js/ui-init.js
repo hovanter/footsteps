@@ -46,7 +46,7 @@ $(document).ready(function() {
     // Probably more fancy than we need...
     $('#dest-search-input').on("change paste keyup", function() {
         var search_text = $('#dest-search-input').val();
-        if (!search_text || search_text == null) {
+        if (!search_text || search_text == null || search_text.length == 0) {
             $('#search-results').html("");
             return;
         }

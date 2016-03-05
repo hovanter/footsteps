@@ -20,6 +20,7 @@ $content-background-color: #eeeeee;
 	height: 100%;
 	background-color: $content-background-color;
 }
+.content::-webkit-scrollbar { width: 0 !important }
 
 .bar-nav ~ .content-home {
 	padding-top: 0px;
@@ -76,6 +77,7 @@ $content-background-color: #eeeeee;
 
 .btn-primary {
 	background-color: $accent-color;
+	font-family: AvenirWeb_regular;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -126,7 +128,23 @@ $content-background-color: #eeeeee;
 #path-items-container .table-view-cell {
     padding: 0px;
     height: 88px;
+}
+
+#marker-photos-container .table-view-cell {
+    padding: 0px;
+    height: 200px;
 } 
+
+#marker-audio-container .table-view-cell {
+    padding: 0px;
+    height: 100px;
+} 
+
+#marker-text-container .table-view-cell {
+    padding: 0px;
+    height: 80px;
+} 
+
 
 #path-items-container a {
 	padding-top: 11px;
