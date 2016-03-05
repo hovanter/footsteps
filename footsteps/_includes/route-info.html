@@ -1,15 +1,13 @@
 <div id="route-info" class="sidebar-content">
-    <div class="slider" id="mySlider">
-        <div class="slide-group">
-            <div class="slide">
-                {% include route-info-panel.html title="Route 1" profile-pic="" %}
-            </div>
-            <div class="slide">
-                {% include route-info-panel.html title="Route 2" %}
-            </div>
-            <div class="slide">
-                {% include route-info-panel.html title="Route 3" %}
-            </div>
+    <div class="slider">
+        <div class="slide">
+            {% include route-info-panel.html title="Path 1 of 3" profile-pic="" %}
+        </div>
+        <div class="slide">
+            {% include route-info-panel.html title="Path 2 of 3" %}
+        </div>
+        <div class="slide">
+            {% include route-info-panel.html title="Path 3 of 3" %}
         </div>
     </div>
     <div>
@@ -18,8 +16,8 @@
 </div>
 <script>
 // Slick init scripts.
-$('.slide-group').slick({
+$('.slider').slick({
     dots: true
 });
-$('.slide-group button').remove(); 
+$('.slider button').remove(); 
 </script>

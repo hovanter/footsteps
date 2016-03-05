@@ -19,6 +19,12 @@ $grey-color-dark:  darken($grey-color, 25%);
     content: "";
 }
 
+/**** Slide style ****/
+
+.slick-slide {
+	overflow: hidden;
+}
+
 /**** Pager (dots) style ****/
 
 ul.slick-dots {

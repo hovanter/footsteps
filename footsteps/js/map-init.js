@@ -103,7 +103,7 @@ $(document).ready(function() {
 // amount of the viewport obstructed by a sidebar
 // with the given height.
 function _panToPath(path, sidebar_height) {
-    var bounds = path.getBounds();
+    /*var bounds = path.getBounds();
     var sb_top = $(window).height() - sidebar_height - 150;
     var sb_offset = sb_top / $(window).height();
     var lat_diff = bounds._northEast.lat - bounds._southWest.lat;
@@ -112,15 +112,16 @@ function _panToPath(path, sidebar_height) {
     map.fitBounds([
         [adjusted_lat, bounds._southWest.lng],
         [bounds._northEast.lat, bounds._northEast.lng]
-    ]);
+    ]);*/
+    map.fitBounds(path.getBounds());
 }
 
 // Selects a given path (marker).
 function _selectPath(path) {
     path.setStyle({color: '#f66', opacity: 0.8});
     setSidebarContent('route-info.html')
-    showSidebar(300);
-    _panToPath(path, 300);
+    showSidebar(530);
+    _panToPath(path, 530);
 }
 
 // Deselects a given path (marker).
