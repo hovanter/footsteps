@@ -10,22 +10,16 @@
 </div>
 
 <!-- Lower-right-corner action buttons -->
-<div class="actions">
-    <!-- Record/stop button -->
-	<div class="action-container animated" >
-	   <div class="action-button icon icon-play"></div>
-	</div>
+<ul class="actions">
+    <!-- Drop button -->
+	<li id="drop-button" class="action-button animated"></li>
 
-    <!-- Drop item button -->
-	<div class="action-container animated">
-        <div class="action-button" id="recording-icon"></div>
-    </div>
+    <!-- Recording button -->
+    <li id="recording-button" class="action-button animated icon icon-play"></li>
 
-    <!-- Pan to user location button -->
-	<div class="action-container animated">
-        <div class="action-button icon icon-home" id="locate-user-button"></div>
-    </div>
-</div>
+    <!-- Pan-to-user-location button -->
+    <li id="locate-user-button" class="action-button animated icon icon-home"></li>
+</ul>
 
 <!-- Popup -->
 <div id="popup-overlay" class="animated">

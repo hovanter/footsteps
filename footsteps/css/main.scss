@@ -114,20 +114,21 @@ ul {
 
 /**** Action items ****/
 
-.action-container {
-	background-color: $accent-color;
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-}
-
-.action-container:first-child {
-	margin-bottom: 15px;
+.actions {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
 }
 
 .action-button {
 	height: 50px;
 	width: 50px;
+	margin-top: 15px;
+	background-color: $accent-color;
+	display: block;
 	font-size: 30px;
 	line-height: 50px;
 	text-align: center;
@@ -144,24 +145,16 @@ ul {
 	display: block;
 }
 
-.actions {
-	position: absolute;
-	bottom: 15px;
-	right: 15px;
-}
-
-#recording-icon {
-	background: url('../assets/dropMarkerIcon.png') no-repeat;
+#drop-button {
+	display: none;
+	background-image: url('../assets/dropMarkerIcon.png');
+	background-repeat: no-repeat;
 	background-size: 25px 32px;
     background-position: 50% 50%;
 }
 
-#isRecording {
+.isRecording {
 	background-color: #FF5555;
-}
-
-.action-container:nth-child(2) {
-	display: none;
 }
 
 /**** Filters / Path info box ****/

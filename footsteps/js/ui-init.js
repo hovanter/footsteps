@@ -11,36 +11,28 @@ $(document).ready(function() {
     });
 
     // Wire up drop button to show marker menu popup.
-    var dropButton = $('.action-container:nth-child(2)');
-    dropButton.click(function() {
+    $('#drop-button').click(function() {
         setPopupContent('drop-options.html')
         showPopup(70);
     });
 
     // Wire up record button to switch between play/stop icons.
-    var recordButton = $('.action-container:first-child .action-button');
-    recordButton.click(function() {
-
-        dropButton.toggle();
-
-        if(recordButton.hasClass('icon-stop')) {
-            recordButton.removeClass('icon-stop');
-            recordButton.addClass('icon-play');
-            $('.action-container:first-child').removeAttr('id');
-
-            // dropButton.addClass('');
+    $('#recording-button').click(function() {
+        if ($('#recording-button').hasClass('icon-stop')) {
+            $('#recording-button').removeClass('icon-stop');
+            $('#recording-button').removeClass('isRecording');
+            $('#recording-button').addClass('icon-play');
+            $('#drop-button').hide();
         } else {
-            recordButton.removeClass('icon-play');
-            recordButton.addClass('icon-stop'); 
-            $('.action-container:first-child').attr('id', 'isRecording');
-
-            // dropButton.removeClass('');   
+            $('#recording-button').removeClass('icon-play');
+            $('#recording-button').addClass('icon-stop');
+            $('#recording-button').addClass('isRecording'); 
+            $('#drop-button').show();
         }
     });
 
     // Wire up locate user button.
-    var locateUserButton = $('#locate-user-button');
-    locateUserButton.click(function() {
+    $('#locate-user-button').click(function() {
         panToUserLocation();
     });
 
