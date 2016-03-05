@@ -96,6 +96,10 @@ ul {
 
 /**** Top bar ****/
 
+.title {
+	font-family: AvenirWeb_demi;
+}
+
 .profile-button {
 	color: $color-on-accent;
 	padding: 0px !important;
@@ -311,6 +315,31 @@ ul {
     width: 90px;
 	float: left;
 	margin-right: 14px;
+}
+
+.date-text {
+	float: right;
+    margin-right: 10px;
+    font-size: 11px;
+    color: #bdbdbd;
+}
+
+.num-followers-text {
+	font-size: 11px;
+	float: left;
+    color: #bdbdbd;
+}
+
+.path-details-last-row {
+	margin-top: 12px;
+}
+
+/*.pathname {
+	font-family: AvenirWeb_demi;
+}*/
+
+.location-text {
+	font-size: 12px;
 }
 
 /*#church-pic-marker {
