@@ -38,9 +38,15 @@ $(document).ready(function() {
         }
     });
 
-    // Wire up traveller profile pic (route info panel) to profile page
+    // Wire up locate user button.
+    var locateUserButton = $('#locate-user-button');
+    locateUserButton.click(function() {
+        panToUserLocation();
+    });
+
+    // Wire up traveller profile pic (route info panel) to profile page.
     $('.traveller-profile-pic').click(function() {
-        
+
     });
 
     // Slick init scripts.

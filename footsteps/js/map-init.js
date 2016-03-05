@@ -8,12 +8,12 @@ $(document).ready(function() {
       minZoom: 10,
       attributionControl: false
     }).setView([37.4260422,-122.170671], 17);
+    map.zoomControl.removeFrom(map);
 
     /* Load hard-coded layers. */
     peopleLayer = L.mapbox.featureLayer('bhnascar.p9c980ek');
     friendsLayer = L.mapbox.featureLayer('bhnascar.pa5h76d8');
     placesLayer = L.mapbox.featureLayer('bhnascar.pa5806m2');
-    map.zoomControl.removeFrom(map);
 
     /* Wire up clicks for map markers and polylines. (Show sidebar) */
     placesLayer.on("ready", function(e) {
@@ -26,24 +26,29 @@ $(document).ready(function() {
     });
 
     /* Find user location. */
-    map.locate();
-    map.on('locationerror', null);
-    map.on('locationfound', function(e) {
-      map.panTo(new L.LatLng(e.latlng.lat, e.latlng.lng));
-      userLocationLayer = L.mapbox.featureLayer().addTo(map);
-      userLocationLayer.setGeoJSON({
-          type: 'Feature',
-          geometry: {
-              type: 'Point',
-              coordinates: [e.latlng.lng, e.latlng.lat]
-          },
-          properties: {
-              'title': 'Here you are!',
-              'marker-color': '#ff8888',
-              'marker-symbol': 'pitch'
-          }
+    panToUserLocation = function() {
+      map.locate();
+      map.on('locationerror', null);
+      map.on('locationfound', function(e) {
+        map.panTo(new L.LatLng(e.latlng.lat, e.latlng.lng));
+        if (typeof userLocationLayer == "undefined") {
+          userLocationLayer = L.mapbox.featureLayer().addTo(map);
+        }
+        userLocationLayer.setGeoJSON({
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [e.latlng.lng, e.latlng.lat]
+            },
+            properties: {
+                'title': 'Here you are!',
+                'marker-color': '#F0E68C',
+                'marker-symbol': 'pitch'
+            }
+        });
       });
-    });
+    }
+    panToUserLocation();
 
     /* Filter functions */
 
