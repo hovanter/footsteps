@@ -27,6 +27,11 @@ $content-background-color: #eeeeee;
 
 /**** Navigation bar styles ****/
 
+/* To fix positioning context for subitems. */
+.bar-content {
+	position: relative;
+}
+
 .bar a, a:hover, a:visited, a:active {
 	text-decoration: none;
 	color: $accent-color;
