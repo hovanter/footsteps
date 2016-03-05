@@ -42,7 +42,7 @@ $(document).ready(function() {
             },
             properties: {
                 'title': 'Here you are!',
-                'marker-color': '#ff8888',
+                'marker-color': '#F0E68C',
                 'marker-symbol': 'pitch'
             }
         });
