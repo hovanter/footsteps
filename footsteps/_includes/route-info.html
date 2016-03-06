@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="follow-button-container">
-        <button class="btn btn-primary btn-block">Follow</button> 
+        <button class="btn btn-primary btn-block" id="route-info-button">Follow</button> 
     </div>
 </div>
 <script>
@@ -21,9 +21,6 @@ $('.slider').slick({
 });
 $('.slider button').remove(); 
 
-// Wire up follow button on route info card
-$('#route-info button').click(function() {
-    setSidebarContent('follow-instructions.html');
-    showSidebar(270);
-});
+wireFollow();
+
 </script>
