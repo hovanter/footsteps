@@ -157,6 +157,12 @@ ul {
 	background-color: #FF5555;
 }
 
+.your-location-icon {
+	background: url('../assets/person-icon-2.png') no-repeat;
+	background-size: contain;
+	background-color: $accent-color;
+}
+
 /**** Filters / Path info box ****/
 .animated {
     -webkit-transition: all $ui-transition-speed ease;
