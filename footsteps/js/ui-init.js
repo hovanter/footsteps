@@ -5,7 +5,7 @@ $(document).ready(function() {
 		if (isSidebarVisible()) { 
 	 		hideSidebar();
 	 	} else {
-            setSidebarContent('filters.html');
+            setSidebarContent('following.html');
 	 		showSidebar(270);
 	 	}
     });
