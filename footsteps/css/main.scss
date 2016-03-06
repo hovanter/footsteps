@@ -427,6 +427,15 @@ ul {
 	background-size: contain;
 	margin: 7px auto;
 }
+.drop-bar-follow {
+	height: 50px;
+	width: 270px;
+	background: url(../assets/markers-bar.png) no-repeat;
+	background-size: contain;
+	margin: 10px auto;
+	margin-top: 15px;
+}
+
 
 /**** My Markers ****/
 .paris-marker-image{
@@ -462,7 +471,30 @@ ul {
 
 /**** Following Panel ****/
 .directions-img{
-	background: url('../assets/empty-profile.png') no-repeat;
-	background-size: cover;
-	width: 100%;
+	width: 15%;
+	height: auto;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.direction-text{
+	position: relative;
+	float: right;
+	margin-top: 20px;
+	margin-right: 70px;
+}
+.marker-text{
+	position: relative;
+	float: right;
+	margin-top: -20px;
+	margin-right: 70px;
+	font-size: 11px;
+   color: #bdbdbd;
+}
+
+.new-marker-dialogue{
+	margin-top: 15px;
+}
+
+.marker-buttons{
+	text-align: center;
 }

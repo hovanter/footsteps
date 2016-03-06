@@ -5,7 +5,7 @@ $(document).ready(function() {
 		if (isSidebarVisible()) { 
 	 		hideSidebar();
 	 	} else {
-            setSidebarContent('following.html');
+            setSidebarContent('filters.html');
 	 		showSidebar(270);
 	 	}
     });
@@ -37,7 +37,7 @@ $(document).ready(function() {
     });
 
     // Wire up follow button on route info card
-    $('#route-info button').click(function() {
+    $('#route-info-button').click(function() {
        console.log('Hi');
        hideSidebar();
     });
@@ -64,3 +64,22 @@ $(document).ready(function() {
         });
     })
 });
+
+function wireFollow(){
+    $('#route-info-button').click(function() {
+            hideSidebar();
+            setSidebarContent('following.html');
+            showSidebar(180);
+            setTimeout(function(){
+                setPopupContent('new-marker.html')
+                showPopup(100);
+            },2000);
+    });
+}
+
+function wirePickUp(){
+    $('#pick-up').click(function(){
+        setPopupContent('drop-options.html');
+        showPopup();
+    });
+}
