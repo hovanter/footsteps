@@ -164,6 +164,22 @@ ul {
 }
 
 /**** Filters / Path info box ****/
+
+#friends-icon {
+	background: url('../assets/friends-icon.png') no-repeat;
+	background-size: contain;
+}
+
+#location-icon {
+	background: url('../assets/location-icon.png') no-repeat;
+	background-size: contain;
+}
+
+#paths-icon {
+	background: url('../assets/paths-icon.png') no-repeat;
+	background-size: contain;
+}
+
 .animated {
     -webkit-transition: all $ui-transition-speed ease;
     transition: all $ui-transition-speed ease
