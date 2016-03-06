@@ -1,15 +1,20 @@
 <div class="bar-content bar-inverted">
-    <a class="traveller-profile-pic-thumbnail catherine-pic"href="traveller-profile.html" data-ignore="push"></a>
+    <a class="traveller-profile-pic-thumbnail {{ include.profile-id }}"href="traveller-profile.html" data-ignore="push"></a>
     <h1 class="title">{{ include.title }}</h1>
 </div>
 <br />
-<h4>About</h4>
-<p class="route-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<h3 class="pathname-header">{{ include.pathname }}</h3>
+<div class="path-start-end-container">
+    <h5><span class="path-start-end-label">Start:</span> <span class="path-start-end-value">{{include.path-start}}</span></h5> 
+    <h5><span class="path-start-end-label">End:</span> <span class="path-start-end-value">Hoover Tower</span></h5> 
+</div>
+<!-- <h4>About</h4>
+<p class="route-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
 <h4>Photos</h4>
 <div class="photo-track">
-    <img class="path-preview" src="assets/paris-thumbnail.jpg" />
-    <img class="path-preview" src="assets/paris-cheese-thumbnail.jpg" />
-    <img class="path-preview" src="assets/tokyo.jpg" />
+    <img class="path-preview" src="assets/hoover-tower.jpg" />
+    <img class="path-preview" src="assets/stanford-chapel.jpg" />
+    <img class="path-preview" src="assets/grad-educ.jpg" />
     <img class="path-preview" src="assets/ireland-thumbnail.jpg" />
 </div>
 <h4>Essential stats</h4>
@@ -17,7 +22,7 @@
     <tr>
         <td>
             <span class="badge">3</span>
-            <p>Hidden gems</p>
+            <p>Discoveries</p>
         </td>
         <td>
             <span class="badge">5</span>

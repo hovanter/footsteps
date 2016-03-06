@@ -84,6 +84,10 @@ body {
 	font-family: AvenirWeb_regular;
 }
 
+input {
+	font-family: AvenirWeb_regular;
+}
+
 header {
 	position: absolute;
 	top: 15px;
@@ -165,6 +169,22 @@ ul {
 
 /**** Filters / Path info box ****/
 
+.pathname-header {
+	color: #4EBB8F;
+}
+
+.path-start-end-label {
+	color: #dadada;
+}
+
+.path-start-end-container {
+	margin-bottom: 30px;
+}
+
+.path-start-end-value {
+	color: grey;
+}
+
 #friends-icon {
 	background: url('../assets/friends-icon.png') no-repeat;
 	background-size: contain;
@@ -224,7 +244,7 @@ ul {
 }
 
 .route-description {
-	padding: 15px;
+	padding: 0px 15px 15px 15px;
 }
 
 .route-info-table {
@@ -261,6 +281,16 @@ ul {
 .catherine-pic {
 	background: url('../assets/catherine-profile.jpg') no-repeat;
     background-size: contain;
+}
+
+.ben-han-pic {
+	background: url('../assets/ben-han-profile.jpg') no-repeat;
+    background-size: cover;
+}
+
+.andrei-pic {
+	background: url('../assets/andrei-profile.jpg') no-repeat;
+    background-size: cover;
 }
 
 .traveller-profile-pic {
