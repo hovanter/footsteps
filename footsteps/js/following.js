@@ -19,6 +19,17 @@ function wirePickUp(){
         setPopupContent('photo-discovery1.html');
         showPopup(250);
     });
+    $('#skip-btn').off("click");
+    $('#skip-btn').click(function(){
+        $('#popup-overlay').trigger('click');
+    });
+    $('#popup-overlay-btn').off("click");
+    $('#popup-overlay').click(function(){
+        setTimeout(function(){
+            setPopupContent('new-marker2.html');
+            showPopup(100);
+        },2000);
+    });
 }
 
 function wireOverlay(){
@@ -42,6 +53,18 @@ function wirePickUp2(){
         setPopupContent('photo-discovery2.html');
         showPopup(300);
     });
+    $('#skip-btn').off("click");
+    $('#skip-btn').click(function(){
+        $('#popup-overlay').trigger('click');
+    });
+    $('#popup-overlay-btn').off("click");
+    $('#popup-overlay').click(function(){
+        setTimeout(function(){
+            setPopupContent('new-marker3.html');
+            showPopup(100);
+        },2000);
+    });
+
 }
 
 function wireOverlay2(){
@@ -65,6 +88,18 @@ function wirePickUp3(){
         setPopupContent('photo-discovery3.html');
         showPopup(250);
     });
+    $('#skip-btn').off("click");
+    $('#skip-btn').click(function(){
+        $('#popup-overlay').trigger('click');
+    });
+    $('#popup-overlay-btn').off("click");
+    $('#popup-overlay').click(function(){
+        setTimeout(function(){
+            setPopupContent('path-complete.html');
+            showPopup(100);
+        },2000);
+    });
+
 }
 
 function wireOverlay3(){
