@@ -120,8 +120,8 @@ function _panToPath(path, sidebar_height) {
 function _selectPath(path) {
     path.setStyle({color: '#f66', opacity: 0.8});
     setSidebarContent('route-info.html')
-    showSidebar(530);
-    _panToPath(path, 530);
+    showSidebar(500);
+    _panToPath(path, 500);
 }
 
 // Deselects a given path (marker).
