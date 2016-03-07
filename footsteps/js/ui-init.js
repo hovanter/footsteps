@@ -21,16 +21,13 @@ $(document).ready(function() {
         if ($('#recording-button').hasClass('icon-stop')) {
             $('#recording-button').removeClass('icon-stop');
             $('#recording-button').removeClass('isRecording');
-            $('#recording-button').addClass('isNotRecording');
-
-            $("#recording-icon").show();
+            $('#recording-button').addClass('icon-play');
             $('#drop-button').hide();
         } else {
-            $('#recording-button').removeClass('isNotRecording');
+            $('#recording-button').removeClass('icon-play');
             $('#recording-button').addClass('icon-stop');
             $('#recording-button').addClass('isRecording'); 
             $('#drop-button').show();
-            $("#recording-icon").hide();
         }
     });
 
@@ -68,22 +65,3 @@ $(document).ready(function() {
     })
 });
 
-function wireFollow(){
-    $('#route-info-button').click(function() {
-            hideSidebar();
-            setSidebarContent('following.html');
-            showSidebar(180);
-            setTimeout(function(){
-                setPopupContent('new-marker.html')
-                showPopup(100);
-            },2000);
-    });
-}
-
-function wirePickUp(){
-    $('#pick-up').click(function(){
-        hideSidebar();
-        setPopupContent('photo-discovery1.html');
-        showPopup(300);
-    });
-}

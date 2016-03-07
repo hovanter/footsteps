@@ -1,6 +1,7 @@
 //pick up three markers on the way, wire different templates for each stage
 function wireFollow(){
     $('#route-info-button').click(function() {
+            $('#sidebar-handle-icon').hide();
             hideSidebar();
             setSidebarContent('following.html');
             showSidebar(180);
@@ -16,7 +17,7 @@ function wirePickUp(){
     $('#pick-up').click(function(){
         hideSidebar();
         setPopupContent('photo-discovery1.html');
-        showPopup(300);
+        showPopup(250);
     });
 }
 
@@ -62,18 +63,18 @@ function wirePickUp3(){
     $('#pick-up').click(function(){
         hideSidebar();
         setPopupContent('photo-discovery3.html');
-        showPopup(300);
+        showPopup(250);
     });
 }
 
 function wireOverlay3(){
     $('#popup-overlay').click(function(){
+        console.log('show plz');
         showSidebar(180);
         setTimeout(function(){
             setPopupContent('path-complete.html')
             showPopup(100);
         },2000);
-        hideSidebar();
     });
 }
 
@@ -81,5 +82,7 @@ function unwireOverlay(){
     $('#popup-overlay').off("click");
     $('#popup-overlay').click(function(){
         hidePopup();
+        hideSidebar();
+        $('#sidebar-handle-icon').show();
     });
 }

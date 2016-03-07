@@ -420,6 +420,22 @@ ul {
     color: #bdbdbd;
 }
 
+.follow-date-text-video{
+	float: right;
+  margin-right: 10px;
+  margin-top: 25px;
+  font-size: 13px;
+  color: #acacac;
+}
+
+.follow-date-text-photo{
+	float: right;
+  margin-right: 10px;
+  margin-top: 25px;
+  font-size: 13px;
+  color: #acacac;
+}
+
 .num-followers-text {
 	font-size: 11px;
 	float: left;
@@ -576,7 +592,7 @@ ul {
 
 /**** Photo Discoverys ****/
 .photo-discovery1{
-	background: url('../assets/paris-thumbnail.jpg') no-repeat;
+	background: url('../assets/totem.jpg') no-repeat;
 	background-size: cover;
   height: 80%;
   width: 100%;
