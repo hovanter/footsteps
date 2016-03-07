@@ -12,7 +12,7 @@ function getUserLocation(callback) {
             },
             properties: {
                 'title': 'Here you are!',
-                'marker-color': '#F0E68C',
+                'marker-color': '#DAA520',
                 'marker-symbol': 'pitch'
             }
         });
