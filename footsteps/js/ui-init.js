@@ -79,7 +79,8 @@ function wireFollow(){
 
 function wirePickUp(){
     $('#pick-up').click(function(){
-        setPopupContent('drop-options.html');
-        showPopup();
+        hideSidebar();
+        setPopupContent('photo-discovery1.html');
+        showPopup(300);
     });
 }
