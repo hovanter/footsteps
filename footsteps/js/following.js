@@ -17,7 +17,7 @@ function wirePickUp(){
     $('#pick-up').click(function(){
         hideSidebar();
         setPopupContent('photo-discovery1.html');
-        showPopup(250);
+        showPopup(225);
     });
     $('#skip-btn').off("click");
     $('#skip-btn').click(function(){
@@ -86,7 +86,7 @@ function wirePickUp3(){
     $('#pick-up').click(function(){
         hideSidebar();
         setPopupContent('photo-discovery3.html');
-        showPopup(250);
+        showPopup(225);
     });
     $('#skip-btn').off("click");
     $('#skip-btn').click(function(){

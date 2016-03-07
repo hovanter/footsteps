@@ -259,6 +259,21 @@ ul {
     z-index: 10;
     top: 10px;
 }
+.traveller-profile-pic-thumbnail-follow {
+	background: url('../assets/empty-profile.png') no-repeat;
+	height: 50px; /*$profile-icon-size;*/
+    width: 50px; /*$profile-icon-size;*/
+    border-radius: 50%;  
+    border: 2px solid $color-on-accent;
+    float: right;
+    margin-top: -198px; /*7px;*/
+    position: relative;
+    z-index: 20;
+    margin-left: 10px;
+}
+.more-margin{
+	margin-top: -240px;
+}
 
 .route-description {
 	padding: 0px 15px 15px 15px;
@@ -425,9 +440,8 @@ ul {
 }
 
 .follow-date-text-video{
-	float: right;
-  margin-right: 10px;
-  margin-top: 25px;
+	float: left;
+  margin-left: 10px;
   font-size: 13px;
   color: #acacac;
 }
@@ -435,7 +449,6 @@ ul {
 .follow-date-text-photo{
 	float: right;
   margin-right: 10px;
-  margin-top: 25px;
   font-size: 13px;
   color: #acacac;
 }
@@ -616,4 +629,24 @@ ul {
   height: 80%;
   width: 100%;
 	float: left;
+}
+
+.photo-description{
+	font-size: 12px;
+	font-weight: lighter;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+/**** recording styes ****/
+.save-text{
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.share-button-container {
+	text-align: center;
+	padding: 10px 15px 15px;
 }
