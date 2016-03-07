@@ -480,6 +480,12 @@ ul {
 	z-index: -1;
 }
 
+.start-icon, .end-icon {
+	border-radius: 50%;
+	border: 1px solid #FFFFFF;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
 /**** Markers bar ****/
 .drop-bar {
 	height: 50px;
