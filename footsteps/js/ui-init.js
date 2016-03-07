@@ -65,21 +65,3 @@ $(document).ready(function() {
     })
 });
 
-function wireFollow(){
-    $('#route-info-button').click(function() {
-            hideSidebar();
-            setSidebarContent('following.html');
-            showSidebar(180);
-            setTimeout(function(){
-                setPopupContent('new-marker.html')
-                showPopup(100);
-            },2000);
-    });
-}
-
-function wirePickUp(){
-    $('#pick-up').click(function(){
-        setPopupContent('drop-options.html');
-        showPopup();
-    });
-}

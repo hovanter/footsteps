@@ -161,10 +161,24 @@ ul {
 	background-color: #FF5555;
 }
 
+.isNotRecording {
+	padding-top: 12px;
+}
+
+
+#recording-icon {
+	background-color: white;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
 .your-location-icon {
-	background: url('../assets/person-icon-2.png') no-repeat;
-	background-size: contain;
+	background: url('../assets/reticle.png') no-repeat;
+	background-size: 30px 30px;
 	background-color: $accent-color;
+	background-position: center;
 }
 
 /**** Filters / Path info box ****/
@@ -232,8 +246,8 @@ ul {
 
 .traveller-profile-pic-thumbnail {
 	background: url('../assets/empty-profile.png') no-repeat;
-	height: 39px; /*$profile-icon-size;*/
-    width: 39px; /*$profile-icon-size;*/
+	height: 50px; /*$profile-icon-size;*/
+    width: 50px; /*$profile-icon-size;*/
     background-size: contain;
     border-radius: 50%;  
     border: 2px solid $color-on-accent;
@@ -241,6 +255,7 @@ ul {
     margin-top: 2px; /*7px;*/
     position: relative;
     z-index: 10;
+    top: 10px;
 }
 
 .route-description {
@@ -406,6 +421,22 @@ ul {
     color: #bdbdbd;
 }
 
+.follow-date-text-video{
+	float: right;
+  margin-right: 10px;
+  margin-top: 25px;
+  font-size: 13px;
+  color: #acacac;
+}
+
+.follow-date-text-photo{
+	float: right;
+  margin-right: 10px;
+  margin-top: 25px;
+  font-size: 13px;
+  color: #acacac;
+}
+
 .num-followers-text {
 	font-size: 11px;
 	float: left;
@@ -559,9 +590,22 @@ ul {
 }
 
 .new-marker-dialogue{
-	margin-top: 15px;
+	margin-top: 20px;
 }
 
 .marker-buttons{
 	text-align: center;
+}
+
+#skip-btn {
+	background-color: gray;
+}
+
+/**** Photo Discoverys ****/
+.photo-discovery1{
+	background: url('../assets/totem.jpg') no-repeat;
+	background-size: cover;
+  height: 80%;
+  width: 100%;
+	float: left;
 }
