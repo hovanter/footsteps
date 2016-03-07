@@ -18,15 +18,11 @@ $(document).ready(function() {
 
     // Wire up record button to switch between play/stop icons.
     $('#recording-button').click(function() {
-        if ($('#recording-button').hasClass('icon-stop')) {
-            $('#recording-button').removeClass('icon-stop');
+        if ($('#recording-button').hasClass('isRecording')) {
             $('#recording-button').removeClass('isRecording');
-            $('#recording-button').addClass('icon-play');
             $('#drop-button').hide();
         } else {
-            $('#recording-button').removeClass('icon-play');
-            $('#recording-button').addClass('icon-stop');
-            $('#recording-button').addClass('isRecording'); 
+            $('#recording-button').addClass('isRecording');
             $('#drop-button').show();
         }
     });
