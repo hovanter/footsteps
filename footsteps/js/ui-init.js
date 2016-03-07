@@ -63,5 +63,18 @@ $(document).ready(function() {
             }
         });
     })
+    var isRecording = false;
+    $('#recording-button').click(function(){
+        if (isRecording === false){
+            setPopupContent('record-notification.html');
+            showPopup(250);
+            isRecording = true;
+        }
+        else{
+            setPopupContent('stop-record-notification.html');
+            showPopup(250);
+            isRecording = false;
+        }
+    });
 });
 
