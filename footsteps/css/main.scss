@@ -161,10 +161,24 @@ ul {
 	background-color: #FF5555;
 }
 
+.isNotRecording {
+	padding-top: 12px;
+}
+
+
+#recording-icon {
+	background-color: white;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
 .your-location-icon {
-	background: url('../assets/person-icon-2.png') no-repeat;
-	background-size: contain;
+	background: url('../assets/reticle.png') no-repeat;
+	background-size: 30px 30px;
 	background-color: $accent-color;
+	background-position: center;
 }
 
 /**** Filters / Path info box ****/

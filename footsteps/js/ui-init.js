@@ -21,13 +21,16 @@ $(document).ready(function() {
         if ($('#recording-button').hasClass('icon-stop')) {
             $('#recording-button').removeClass('icon-stop');
             $('#recording-button').removeClass('isRecording');
-            $('#recording-button').addClass('icon-play');
+            $('#recording-button').addClass('isNotRecording');
+
+            $("#recording-icon").show();
             $('#drop-button').hide();
         } else {
-            $('#recording-button').removeClass('icon-play');
+            $('#recording-button').removeClass('isNotRecording');
             $('#recording-button').addClass('icon-stop');
             $('#recording-button').addClass('isRecording'); 
             $('#drop-button').show();
+            $("#recording-icon").hide();
         }
     });
 
