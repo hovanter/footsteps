@@ -50,6 +50,15 @@ function addLayerToggle(layerID, cssID) {
     }
 }
 
+// Loads a search result (hard-code to Hoover tower 
+// for now)
+function loadResult() {
+    hideSearchResults();
+    map.panTo([37.4276938, -122.1662555]);
+    setSidebarContent('route-info.html')
+    showSidebar(500);
+}
+
 $(document).ready(function() {
     L.mapbox.accessToken = 'pk.eyJ1IjoiYmhuYXNjYXIiLCJhIjoiY2lqa3NzaTc3MDAwNHQ5a29ibXgxOWllbyJ9.PwtqGI5Rbwewn2sbw5cgVw';
     map = L.mapbox.map('footstep-map', 'mapbox.streets', {
@@ -77,12 +86,13 @@ $(document).ready(function() {
     map.addLayer(layers["user"]);
 
     // Pan to user location. 
-    // panToUserLocation();
+    panToUserLocation();
 
     /* Wire up clicks for map markers and polylines. (Show sidebar) */
     for (var key in layers) {
         var layer = layers[key];
         layer.on("ready", function(e) {
+            var parentLayer = this;
             this.eachLayer(function(marker) {
                 if (marker.feature.geometry.type == "LineString") {
                     marker.on("popupopen", function(e) {
@@ -91,7 +101,8 @@ $(document).ready(function() {
                     marker.on("popupclose", function(e) {
                         _deselectPath(this);
                     });
-                }
+                    _addStartAndEndIcons(parentLayer, marker);
+                } 
             });
         });
     }
@@ -114,6 +125,74 @@ function _panToPath(path, sidebar_height) {
         [bounds._northEast.lat, bounds._northEast.lng]
     ]);*/
     map.fitBounds(path.getBounds());
+}
+
+// Adds start and end icons to a given path.
+function _addStartAndEndIcons(parentLayer, pathLayer) {
+    var markerLayer = L.mapbox.featureLayer().addTo(map);
+
+    var iconURLs = [
+        "assets/catherine-profile.jpg",
+        "assets/ben-han-profile.jpg",
+        "assets/andrei-profile.jpg"
+    ];
+    var iconURL = iconURLs[Math.floor(Math.random() * iconURLs.length)];
+    
+    // Create markers using geoJSON
+    var coordinates = pathLayer.feature.geometry.coordinates
+    var geoJSON = [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": coordinates[0]
+            },
+            "properties": {
+                "title": "Start",
+                "icon": {
+                    "iconUrl": iconURL,
+                    "iconSize": [35, 35],
+                    "iconAnchor": [17.5, 17.5],
+                    "popupAnchor": [0, -20],
+                    "className": "start-icon"
+                }
+            }
+        }
+    ];
+
+    // Wire marker layer actions.
+    markerLayer.on("popupopen", function(e) {
+        _selectPath(pathLayer);
+    });
+    markerLayer.on("popupclose", function(e) {
+        _deselectPath(pathLayer);
+    })
+    markerLayer.on('layeradd', function(e) {
+        var marker = e.layer,
+        feature = marker.feature;
+        marker.setIcon(L.icon(feature.properties.icon));
+        _toggleHiddenLayers();
+    });
+
+    markerLayer.setGeoJSON(geoJSON);
+    parentLayer.addLayer(markerLayer);
+}
+
+function _toggleHiddenLayers() {
+    for (var key in layers) {
+        layer = layers[key];
+        if (!map.hasLayer(layer)) {
+            map.addLayer(layer);
+            map.removeLayer(layer);
+        }
+    }
+}
+
+// Loads a map layer from a JSON file.
+function _loadLayerFromJSON(json) {
+    var layer = L.mapbox.featureLayer().addTo(map);
+    layer.setGeoJSON(json);
+    return layer;
 }
 
 // Selects a given path (marker).

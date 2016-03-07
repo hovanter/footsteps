@@ -1,0 +1,498 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ilhaqdoc2",
+        "title": "End",
+        "description": "",
+        "marker-size": "medium",
+        "marker-color": "#c091e6",
+        "marker-symbol": "golf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.167746,
+          37.429095
+        ]
+      },
+      "id": "12073984ef3900320ef48ca9fa31b55f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Andrei route to class",
+        "description": "",
+        "stroke": "#c091e6",
+        "stroke-width": 7,
+        "stroke-opacity": 0.800000011920929
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.16696,
+            37.419714
+          ],
+          [
+            -122.167078,
+            37.419799
+          ],
+          [
+            -122.166874,
+            37.420003
+          ],
+          [
+            -122.16843,
+            37.421367
+          ],
+          [
+            -122.168676,
+            37.421699
+          ],
+          [
+            -122.169106,
+            37.422628
+          ],
+          [
+            -122.169427,
+            37.423616
+          ],
+          [
+            -122.169492,
+            37.423957
+          ],
+          [
+            -122.169438,
+            37.424085
+          ],
+          [
+            -122.16947,
+            37.424247
+          ],
+          [
+            -122.169084,
+            37.425337
+          ],
+          [
+            -122.169213,
+            37.425482
+          ],
+          [
+            -122.167915,
+            37.429282
+          ],
+          [
+            -122.167679,
+            37.429256
+          ]
+        ]
+      },
+      "id": "30a3898cd190aa72ac37e88683e560b1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ben-han route to class",
+        "description": "",
+        "stroke": "#c091e6",
+        "stroke-width": 7,
+        "stroke-opacity": 0.800000011920929
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.175865,
+            37.428686
+          ],
+          [
+            -122.171498,
+            37.42774
+          ],
+          [
+            -122.171348,
+            37.42826
+          ],
+          [
+            -122.171069,
+            37.42826
+          ],
+          [
+            -122.170747,
+            37.428243
+          ],
+          [
+            -122.170039,
+            37.42814
+          ],
+          [
+            -122.169846,
+            37.428711
+          ],
+          [
+            -122.169932,
+            37.428728
+          ],
+          [
+            -122.169953,
+            37.42889
+          ],
+          [
+            -122.169739,
+            37.428975
+          ],
+          [
+            -122.169706,
+            37.429026
+          ],
+          [
+            -122.169299,
+            37.428984
+          ],
+          [
+            -122.169084,
+            37.429009
+          ],
+          [
+            -122.168333,
+            37.429265
+          ],
+          [
+            -122.168269,
+            37.429563
+          ],
+          [
+            -122.167829,
+            37.429844
+          ],
+          [
+            -122.167754,
+            37.429785
+          ],
+          [
+            -122.167818,
+            37.429469
+          ],
+          [
+            -122.167679,
+            37.429435
+          ]
+        ]
+      },
+      "id": "4056d1e8079a56b94d7aa3820ce61831"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ilhaq8d71",
+        "title": "End",
+        "description": "",
+        "marker-size": "medium",
+        "marker-color": "#c091e6",
+        "marker-symbol": "golf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.167681,
+          37.429256
+        ]
+      },
+      "id": "74a9a5ef1923fd1319d9715f06635278"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ilap7doa0",
+        "title": "Bike ramp",
+        "description": "Did you know this existed?",
+        "marker-size": "medium",
+        "marker-color": "#c091e6",
+        "marker-symbol": "camera"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.169953,
+          37.428873
+        ]
+      },
+      "id": "8b74d8ce546a7361546cc4a6230ee84a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ilap86yu1",
+        "title": "Annenberg Auditorium",
+        "description": "Now a giant pit in the ground.",
+        "marker-size": "medium",
+        "marker-color": "#c091e6",
+        "marker-symbol": "camera"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.168301,
+          37.427612
+        ]
+      },
+      "id": "a9a93c06f4e6c69d60383551edc19430"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ilhaputl0",
+        "title": "End",
+        "description": "",
+        "marker-size": "medium",
+        "marker-color": "#c091e6",
+        "marker-symbol": "golf"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.167679,
+          37.429437
+        ]
+      },
+      "id": "b8eb5a4510f7a4e44061c69410a86a24"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ilapa7ui3",
+        "title": "Intersection of death",
+        "description": "Especially at 10 in the morning. Don't crash.",
+        "marker-size": "medium",
+        "marker-color": "#c091e6",
+        "marker-symbol": "camera"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.169384,
+          37.424528
+        ]
+      },
+      "id": "c08d867b335908d233082394ad65cbad"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "marker-ilap8yy92",
+        "title": "Strawberry tree",
+        "description": "Yes this is a strawberry tree. Yes the berries don't look like the supermarket kind of strawberry. Yes they are edible. Yes they are delicious. No, I will not pay your hospital bill, if any.",
+        "marker-size": "medium",
+        "marker-color": "#c091e6",
+        "marker-symbol": "camera"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.166177,
+          37.425482
+        ]
+      },
+      "id": "c81bbb4c14a6e10e68e4ca495ca08287"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Catherine route to class",
+        "description": "",
+        "stroke": "#c091e6",
+        "stroke-width": 7,
+        "stroke-opacity": 0.800000011920929
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.162775,
+            37.425107
+          ],
+          [
+            -122.162808,
+            37.425013
+          ],
+          [
+            -122.163484,
+            37.425133
+          ],
+          [
+            -122.163569,
+            37.425073
+          ],
+          [
+            -122.163602,
+            37.424911
+          ],
+          [
+            -122.165168,
+            37.42526
+          ],
+          [
+            -122.16535,
+            37.425371
+          ],
+          [
+            -122.165919,
+            37.425508
+          ],
+          [
+            -122.166037,
+            37.425508
+          ],
+          [
+            -122.166166,
+            37.425584
+          ],
+          [
+            -122.166241,
+            37.425559
+          ],
+          [
+            -122.167003,
+            37.425738
+          ],
+          [
+            -122.166949,
+            37.425917
+          ],
+          [
+            -122.166992,
+            37.426019
+          ],
+          [
+            -122.167721,
+            37.426223
+          ],
+          [
+            -122.16799,
+            37.426624
+          ],
+          [
+            -122.168612,
+            37.42676
+          ],
+          [
+            -122.168322,
+            37.427595
+          ],
+          [
+            -122.168419,
+            37.427757
+          ],
+          [
+            -122.16814,
+            37.428634
+          ],
+          [
+            -122.167947,
+            37.429163
+          ],
+          [
+            -122.167743,
+            37.429095
+          ]
+        ]
+      },
+      "id": "d05893196025f4626beed2eac5888923"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.16696,
+          37.419714
+        ]
+      },
+      "properties": {
+        "title": "Start",
+        "icon": {
+          "iconUrl": "assets/ben-han-profile.jpg",
+          "iconSize": [
+            35,
+            35
+          ],
+          "iconAnchor": [
+            17.5,
+            17.5
+          ],
+          "popupAnchor": [
+            0,
+            -20
+          ],
+          "className": "start-icon"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.175865,
+          37.428686
+        ]
+      },
+      "properties": {
+        "title": "Start",
+        "icon": {
+          "iconUrl": "assets/catherine-profile.jpg",
+          "iconSize": [
+            35,
+            35
+          ],
+          "iconAnchor": [
+            17.5,
+            17.5
+          ],
+          "popupAnchor": [
+            0,
+            -20
+          ],
+          "className": "start-icon"
+        }
+      }
+    },
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -122.162775,
+              37.425107
+            ]
+          },
+          "properties": {
+            "title": "Start",
+            "icon": {
+              "iconUrl": "assets/catherine-profile.jpg",
+              "iconSize": [
+                35,
+                35
+              ],
+              "iconAnchor": [
+                17.5,
+                17.5
+              ],
+              "popupAnchor": [
+                0,
+                -20
+              ],
+              "className": "start-icon"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
