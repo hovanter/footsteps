@@ -56,7 +56,7 @@ function loadResult() {
     hideSearchResults();
     map.panTo([37.4276938, -122.1662555]);
     setSidebarContent('route-info.html')
-    showSidebar(500);
+    showSidebar(480);
 }
 
 $(document).ready(function() {
@@ -198,9 +198,9 @@ function _loadLayerFromJSON(json) {
 // Selects a given path (marker).
 function _selectPath(path) {
     path.setStyle({color: '#f66', opacity: 0.8});
-    setSidebarContent('route-info.html')
-    showSidebar(480);
-    _panToPath(path, 480);
+    setSidebarContent('route-info-single.html')
+    showSidebar(450);
+    _panToPath(path, 450);
 }
 
 // Deselects a given path (marker).
