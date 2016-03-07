@@ -6,6 +6,7 @@ function lookupLocation(search_text, callback) {
     var params = "?access_token=" + L.mapbox.accessToken;
     var search_query = BASE_SEARCH_STRING + encodeURIComponent(search_text) + ".json" + params;
     $.get(search_query, function(data) {
+    	$("#search-results").show();
         callback(data.features);
     });
 }
@@ -14,8 +15,18 @@ function lookupLocation(search_text, callback) {
 function geoJSONToList(results) {
 	var text = "<ul>";
 	for (var index in results) {
-		text += "<li><a href=''>" + results[index].text + "</a></li>"
+		text += "<li><a href='javascript:loadResult()'>" + results[index].text + "</a></li>"
 	}
 	text += "</ul>";
 	return text;
+}
+
+// Hides search results.
+function hideSearchResults() {
+	$("#search-results").hide();
+}
+
+// Shows search results.
+function showSearchResults() {
+	$("#search-results").show();
 }

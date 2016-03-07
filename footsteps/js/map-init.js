@@ -50,6 +50,15 @@ function addLayerToggle(layerID, cssID) {
     }
 }
 
+// Loads a search result (hard-code to Hoover tower 
+// for now)
+function loadResult() {
+    hideSearchResults();
+    map.panTo([37.4276938, -122.1662555]);
+    setSidebarContent('route-info.html')
+    showSidebar(500);
+}
+
 $(document).ready(function() {
     L.mapbox.accessToken = 'pk.eyJ1IjoiYmhuYXNjYXIiLCJhIjoiY2lqa3NzaTc3MDAwNHQ5a29ibXgxOWllbyJ9.PwtqGI5Rbwewn2sbw5cgVw';
     map = L.mapbox.map('footstep-map', 'mapbox.streets', {
@@ -65,21 +74,19 @@ $(document).ready(function() {
 
     // Load data layers. Store them into a dictionary of
     // layer ID --> Mapbox layer object.
-    layers = {}
-    $.get("json/friends.json", function(json) {
-        layers["friends"] = _loadLayerFromJSON(json);
-        map.addLayer(layers["friends"]);
-    });
-    $.get("json/paths.json", function(json) {
-        layers["paths"] = _loadLayerFromJSON(json);
-    });
-    $.get("json/places.json", function(json) {
-        layers["places"] = _loadLayerFromJSON(json);
-    });
-    layers["user"] = L.mapbox.featureLayer().addTo(map);
+    layers = {
+        "paths": L.mapbox.featureLayer('bhnascar.p9c980ek'),
+        "friends": L.mapbox.featureLayer('bhnascar.pa5h76d8'),
+        "places": L.mapbox.featureLayer('bhnascar.pa5806m2'),
+        "user": L.mapbox.featureLayer()
+    };
+
+    // Load any initial layers that you want here.
+    map.addLayer(layers["friends"]);
+    map.addLayer(layers["user"]);
 
     // Pan to user location. 
-    // panToUserLocation();
+    panToUserLocation();
 
     /* Wire up clicks for map markers and polylines. (Show sidebar) */
     for (var key in layers) {
@@ -94,6 +101,7 @@ $(document).ready(function() {
                     marker.on("popupclose", function(e) {
                         _deselectPath(this);
                     });
+                    _addStartAndEndIcons(parentLayer, marker);
                 } 
             });
         });
@@ -153,17 +161,31 @@ function _addStartAndEndIcons(parentLayer, pathLayer) {
     ];
 
     // Wire marker layer actions.
-    markerLayer.on("click", function(e) {
+    markerLayer.on("popupopen", function(e) {
         _selectPath(pathLayer);
     });
+    markerLayer.on("popupclose", function(e) {
+        _deselectPath(pathLayer);
+    })
     markerLayer.on('layeradd', function(e) {
         var marker = e.layer,
         feature = marker.feature;
         marker.setIcon(L.icon(feature.properties.icon));
+        _toggleHiddenLayers();
     });
 
     markerLayer.setGeoJSON(geoJSON);
     parentLayer.addLayer(markerLayer);
+}
+
+function _toggleHiddenLayers() {
+    for (var key in layers) {
+        layer = layers[key];
+        if (!map.hasLayer(layer)) {
+            map.addLayer(layer);
+            map.removeLayer(layer);
+        }
+    }
 }
 
 // Loads a map layer from a JSON file.
