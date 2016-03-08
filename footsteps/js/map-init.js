@@ -1,5 +1,7 @@
 // Fetches the user location and calls the provided
 // callback function with the user location.
+
+
 function getUserLocation(callback) {
     map.locate();
     map.on('locationerror', null);
@@ -114,7 +116,7 @@ $(document).ready(function() {
 // amount of the viewport obstructed by a sidebar
 // with the given height.
 function _panToPath(path, sidebar_height) {
-    /*var bounds = path.getBounds();
+    var bounds = path.getBounds();
     var sb_top = $(window).height() - sidebar_height - 150;
     var sb_offset = sb_top / $(window).height();
     var lat_diff = bounds._northEast.lat - bounds._southWest.lat;
@@ -123,8 +125,8 @@ function _panToPath(path, sidebar_height) {
     map.fitBounds([
         [adjusted_lat, bounds._southWest.lng],
         [bounds._northEast.lat, bounds._northEast.lng]
-    ]);*/
-    map.fitBounds(path.getBounds());
+    ]);
+    //map.fitBounds(path.getBounds());
 }
 
 // Adds start and end icons to a given path.
@@ -197,8 +199,20 @@ function _loadLayerFromJSON(json) {
 
 // Selects a given path (marker).
 function _selectPath(path) {
+    console.log(path.feature.id);
     path.setStyle({color: '#f66', opacity: 0.8});
-    setSidebarContent('route-info-single.html')
+    //Andrei 30a3898cd190aa72ac37e88683e560b1
+    //Cat d05893196025f4626beed2eac5888923
+    //BH 4056d1e8079a56b94d7aa3820ce61831
+    if(path.feature.id === '4056d1e8079a56b94d7aa3820ce61831'){//bh
+        setSidebarContent('route-info-single-benhan.html')
+    }
+    else if(path.feature.id === '30a3898cd190aa72ac37e88683e560b1'){//drei
+        setSidebarContent('route-info-single-andrei.html')
+    }
+    else{//cat
+        setSidebarContent('route-info-single-catherine.html')
+    }
     showSidebar(450);
     _panToPath(path, 450);
 }
