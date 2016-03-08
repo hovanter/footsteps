@@ -63,12 +63,12 @@ $(document).ready(function() {
     $('#recording-button').click(function(){
         if (isRecording === false){
             setPopupContent('record-notification.html');
-            showPopup(165);
+            showPopup(180);
             isRecording = true;
         }
         else{
             setPopupContent('stop-record-notification.html');
-            showPopup(165);
+            showPopup(170);
             isRecording = false;
         }
     });
