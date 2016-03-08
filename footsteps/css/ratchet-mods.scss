@@ -88,6 +88,11 @@ a.btn:visited {
 	color: #fff !important;
 }
 
+.btn {
+	font-size: 18px;
+	padding: 10px;
+}
+
 .btn-primary {
 	background-color: $accent-color;
 	font-family: AvenirWeb_regular;
@@ -95,7 +100,7 @@ a.btn:visited {
 }
 
 .marker-buttons .btn-primary {
-	width: 60px;
+	width: 80px;
 }
 
 .toggle {

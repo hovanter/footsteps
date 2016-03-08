@@ -1,13 +1,15 @@
 //pick up three markers on the way, wire different templates for each stage
 function wireFollow(){
-    $('#route-info-button').click(function() {
+    console.log("Wired follow.");
+    $('.route-info-button').click(function() {
+            console.log("Follow clicked!");
             $('#sidebar-handle-icon').hide();
             hideSidebar();
             setSidebarContent('following.html');
             showSidebar(180);
             setTimeout(function(){
                 setPopupContent('new-marker.html')
-                showPopup(100);
+                showPopup(120);
             },2000);
     });
 }
@@ -27,7 +29,7 @@ function wirePickUp(){
     $('#popup-overlay').click(function(){
         setTimeout(function(){
             setPopupContent('new-marker2.html');
-            showPopup(100);
+            showPopup(120);
         },2000);
     });
 }
@@ -38,7 +40,7 @@ function wireOverlay(){
         showSidebar(180);
         setTimeout(function(){
             setPopupContent('new-marker2.html');
-            showPopup(100);
+            showPopup(120);
         },2000);
     });
     $('#popup-overlay').click(function(){
@@ -61,7 +63,7 @@ function wirePickUp2(){
     $('#popup-overlay').click(function(){
         setTimeout(function(){
             setPopupContent('new-marker3.html');
-            showPopup(100);
+            showPopup(120);
         },2000);
     });
 
@@ -73,7 +75,7 @@ function wireOverlay2(){
         showSidebar(180);
         setTimeout(function(){
             setPopupContent('new-marker3.html')
-            showPopup(100);
+            showPopup(120);
         },2000);
     });
     $('#popup-overlay').click(function(){
@@ -96,7 +98,7 @@ function wirePickUp3(){
     $('#popup-overlay').click(function(){
         setTimeout(function(){
             setPopupContent('path-complete.html');
-            showPopup(100);
+            showPopup(60);
         },2000);
     });
 
@@ -108,7 +110,7 @@ function wireOverlay3(){
         showSidebar(180);
         setTimeout(function(){
             setPopupContent('path-complete.html')
-            showPopup(100);
+            showPopup(60);
         },2000);
     });
 }

@@ -13,7 +13,7 @@ $(document).ready(function() {
     // Wire up drop button to show marker menu popup.
     $('#drop-button').click(function() {
         setPopupContent('drop-options.html')
-        showPopup(70);
+        showPopup(140);
     });
 
     // Wire up record button to switch between play/stop icons.
@@ -63,12 +63,12 @@ $(document).ready(function() {
     $('#recording-button').click(function(){
         if (isRecording === false){
             setPopupContent('record-notification.html');
-            showPopup(250);
+            showPopup(165);
             isRecording = true;
         }
         else{
             setPopupContent('stop-record-notification.html');
-            showPopup(250);
+            showPopup(165);
             isRecording = false;
         }
     });
