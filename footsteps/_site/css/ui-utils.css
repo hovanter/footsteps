@@ -3,7 +3,7 @@
   z-index: 15;
   position: fixed;
   border-radius: 5px;
-  height: 0px;
+  display: inline-block;
   left: 15px;
   bottom: 0px;
   background-color: #ffffff;

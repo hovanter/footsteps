@@ -621,7 +621,7 @@ ul {
   /*7px;*/
   position: relative;
   z-index: 10;
-  top: 10px; }
+  top: 15px; }
 
 .traveller-profile-pic-thumbnail-follow {
   background: url("../assets/empty-profile.png") no-repeat;

@@ -51,7 +51,7 @@ function setPopupContent(html_file) {
 function hideSidebar() {
     $('#sidebar').css({
         bottom: "0px",
-        height: "0px"
+        "max-height": "0px"
     });
     $('#sidebar-handle').css({
         bottom: "15px",
@@ -63,7 +63,7 @@ function hideSidebar() {
 function showSidebar(height) {
     $('#sidebar').css({
         bottom: "15px",
-        height: height + "px",
+        "max-height": "1000px",
         width: ($(window).width() - 30) + "px"
     });
     $('#sidebar-handle').css({
