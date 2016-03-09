@@ -80,6 +80,12 @@ $content-background-color: #eeeeee;
 	padding-bottom: 14px;
 }
 
+/**** Badge styles ****/
+
+.badge-primary {
+	background-color: $accent-color;
+}
+
 /**** Button styles ****/
 
 a.btn:hover,
@@ -132,6 +138,11 @@ a.btn:visited {
 }
 
 /**** Table view styles ****/
+
+.table-view-cell > a:not(.btn) {
+	display: inline !important;
+	margin: 0px !important;
+}
 
 .table-view {
 	border: none;

@@ -312,13 +312,11 @@ ul {
 }
 
 .photo-track {
-  overflow: scroll;
   height: 175px;
   width: 100%;
-  float: right;
   background: url("../assets/hoover-tower.jpg") no-repeat;
   background-size: cover;
-  margin-top: -8px;
+  margin-top: -10px;
 }
 
 .photo-track::-webkit-scrollbar { width: 0 !important }
@@ -647,25 +645,24 @@ ul {
 }
 
 /**** Following Panel ****/
-.directions-img{
-	width: 15%;
-	height: auto;
-	margin-top: 10px;
-	margin-left: 20px;
-}
-.direction-text{
+
+.directions {
+	text-align: center;
+	height: 60px;
 	position: relative;
-	float: right;
-	margin-top: 20px;
-	margin-right: 70px;
 }
-.marker-text{
-	position: relative;
-	float: right;
-	margin-top: -20px;
-	margin-right: 70px;
-	font-size: 11px;
-   color: #bdbdbd;
+
+.directions-img {
+	width: auto;
+	max-height: 100%;
+	padding: 5px;
+	vertical-align: middle;
+}
+.direction-text {
+	text-align: center;
+	padding: 15px;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .new-marker-dialogue{
@@ -674,6 +671,10 @@ ul {
 
 .marker-buttons{
 	text-align: center;
+}
+
+.skip {
+	background-color: gray !important;
 }
 
 #skip-btn {
@@ -690,9 +691,8 @@ ul {
 .photo-discovery1{
 	background: url('../assets/totem.jpg') no-repeat;
 	background-size: cover;
-  height: 80%;
-  width: 100%;
-	float: left;
+  	height: 80%;
+  	width: 100%;
 }
 
 .photo-description{

@@ -6,7 +6,7 @@ $(document).ready(function() {
 	 		hideSidebar();
 	 	} else {
             setSidebarContent('filters.html');
-	 		showSidebar(260);
+	 		showSidebar(370);
 	 	}
     });
 

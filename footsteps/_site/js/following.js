@@ -53,7 +53,7 @@ function wirePickUp2(){
     $('#pick-up').click(function(){
         hideSidebar();
         setPopupContent('photo-discovery2.html');
-        showPopup(300);
+        showPopup(340);
     });
     $('#skip-btn').off("click");
     $('#skip-btn').click(function(){

@@ -201,8 +201,33 @@ function _loadLayerFromJSON(json) {
     return layer;
 }
 
+// Filters all layers except the given path. 
+function _filterAllLayersExceptPath(path) {
+    for (var key in layers) {
+        layer = layers[key];
+        if (typeof layer.setFilter == "function") {
+            layer.setFilter(function(f) {
+                return f === path.feature;
+            });
+        }
+    }
+}
+
+// Unfilters all layers. 
+function _unfilterAllLayers() {
+    for (var key in layers) {
+        layer = layers[key];
+        if (typeof layer.setFilter == "function") {
+            layer.setFilter(function(f) {
+                return true;
+            });
+        }
+    }
+}
+
 // Selects a given path (marker).
 function _selectPath(path) {
+    _selected_path = path
     console.log(path.feature.id);
     path.setStyle({color: '#f66', opacity: 0.8});
     //Andrei 30a3898cd190aa72ac37e88683e560b1

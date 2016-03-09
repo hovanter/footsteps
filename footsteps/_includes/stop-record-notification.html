@@ -2,6 +2,14 @@
 <h3>Your path has been saved!<h3>
 <h4>Share it with your friends!</h4>
 <div style="text-align: center;">
-	<button class="btn btn-primary" id="pick-up">Share</button>
-	<button class="btn btn-primary" id="pick-up">Skip</button>
+	<button class="btn btn-primary" id="share-path">Share</button>
+	<button class="btn btn-primary skip" id="skip-share-path">Skip</button>
 </div>
+<script>
+$("#share-path").click(function(e) {
+	hidePopup();
+})
+$("#skip-share-path").click(function(e) {
+	hidePopup();
+})
+</script>
