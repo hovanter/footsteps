@@ -6,7 +6,7 @@ function wireFollow(){
             $('#sidebar-handle-icon').hide();
             hideSidebar();
             setSidebarContent('following.html');
-            showSidebar(180);
+            showSidebar(130);
             setTimeout(function(){
                 setPopupContent('new-marker.html')
                 showPopup(120);
@@ -37,7 +37,7 @@ function wirePickUp(){
 function wireOverlay(){
     $('#popup-overlay').off("click");
     $('#popup-overlay').click(function(){
-        showSidebar(180);
+        showSidebar(130);
         setTimeout(function(){
             setPopupContent('new-marker2.html');
             showPopup(120);
@@ -72,7 +72,7 @@ function wirePickUp2(){
 function wireOverlay2(){
     $('#popup-overlay').off("click");
     $('#popup-overlay').click(function(){
-        showSidebar(180);
+        showSidebar(130);
         setTimeout(function(){
             setPopupContent('new-marker3.html')
             showPopup(120);
@@ -107,7 +107,7 @@ function wirePickUp3(){
 function wireOverlay3(){
     $('#popup-overlay').click(function(){
         console.log('show plz');
-        showSidebar(180);
+        showSidebar(130);
         setTimeout(function(){
             setPopupContent('path-complete.html')
             showPopup(120);
