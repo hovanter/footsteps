@@ -6,18 +6,22 @@ function getUserLocation(callback) {
     map.locate();
     map.on('locationerror', null);
     map.on('locationfound', function(e) {
-        layers["user"].setGeoJSON({
-            type: 'Feature',
-            geometry: {
-                type: 'Point',
-                coordinates: [e.latlng.lng, e.latlng.lat]
-            },
-            properties: {
-                'title': 'Here you are!',
-                'marker-color': '#DAA520',
-                'marker-symbol': 'pitch'
-            }
-        });
+        // Get user coordinates.
+        var coordinates = [e.latlng.lat, e.latlng.lng];
+
+        // Update (create if necessary) marker.
+        if (typeof userMarker === "undefined") {
+            var userIcon = L.divIcon({
+              className: 'user-location-icon',
+              iconSize: [30, 30],
+              shadowSize: [36, 36],
+              shadowAnchor: [15, 15]
+            });
+            userMarker = L.marker(coordinates, {icon: userIcon}).addTo(map);
+            layers["user"] = userMarker;
+        }
+        userMarker.setLatLng(coordinates);
+
         if (typeof callback !== null) {
             callback(e.latlng.lat, e.latlng.lng);
         }
