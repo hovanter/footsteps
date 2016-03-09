@@ -62,7 +62,7 @@ function loadResult() {
     hideSearchResults();
     map.panTo([37.4276938, -122.1662555]);
     setSidebarContent('route-info.html')
-    showSidebar(480);
+    showSidebar(340);
 }
 
 $(document).ready(function() {
@@ -217,8 +217,8 @@ function _selectPath(path) {
     else{//cat
         setSidebarContent('route-info-single-catherine.html')
     }
-    showSidebar(300);
-    _panToPath(path, 300);
+    showSidebar(308);
+    _panToPath(path, 308);
 }
 
 // Deselects a given path (marker).

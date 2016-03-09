@@ -12,7 +12,7 @@
 /**** Pager (dots) style ****/
 ul.slick-dots {
   max-width: 200px;
-  margin: 0px auto 10px;
+  margin: 6px auto;
   text-align: center; }
 
 ul.slick-dots li {
