@@ -23,12 +23,6 @@ function showPopup(height) {
     $('#popup-overlay').click(function(e) {
         hidePopup();
     });
-    $('#popup').css({
-        height: height + "px",
-        left: "15px",
-        top: ($(window).height() / 2.0 - height / 2.0) + "px",
-        width: ($(window).width() - 30) + "px"
-    });
 }
 
 // Returns whether or not the popup is currently visible.
@@ -39,7 +33,16 @@ function isPopupVisible() {
 // Sets the content of the popup with the content of the
 // given HTML file. Uses an AJAX call.
 function setPopupContent(html_file) {
-    $('#popup').load(html_file);
+    $('#popup').load(html_file, function() {
+        // Size to fit content.
+        height = $("#popup")[0].scrollHeight + 15;
+        $('#popup').css({
+            height: height + "px",
+            left: "15px",
+            top: ($(window).height() / 2.0 - height / 2.0) + "px",
+            width: ($(window).width() - 30) + "px"
+        });
+    });
 }
 
 /**** Sidebar implementation ****/
