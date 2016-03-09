@@ -6,7 +6,7 @@ $(document).ready(function() {
 	 		hideSidebar();
 	 	} else {
             setSidebarContent('filters.html');
-	 		showSidebar(370);
+	 		showSidebar(330);
 	 	}
     });
 
@@ -19,7 +19,7 @@ $(document).ready(function() {
     // Wire up filter button to show map filters.
     $('#filter-button').click(function() {
         setSidebarContent('filters.html');
-        showSidebar(370);
+        showSidebar(330);
     });
 
     // Wire up record button to switch between play/stop icons.
