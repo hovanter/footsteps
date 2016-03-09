@@ -11,8 +11,7 @@ $(document).ready(function() {
 
     // Wire up drop button to show marker menu popup.
     $('#drop-button').click(function() {
-        setPopupContent('drop-options.html')
-        showPopup(140);
+        showPopup('drop-options.html')
     });
 
     // Wire up filter button to show map filters.
@@ -66,13 +65,11 @@ $(document).ready(function() {
     var isRecording = false;
     $('#recording-button').click(function(){
         if (isRecording === false){
-            setPopupContent('record-notification.html');
-            showPopup(180);
+            showPopup('record-notification.html');
             isRecording = true;
         }
         else{
-            setPopupContent('stop-record-notification.html');
-            showPopup(170);
+            showPopup('stop-record-notification.html');
             isRecording = false;
         }
     });

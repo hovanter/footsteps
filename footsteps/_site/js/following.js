@@ -7,8 +7,7 @@ function wireFollow(){
             hideSidebar();
             showSidebar('following.html');
             setTimeout(function(){
-                setPopupContent('new-marker.html')
-                showPopup(120);
+                showPopup('new-marker.html')
             },2000);
     });
 }
@@ -17,8 +16,7 @@ function wirePickUp(){
     $('#pick-up').off("click");
     $('#pick-up').click(function(){
         hideSidebar();
-        setPopupContent('photo-discovery1.html');
-        showPopup();
+        showPopup('photo-discovery1.html');
     });
     $('#skip-btn').off("click");
     $('#skip-btn').click(function(){
@@ -27,8 +25,7 @@ function wirePickUp(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            setPopupContent('new-marker2.html');
-            showPopup(120);
+            showPopup('new-marker2.html');
         },2000);
     });
 }
@@ -38,8 +35,7 @@ function wireOverlay(){
     $('#popup-overlay').click(function(){
         showSidebar();
         setTimeout(function(){
-            setPopupContent('new-marker2.html');
-            showPopup(120);
+            showPopup('new-marker2.html');
         },2000);
     });
     $('#popup-overlay').click(function(){
@@ -51,8 +47,7 @@ function wirePickUp2(){
     $('#pick-up').off("click");
     $('#pick-up').click(function(){
         hideSidebar();
-        setPopupContent('photo-discovery2.html');
-        showPopup();
+        showPopup('photo-discovery2.html');
     });
     $('#skip-btn').off("click");
     $('#skip-btn').click(function(){
@@ -61,8 +56,7 @@ function wirePickUp2(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            setPopupContent('new-marker3.html');
-            showPopup(120);
+            showPopup('new-marker3.html');
         },2000);
     });
 
@@ -73,8 +67,7 @@ function wireOverlay2(){
     $('#popup-overlay').click(function(){
         showSidebar();
         setTimeout(function(){
-            setPopupContent('new-marker3.html')
-            showPopup(120);
+            showPopup('new-marker3.html')
         },2000);
     });
     $('#popup-overlay').click(function(){
@@ -86,8 +79,7 @@ function wirePickUp3(){
     $('#pick-up').off("click");
     $('#pick-up').click(function(){
         hideSidebar();
-        setPopupContent('photo-discovery3.html');
-        showPopup();
+        showPopup('photo-discovery3.html');
     });
     $('#skip-btn').off("click");
     $('#skip-btn').click(function(){
@@ -96,8 +88,7 @@ function wirePickUp3(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            setPopupContent('path-complete.html');
-            showPopup(120);
+            showPopup('path-complete.html');
         },2000);
     });
 
@@ -108,8 +99,7 @@ function wireOverlay3(){
         console.log('show plz');
         showSidebar();
         setTimeout(function(){
-            setPopupContent('path-complete.html')
-            showPopup(120);
+            showPopup('path-complete.html')
         },2000);
     });
 }

@@ -14,17 +14,6 @@ function hidePopup() {
     });
 }
 
-// Shows the popup.
-function showPopup(height) {
-    $('#popup-overlay').css({
-        background: "rgba(0, 0, 0, 0.5)",
-        "z-index": "14"
-    });
-    $('#popup-overlay').click(function(e) {
-        hidePopup();
-    });
-}
-
 // Returns whether or not the popup is currently visible.
 function isPopupVisible() {
     return $('#popup').height() > 0;
@@ -35,7 +24,7 @@ function isPopupVisible() {
 //
 // If no argument is provided the AJAX call is not made and
 // the popup is shown with previous content, if any.
-function setPopupContent(html_file) {
+function showPopup(html_file) {
     $('#popup').load(html_file, function() {
         // Size to fit content.
         height = $("#popup")[0].scrollHeight + 15;
@@ -44,6 +33,13 @@ function setPopupContent(html_file) {
             left: "15px",
             top: ($(window).height() / 2.0 - height / 2.0) + "px",
             width: ($(window).width() - 30) + "px"
+        });
+        $('#popup-overlay').css({
+            background: "rgba(0, 0, 0, 0.5)",
+            "z-index": "14"
+        });
+        $('#popup-overlay').click(function(e) {
+            hidePopup();
         });
     });
 }
