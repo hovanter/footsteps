@@ -5,8 +5,7 @@ $(document).ready(function() {
 		if (isSidebarVisible()) { 
 	 		hideSidebar();
 	 	} else {
-            setSidebarContent('filters.html');
-	 		showSidebar(330);
+            showSidebar('filters.html');
 	 	}
     });
 
@@ -18,8 +17,7 @@ $(document).ready(function() {
 
     // Wire up filter button to show map filters.
     $('#filter-button').click(function() {
-        setSidebarContent('filters.html');
-        showSidebar(330);
+        showSidebar('filters.html');
     });
 
     // Wire up record button to switch between play/stop icons.

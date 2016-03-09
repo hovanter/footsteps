@@ -61,8 +61,7 @@ function addLayerToggle(layerID, cssID) {
 function loadResult() {
     hideSearchResults();
     map.panTo([37.4276938, -122.1662555]);
-    setSidebarContent('route-info.html')
-    showSidebar(340);
+    showSidebar('route-info.html')
 }
 
 $(document).ready(function() {
@@ -209,15 +208,14 @@ function _selectPath(path) {
     //Cat d05893196025f4626beed2eac5888923
     //BH 4056d1e8079a56b94d7aa3820ce61831
     if(path.feature.id === '4056d1e8079a56b94d7aa3820ce61831'){//bh
-        setSidebarContent('route-info-single-benhan.html')
+        showSidebar('route-info-single-benhan.html')
     }
     else if(path.feature.id === '30a3898cd190aa72ac37e88683e560b1'){//drei
-        setSidebarContent('route-info-single-andrei.html')
+        showSidebar('route-info-single-andrei.html')
     }
     else{//cat
-        setSidebarContent('route-info-single-catherine.html')
+        showSidebar('route-info-single-catherine.html')
     }
-    showSidebar(308);
     _panToPath(path, 308);
 }
 
