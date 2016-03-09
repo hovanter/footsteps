@@ -16,6 +16,12 @@ $(document).ready(function() {
         showPopup(140);
     });
 
+    // Wire up filter button to show map filters.
+    $('#filter-button').click(function() {
+        setSidebarContent('filters.html');
+        showSidebar(260);
+    });
+
     // Wire up record button to switch between play/stop icons.
     $('#recording-button').click(function() {
         if ($('#recording-button').hasClass('isRecording')) {

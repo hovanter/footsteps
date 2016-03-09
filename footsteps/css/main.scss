@@ -118,10 +118,19 @@ ul {
 
 /**** Action items ****/
 
-.actions {
+.actions-right {
 	position: absolute;
 	bottom: 15px;
 	right: 15px;
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.actions-left {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
 	list-style-type: none;
 	padding: 0px;
 	margin: 0px;
