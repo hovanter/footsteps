@@ -1,39 +1,42 @@
 <div class="bar-content bar-inverted">
-    <a class="traveller-profile-pic-thumbnail {{ include.profile-id }}" href="traveller-profile.html" data-ignore="push"></a>
-    <h1 class="title">{{ include.title }}</h1>
+    <a class="traveller-profile-pic-thumbnail {{ include.profile-id }}"href="traveller-profile.html" data-ignore="push"></a>
+    <h1 class="title">{{ include.pathname }}</h1>
 </div>
-<br />
-<h3 class="pathname-header">{{ include.pathname }}</h3>
-<div class="path-start-end-container">
-    <h5><span class="path-start-end-label">Start:</span> <span class="path-start-end-value">{{include.path-start}}</span></h5> 
-    <h5><span class="path-start-end-label">End:</span> <span class="path-start-end-value">Hoover Tower</span></h5> 
-</div>
+
+<!--<h3 class="pathname-header">{{ include.pathname }}</h3> -->
+<!--<div class="path-start-end-container">
+    <span class="path-start-end-label">Start:</span> <span class="path-start-end-value">{{include.path-start}}</span> 
+    <span class="path-start-end-label">End:</span> <span class="path-start-end-value">Hoover Tower</span>
+</div> -->
 <!-- <h4>About</h4>
 <p class="route-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-<h4>Photos</h4>
 <div class="photo-track">
-    <img class="path-preview" src="assets/hoover-tower.jpg" />
-    <img class="path-preview" src="assets/stanford-chapel.jpg" />
-    <img class="path-preview" src="assets/grad-educ.jpg" />
-    <img class="path-preview" src="assets/ireland-thumbnail.jpg" />
+    <div class="pic-info">
+        <div><span class="path-start-end-label">Start:</span> <span class="path-start-end-label">{{include.path-start}}</span></div>
+        <div><span class="path-start-end-label">End:</span> <span class="path-start-end-label">Hoover Tower</span></div>    
+        <a class="btn btn-primary-alpha route-info-button" style = "float:left;">Follow</a> 
+    </div>
 </div>
-<h4>Essential stats</h4>
-<table class="route-info-table">
-    <tr>
-        <td>
-            <span class="badge">3</span>
-            <p>Discoveries</p>
-        </td>
-        <td>
-            <span class="badge">5</span>
-            <p>Markers</p>
-        </td>
-        <td>
-            <span class="badge">1.5mi</span>
-            <p>Distance</p>
-        </td>
-    </tr>
-</table>
+<div class="route-stats-container">
+<div class="route-snapshot-info-container">
+    <div class="traveller-snapshot-info-item">
+        <span class="metric-value">3</span> <br> <span class="metric-name">Discoveries</span>
+    </div>
+    <div class="traveller-snapshot-info-item">
+        <span class="metric-value">4</span> <br> <span class="metric-name">Markers</span>
+    </div>
+    <div class="traveller-snapshot-info-item">
+        <span class="metric-value">1.2 mi</span> <br> <span class="metric-name">Distance</span>
+    </div>
+</div>
+<div class="tags">
+    <span class="badge">architecture</span>
+    <span class="badge">fountains</span>
+    <span class="badge">museums</span>
+    <span class="badge">wine</span>
+</div>
+</div>
+<!--
 <div class="follow-button-container">
     <a class="btn btn-primary route-info-button">Follow</a> 
-</div>
+</div> -->
