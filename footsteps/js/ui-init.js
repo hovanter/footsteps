@@ -19,7 +19,7 @@ $(document).ready(function() {
     // Wire up filter button to show map filters.
     $('#filter-button').click(function() {
         setSidebarContent('filters.html');
-        showSidebar(260);
+        showSidebar(370);
     });
 
     // Wire up record button to switch between play/stop icons.
