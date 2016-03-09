@@ -1,0 +1,142 @@
+/**** Layout styles ****/
+.bar {
+  z-index: 10;
+  border-bottom: none; }
+
+.content {
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: #eeeeee; }
+
+.content::-webkit-scrollbar {
+  width: 0 !important; }
+
+.bar-nav ~ .content-home {
+  padding-top: 0px; }
+
+/**** Navigation bar styles ****/
+/* To fix positioning context for subitems. */
+.bar-content {
+  position: relative; }
+
+.bar a,
+.bar a:hover,
+.bar a:visited,
+.bar a:active {
+  text-decoration: none;
+  color: #4EBB8F; }
+
+.bar-inverted {
+  color: #fff;
+  background: #4EBB8F; }
+
+.bar-inverted h1,
+.bar-inverted h2,
+.bar-inverted h3,
+.bar-inverted h4,
+.bar-inverted h5,
+.bar-inverted h6,
+.bar-inverted h7 {
+  color: #fff; }
+
+.bar-inverted a,
+.bar-inverted a:hover,
+.bar-inverted a:visited,
+.bar-inverted a:active {
+  text-decoration: none;
+  color: #fff; }
+
+.bar-home {
+  border-bottom: none;
+  background: transparent; }
+
+.bar-content {
+  height: 44px;
+  padding: 0px 10px;
+  border-bottom: 0px solid #ddd;
+  backface-visibility: hiden; }
+
+.tab-item {
+  padding-bottom: 14px; }
+
+/**** Button styles ****/
+a.btn:hover,
+a.btn:active,
+a.btn:visited {
+  color: #fff !important; }
+
+.btn {
+  font-size: 18px;
+  padding: 10px; }
+
+.btn-primary {
+  background-color: #4EBB8F;
+  font-family: AvenirWeb_regular;
+  border: 1px solid rgba(0, 0, 0, 0.2); }
+
+.btn-primary-alpha {
+  background-color: rgba(78, 187, 143, 0.8);
+  font-family: AvenirWeb_regular;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff; }
+
+.marker-buttons .btn-primary {
+  width: 80px; }
+
+.toggle {
+  background-color: #eeeeee; }
+
+.toggle.active {
+  background-color: #4EBB8F;
+  border-color: #4EBB8F; }
+
+.toggle.active .toggle-handle {
+  border-color: #4EBB8F; }
+
+.toggle:before {
+  content: ""; }
+
+.toggle.active:before {
+  content: ""; }
+
+/**** Table view styles ****/
+.table-view {
+  border: none;
+  background-color: transparent; }
+
+.table-view .table-view-cell .badge {
+  background-color: none important; }
+
+.table-view-cell {
+  background-color: #ffffff;
+  border-bottom: none; }
+
+.table-view-cell-style-card {
+  margin: 15px 15px 0px;
+  border-radius: 5px;
+  border-bottom: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); }
+
+#path-items-container .table-view-cell {
+  padding: 0px;
+  height: 88px; }
+
+#marker-photos-container .table-view-cell {
+  padding: 0px;
+  height: 200px; }
+
+#marker-audio-container .table-view-cell {
+  padding: 0px;
+  height: 100px; }
+
+#marker-text-container .table-view-cell {
+  padding: 0px;
+  height: 80px; }
+
+#path-items-container a {
+  padding-top: 11px;
+  width: 100%; }
+
+#filters .table-view-cell {
+  line-height: 0px; }
