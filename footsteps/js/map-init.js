@@ -213,8 +213,8 @@ function _selectPath(path) {
     else{//cat
         setSidebarContent('route-info-single-catherine.html')
     }
-    showSidebar(450);
-    _panToPath(path, 450);
+    showSidebar(300);
+    _panToPath(path, 300);
 }
 
 // Deselects a given path (marker).

@@ -72,7 +72,7 @@ $content-background-color: #eeeeee;
 .bar-content {
 	height: 44px;
 	padding: 0px 10px;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 0px solid #ddd;
 	backface-visibility: hiden;
 }
 
@@ -97,6 +97,13 @@ a.btn:visited {
 	background-color: $accent-color;
 	font-family: AvenirWeb_regular;
 	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary-alpha {
+	background-color: rgba(78, 187, 143, .8);
+	font-family: AvenirWeb_regular;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	color: #fff;
 }
 
 .marker-buttons .btn-primary {

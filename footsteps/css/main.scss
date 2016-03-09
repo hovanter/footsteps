@@ -190,7 +190,7 @@ ul {
 }
 
 .path-start-end-label {
-	color: #dadada;
+	color: #FFFFFF;
 }
 
 .path-start-end-container {
@@ -198,7 +198,7 @@ ul {
 }
 
 .path-start-end-value {
-	color: grey;
+	color: #FFFFFF;
 }
 
 #friends-icon {
@@ -246,6 +246,7 @@ ul {
 	text-align: center;
 }
 
+
 .traveller-profile-pic-thumbnail {
 	background: url('../assets/empty-profile.png') no-repeat;
 	height: 50px; /*$profile-icon-size;*/
@@ -279,9 +280,21 @@ ul {
 	padding: 0px 15px 15px 15px;
 }
 
+.pic-info{
+	margin-left:10px;
+	margin-top: 10px;
+}
+
 .route-info-table {
 	text-align: center;
 	width: 100%;
+}
+.route-stats-container{
+	background: rgba(78, 187, 142, 0.2);
+}
+.route-stats-heading{
+	text-align: center;
+	margin-top: 10px;
 }
 
 .route-info-table td {
@@ -290,11 +303,15 @@ ul {
 }
 
 .photo-track {
-	width: 10000px;
-	overflow: scroll;
-	height: 75px;
-	margin-bottom: 30px;
+  overflow: scroll;
+  height: 175px;
+  width: 100%;
+  float: right;
+  background: url("../assets/hoover-tower.jpg") no-repeat;
+  background-size: cover;
+  margin-top: -8px;
 }
+
 .photo-track::-webkit-scrollbar { width: 0 !important }
 
 
@@ -307,6 +324,11 @@ ul {
 .follow-button-container {
 	text-align: center;
 	padding: 10px 15px 15px;
+}
+
+.tags{
+	display:block;
+	text-align:center;
 }
 
 /**** Traveller Page ****/
@@ -366,6 +388,16 @@ ul {
 	table-layout: fixed;
 }
 
+.route-snapshot-info-container {
+	height: 50px;
+	width: 100%;
+
+	display: table;
+	table-layout: fixed;
+}
+
+
+
 .traveller-snapshot-info-item {
 	display: table-cell;
 	height: 100%;
@@ -393,6 +425,10 @@ ul {
 
 .metric-name {
 	color: #979797;
+}
+
+.route-start-name {
+	color: #FFFFFF;
 }
 
 
@@ -620,6 +656,7 @@ ul {
 #route-info button {
 	display: block;
 	margin: 0 auto;
+
 }
 
 /**** Photo Discoverys ****/
