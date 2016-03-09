@@ -52,9 +52,9 @@ $(document).ready(function() {
             $('#search-results').html("");
             return;
         }
-        else if (search_text.slice(-1) != " ") {
+        /*else if (search_text.slice(-1) != " ") {
             return;
-        }
+        }*/
         lookupLocation(search_text, function(results) {
             resultHTML = geoJSONToList(results);
             if (results.length > 0) {
