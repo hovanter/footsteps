@@ -22,9 +22,11 @@ $(document).ready(function() {
     // Wire up record button to switch between play/stop icons.
     $('#recording-button').click(function() {
         if ($('#recording-button').hasClass('isRecording')) {
+            showPopup('stop-record-notification.html');
             $('#recording-button').removeClass('isRecording');
             $('#drop-button').hide();
         } else {
+            showPopup('record-notification.html');
             $('#recording-button').addClass('isRecording');
             $('#drop-button').show();
         }
@@ -62,16 +64,12 @@ $(document).ready(function() {
             }
         });
     })
-    var isRecording = false;
-    $('#recording-button').click(function(){
-        if (isRecording === false){
-            showPopup('record-notification.html');
-            isRecording = true;
-        }
-        else{
-            showPopup('stop-record-notification.html');
-            isRecording = false;
-        }
-    });
+
+    // Show tutorial if this is the first time the user is
+    // loading the page.
+    if (!sessionStorage.getItem("showed_tutorial")) {
+        showPopup("tutorial.html");
+        sessionStorage.setItem("showed_tutorial", true);
+    }
 });
 
