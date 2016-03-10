@@ -61,7 +61,7 @@ function addLayerToggle(layerID, cssID) {
 function loadResult() {
     hideSearchResults();
     //34.951225,135.7307353
-    map.panTo([34.4276938, -122.1662555]);
+    map.panTo([35.0176671,135.7743668]);
     showSidebar('route-info.html')
 }
 
@@ -72,7 +72,7 @@ $(document).ready(function() {
         minZoom: 10,
         attributionControl: false
     });
-    map.setView([34.951225,135.7307353], 13);
+    map.setView([35.0176671,135.7743668], 14);
     map.zoomControl.removeFrom(map);
     map.on("click", function(e) {
         hideSidebar();
