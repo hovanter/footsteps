@@ -60,18 +60,19 @@ function addLayerToggle(layerID, cssID) {
 // for now)
 function loadResult() {
     hideSearchResults();
-    map.panTo([37.4276938, -122.1662555]);
+    //34.951225,135.7307353
+    map.panTo([34.4276938, -122.1662555]);
     showSidebar('route-info.html')
 }
 
 $(document).ready(function() {
-    L.mapbox.accessToken = 'pk.eyJ1IjoiYmhuYXNjYXIiLCJhIjoiY2lqa3NzaTc3MDAwNHQ5a29ibXgxOWllbyJ9.PwtqGI5Rbwewn2sbw5cgVw';
+    L.mapbox.accessToken = 'pk.eyJ1IjoiYW5kcmVpdDEiLCJhIjoiY2lqbDBlbzc1MDAwenVmbTVxbWl2eGg1ZCJ9.aydIVbwdDbWM4bo-6oEdgg';
     map = L.mapbox.map('footstep-map', 'mapbox.streets', {
         maxZoom: 20,
         minZoom: 10,
         attributionControl: false
     });
-    map.setView([37.4260422, -122.170671], 17);
+    map.setView([34.951225,135.7307353], 13);
     map.zoomControl.removeFrom(map);
     map.on("click", function(e) {
         hideSidebar();
@@ -80,18 +81,19 @@ $(document).ready(function() {
     // Load data layers. Store them into a dictionary of
     // layer ID --> Mapbox layer object.
     layers = {
-        "paths": L.mapbox.featureLayer('bhnascar.p9c980ek'),
-        "friends": L.mapbox.featureLayer('bhnascar.pa5h76d8'),
+        "paths": L.mapbox.featureLayer('andreit1.pceemnjf'),
+        "friends": L.mapbox.featureLayer('andreit1.pcf8aie1'),
         "places": L.mapbox.featureLayer('bhnascar.pa5806m2'),
         "user": L.mapbox.featureLayer()
     };
 
     // Load any initial layers that you want here.
     map.addLayer(layers["friends"]);
+    map.addLayer(layers["paths"]);
     map.addLayer(layers["user"]);
 
     // Pan to user location. 
-    panToUserLocation();
+    //panToUserLocation();
 
     /* Wire up clicks for map markers and polylines. (Show sidebar) */
     for (var key in layers) {
