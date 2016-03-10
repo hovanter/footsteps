@@ -206,14 +206,14 @@ function _loadLayerFromJSON(json) {
 function _selectPath(path) {
     console.log(path.feature.id);
     path.setStyle({color: '#f66', opacity: 0.8});
-    //Andrei 30a3898cd190aa72ac37e88683e560b1
-    //Cat d05893196025f4626beed2eac5888923
-    //BH 4056d1e8079a56b94d7aa3820ce61831
-    if(path.feature.id === '4056d1e8079a56b94d7aa3820ce61831'){//bh
-        showSidebar('route-info-single-benhan.html')
+    //1aea3faec74e9dae067554d923f85080 - hiean Shrien
+    //82ae7d5a1c2ca50823aff861ecdedcd3 - kamo river
+    console.log(path.feature.id);
+    if(path.feature.id === '82ae7d5a1c2ca50823aff861ecdedcd3'){//kamo
+        showSidebar('route-info-single-catherine.html')
     }
-    else if(path.feature.id === '30a3898cd190aa72ac37e88683e560b1'){//drei
-        showSidebar('route-info-single-andrei.html')
+    else if(path.feature.id === '1aea3faec74e9dae067554d923f85080'){//heian
+        showSidebar('route-info-single-heian.html')
     }
     else{//cat
         showSidebar('route-info-single-catherine.html')

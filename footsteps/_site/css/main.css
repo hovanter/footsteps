@@ -663,14 +663,54 @@ ul {
   text-align: center;
   width: 33%; }
 
-.photo-track {
+.photo-track1 {
   height: 175px;
   width: 100%;
-  background: url("../assets/hoover-tower.jpg") no-repeat;
+  background: url("../assets/route-panels/crosstheriver.JPG") no-repeat;
   background-size: cover;
   margin-top: -10px; }
 
-.photo-track::-webkit-scrollbar {
+.photo-track1::-webkit-scrollbar {
+  width: 0 !important; }
+
+.photo-track2 {
+  height: 175px;
+  width: 100%;
+  background: url("../assets/route-panels/dahike.JPG") no-repeat;
+  background-size: cover;
+  margin-top: -10px; }
+
+.photo-track2::-webkit-scrollbar {
+  width: 0 !important; }
+
+.photo-track3 {
+  height: 175px;
+  width: 100%;
+  background: url("../assets/route-panels/newheain.JPG") no-repeat;
+  background-size: cover;
+  margin-top: -10px; }
+
+.photo-track3::-webkit-scrollbar {
+  width: 0 !important; }
+
+.photo-track4 {
+  height: 175px;
+  width: 100%;
+  background: url("../assets/route-panels/oldkyotopath.JPG") no-repeat;
+  background-size: cover;
+  margin-top: -10px; }
+
+.photo-track4::-webkit-scrollbar {
+  width: 0 !important; }
+
+.photo-track5 {
+  height: 175px;
+  width: 100%;
+  background: url("../assets/route-panels/yasakaPath.JPG") no-repeat;
+  background-size: cover;
+  margin-top: -10px; }
+
+.photo-track5::-webkit-scrollbar {
   width: 0 !important; }
 
 .path-preview {
