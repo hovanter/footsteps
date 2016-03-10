@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Footsteps</title>
+    <meta name="description" content="Explore where people have gone around you! Pick a path and have an adventure today!
+">
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Ratchet includes -->
+    <link href="lib/ratchet-v2.0.2/css/ratchet.css" rel="stylesheet">
+
+    <!-- Slick includes -->
+    <link rel="stylesheet" type="text/css" href="lib/slick-1.5.9/slick/slick.css"/>
+
+    <!-- Mapbox includes -->
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
+
+    <!-- Jekyll includes -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ui-utils.css">
+    <link rel="stylesheet" href="css/ratchet-mods.css">
+    <link rel="stylesheet" href="css/slick-mods.css">
+    <link rel="canonical" href="http://yourdomain.com/markers.html">
+    <link rel="alternate" type="application/rss+xml" title="Footsteps" href="http://yourdomain.com/feed.xml">
+</head>
+
+<body>
+
+<header class="bar bar-nav bar-inverted">
+<!-- Header items go here -->
+<a class="icon icon-left-nav pull-left" href="javascript:window.history.back()" data-ignore="push"></a>
+<h1 class="title">Markers for This Path</h1>
+
+</header>
+
+<div class="content">
+<div class="traveller-snapshot-info-container">
+	<div class="traveller-snapshot-info-item">
+		<span class="metric-value">4</span> <br> <span class="metric-name">Markers</span>
+	</div>
+	<div class="traveller-snapshot-info-item">
+		<span class="metric-value">1.2</span> <br> <span class="metric-name">Mile Traveled</span>
+	</div>
+	<div class="traveller-snapshot-info-item">
+		<span class="metric-value">8</span> <br> <span class="metric-name">Follows</span>
+	</div>
+</div>
+
+<ul id="marker-photos-container" class="table-view">
+<li class="table-view-cell media table-view-cell-style-card">
+  <div class="paris-marker-image"></div>
+  <div class="photo-marker-text">Welcome to the jungle</div>
+  <div class="date-text">2/2/2012 1:30PM</div>
+</li>
+</ul>
+
+<ul id="marker-audio-container" class="table-view">
+<li class="table-view-cell media table-view-cell-style-card">
+	<div class="sound-wave-image"></div>
+  <div class="photo-marker-text">Bomb Audio</div>
+  <div class="date-text">2/2/2012 1:35PM</div>
+</li>
+</ul>
+
+<ul id="marker-text-container" class="table-view">
+<li class="table-view-cell media table-view-cell-style-card">
+  <div class="photo-marker-text extra-margin">Super awesome text that you totally wrote about this</div>
+  <div class="date-text">2/2/2012 1:35PM</div>
+</li>
+</ul>
+
+<ul id="marker-photos-container" class="last-marker" class="table-view">
+<li class="table-view-cell media table-view-cell-style-card">
+  <div class="paris-marker-image"></div>
+  <div class="photo-marker-text">Welcome to the jungle</div>
+  <div class="date-text">2/2/2012 1:30PM</div>
+</li>
+</ul>
+
+<nav class="bar bar-tab">
+  <a class="tab-item" href="#">
+    <button class="btn btn-primary">Share</button>
+  </a>
+</nav>
+  
+<!-- Explanation of js-custom hack and why scripts must be here
+	instead of the header: http://stackoverflow.com/questions/23207741/-->
+<script src="js/jquery-1.12.1.min.js" class="js-custom"></script>
+<script src="lib/ratchet-v2.0.2/js/ratchet.js" class="js-custom"></script>
+<script type="text/javascript" src="lib/slick-1.5.9/slick/slick.min.js" class="js-custom"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.js' class="js-custom"></script>
+
+<!-- Our scripts -->
+<script src="js/search.js" class="js-custom"></script>
+<script src="js/ui-utils.js" class="js-custom"></script>
+<script src="js/ui-init.js" class="js-custom"></script>
+</div>
+
+</body>
+
+</html>

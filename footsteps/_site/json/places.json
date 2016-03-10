@@ -1,0 +1,233 @@
+{
+   "type":"FeatureCollection",
+   "features":[
+      {
+         "type":"Feature",
+         "properties":{
+            "id":"marker-ilamwqg2a",
+            "title":"Hot destination!",
+            "description":"Arillaga. 'Yaga. Biggest dining hall on campus.",
+            "marker-size":"large",
+            "marker-color":"#1087bf",
+            "marker-symbol":"fire-station"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -122.164117,
+               37.425422
+            ]
+         },
+         "id":"2cb94e9145e0f2fe14d6dbe98467262b"
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "id":"marker-ilamvs5q9",
+            "title":"Hot destination!",
+            "description":"You can always find some sporting activity going on here. Ultimate frisbee, basketball, soccer, volleyball, Quidditch...",
+            "marker-size":"large",
+            "marker-color":"#1087bf",
+            "marker-symbol":"fire-station"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -122.164213,
+               37.423045
+            ]
+         },
+         "id":"3a6fb1b9b27a1e3b93b141105238a2ed"
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "id":"marker-ilamodpf3",
+            "title":"Hot destination!",
+            "description":"The best chicken tenders on campus. Nothing else needs to be said.",
+            "marker-size":"large",
+            "marker-color":"#1087bf",
+            "marker-symbol":"fire-station"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -122.170484,
+               37.424971
+            ]
+         },
+         "id":"46bff542ef93d0675b7175ceb71b25d6"
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "id":"marker-ilamxs16b",
+            "title":"Hidden gem",
+            "description":"There's free coffee here 24/7. You just need to get in / get past security.",
+            "marker-size":"large",
+            "marker-color":"#1087bf",
+            "marker-symbol":"star"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -122.16211,
+               37.426564
+            ]
+         },
+         "id":"4a05b7e56418aa4d44f4ff5c5c0d0cf5"
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "id":"marker-ilaml1np1",
+            "title":"Hidden gem",
+            "description":"The law school garden. Beautiful outdoor workplace, with lush vines arching over your head everywhere.",
+            "marker-size":"large",
+            "marker-color":"#1087bf",
+            "marker-symbol":"star"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -122.167979,
+               37.42411
+            ]
+         },
+         "id":"8b57e7870ce50101bccff7449a900440"
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "id":"marker-ilamn7sp2",
+            "title":"Hidden gem",
+            "description":"The Beckman Center has some really awesome architecture. Solid photography spot. There's also a cafe here.",
+            "marker-size":"large",
+            "marker-color":"#1087bf",
+            "marker-symbol":"star"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -122.176187,
+               37.431983
+            ]
+         },
+         "id":"8e65915f944e4d00e1ae410ecc1b1a69"
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "id":"marker-ilamquyb5",
+            "title":"Hidden gem",
+            "description":"Windhover isn't on the map because it's a relatively new place. Awesome place to just step out of the noise of every day life and sit down and enjoy the silence around you.",
+            "marker-size":"large",
+            "marker-color":"#1087bf",
+            "marker-symbol":"star"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -122.175033,
+               37.425405
+            ]
+         },
+         "id":"b9789e2135175d3a890e24128557135c"
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "id":"marker-ilamtxxl7",
+            "title":"Hot destinations!",
+            "description":"Must be because students come here all the time to study. Stanford students study, what??",
+            "marker-size":"large",
+            "marker-color":"#1087bf",
+            "marker-symbol":"fire-station"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -122.166831,
+               37.426624
+            ]
+         },
+         "id":"ba54c2a38e42e816663ea60f1edbd428"
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "id":"marker-ilamuujn8",
+            "title":"Hot destination!",
+            "description":"Take a photo in Stanford's famous main quad archways!",
+            "marker-size":"large",
+            "marker-color":"#1087bf",
+            "marker-symbol":"fire-station"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -122.170114,
+               37.427842
+            ]
+         },
+         "id":"d7426f698252fb84fdcaaa7df76c4057"
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "id":"marker-ilamjduo0",
+            "title":"Hidden gem",
+            "description":"The organ in the back of the church is amazing, if you can get up there. Find an organist friend.",
+            "marker-size":"large",
+            "marker-color":"#1087bf",
+            "marker-symbol":"star"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -122.170361,
+               37.427075
+            ]
+         },
+         "id":"d851d39ae6e04d9c23a697e59e4b47a5"
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "id":"marker-ilamsbwz6",
+            "title":"Hot destination!",
+            "description":"Every tourist goes here. Best view of not just Stanford campus but the whole Bay Area. You can see Facebook and Google headquarters from here!",
+            "marker-size":"large",
+            "marker-color":"#1087bf",
+            "marker-symbol":"fire-station"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -122.166965,
+               37.427561
+            ]
+         },
+         "id":"daf6b6299c28b3c960119fd5030ae526"
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "id":"marker-ilampmro4",
+            "title":"Hot destination!",
+            "description":"Students loaf here all the time. ALL THE TIME.",
+            "marker-size":"large",
+            "marker-color":"#1087bf",
+            "marker-symbol":"fire-station"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -122.167432,
+               37.425699
+            ]
+         },
+         "id":"e276e55b1cf1d6a8886c3553d99b7c6a"
+      }
+   ]
+}
