@@ -565,7 +565,8 @@ ul {
   color: #4EBB8F; }
 
 .path-start-end-label {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  font-weight: bold; }
 
 .path-start-end-container {
   margin-bottom: 30px; }

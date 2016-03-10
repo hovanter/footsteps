@@ -210,7 +210,7 @@ function _selectPath(path) {
     //82ae7d5a1c2ca50823aff861ecdedcd3 - kamo river
     console.log(path.feature.id);
     if(path.feature.id === '82ae7d5a1c2ca50823aff861ecdedcd3'){//kamo
-        showSidebar('route-info-single-catherine.html')
+        showSidebar('route-info-single-kamo.html')
     }
     else if(path.feature.id === '1aea3faec74e9dae067554d923f85080'){//heian
         showSidebar('route-info-single-heian.html')
