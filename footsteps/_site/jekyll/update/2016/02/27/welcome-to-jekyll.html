@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Welcome to Jekyll!</title>
+    <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Ratchet includes -->
+    <link href="lib/ratchet-v2.0.2/css/ratchet.css" rel="stylesheet">
+
+    <!-- Slick includes -->
+    <link rel="stylesheet" type="text/css" href="lib/slick-1.5.9/slick/slick.css"/>
+
+    <!-- Mapbox includes -->
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
+
+    <!-- Jekyll includes -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ui-utils.css">
+    <link rel="stylesheet" href="css/ratchet-mods.css">
+    <link rel="stylesheet" href="css/slick-mods.css">
+    <link rel="canonical" href="http://yourdomain.com/jekyll/update/2016/02/27/welcome-to-jekyll.html">
+    <link rel="alternate" type="application/rss+xml" title="Footsteps" href="http://yourdomain.com/feed.xml">
+</head>
+
+<body>
+
+<header class="bar bar-nav bar-inverted">
+<!-- Header items go here -->
+<!-- Note: span hack is for making elements fill the navigation bar width -->
+<span style="display: table-cell; vertical-align: middle;">
+	<a class="icon icon-person profile-button" href="my_paths.html" data-ignore="push"></a>
+</span>
+<span style="display: table-cell; width: 100%;">
+	<input id="dest-search-input" type="search" placeholder="Find a path or place near you...">
+</span>
+
+</header>
+
+<div class="content content-home">
+<!-- Search results -->
+<div id="search-results">
+</div>
+
+<!-- Main map (underneath everything else on this page) -->
+<div id="footstep-map">
+</div>
+
+<!-- Sidebar -->
+<div id="sidebar-handle" class="animated">
+    <span id="sidebar-handle-icon" class="icon icon-up-nav"></span>
+</div>
+<div id="sidebar" class="animated">
+</div>
+
+<!-- Lower-left-corner action buttons -->
+<ul class="actions-left">
+    <!-- Filter button -->
+	<li id="filter-button" class="action-button animated icon icon-gear"></li>
+</ul>
+
+<!-- Lower-right-corner action buttons -->
+<ul class="actions-right">
+    <!-- Drop button -->
+	<li id="drop-button" class="action-button animated"></li>
+
+    <!-- Recording button -->
+    <li id="recording-button" class="action-button animated">
+    	<div id="recording-symbol"></div>
+    </li>
+
+    <!-- Pan-to-user-location button -->
+    <li id="locate-user-button" class="action-button animated your-location-icon"></li>
+</ul>
+
+<!-- Popup -->
+<div id="popup-overlay" class="animated">
+</div>
+<div id="popup" class="animated">
+</div>
+
+
+<!-- Explanation of js-custom hack and why scripts must be here
+	instead of the header: http://stackoverflow.com/questions/23207741/-->
+<script src="js/jquery-1.12.1.min.js" class="js-custom"></script>
+<script src="lib/ratchet-v2.0.2/js/ratchet.js" class="js-custom"></script>
+<script type="text/javascript" src="lib/slick-1.5.9/slick/slick.min.js" class="js-custom"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.js' class="js-custom"></script>
+
+<!-- Our scripts -->
+<script src="js/search.js" class="js-custom"></script>
+<script src="js/ui-utils.js" class="js-custom"></script>
+<script src="js/ui-init.js" class="js-custom"></script>
+<script src="js/map-init.js"></script>
+</div>
+
+<!-- Hack to make scripts work after transitioning back -->
+<!-- http://stackoverflow.com/questions/23207741/ -->
+<script>
+window.addEventListener('push', function() {
+    var scriptsList = document.querySelectorAll('script.js-custom');
+    for(var i = 0; i < scriptsList.length; ++i) {
+        var script = scriptsList[i];
+        $.getScript(script.src);
+    }
+});
+</script>
+
+</body>
+
+</html>
