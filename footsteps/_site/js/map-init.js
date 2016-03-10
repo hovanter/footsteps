@@ -60,7 +60,6 @@ function addLayerToggle(layerID, cssID) {
 // for now)
 function loadResult() {
     hideSearchResults();
-    //34.951225,135.7307353
     map.panTo([35.0176671,135.7743668]);
     showSidebar('route-info.html')
 }
