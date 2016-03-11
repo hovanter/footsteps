@@ -69,6 +69,7 @@ $(document).ready(function() {
     map.setView([35.0118157,135.7785749], 15);
     map.zoomControl.removeFrom(map);
     map.on("click", function(e) {
+        hideSearchResults();
         hideSidebar();
     });
 
