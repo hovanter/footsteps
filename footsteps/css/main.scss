@@ -313,7 +313,7 @@ ul {
 	width: 33%;
 }
 
-.photo-track1 {
+.photo-track-kamo {
   height: 175px;
   width: 100%;
   background: url("../assets/route-panels/crosstheriver.JPG") no-repeat;
@@ -321,9 +321,9 @@ ul {
   margin-top: -10px;
 }
 
-.photo-track1::-webkit-scrollbar { width: 0 !important }
+.photo-track-kamo::-webkit-scrollbar { width: 0 !important }
 
-.photo-track2 {
+.photo-track-meditation {
   height: 175px;
   width: 100%;
   background: url("../assets/route-panels/dahike.JPG") no-repeat;
@@ -331,9 +331,9 @@ ul {
   margin-top: -10px;
 }
 
-.photo-track2::-webkit-scrollbar { width: 0 !important }
+.photo-track-meditation::-webkit-scrollbar { width: 0 !important }
 
-.photo-track3 {
+.photo-track-heian {
   height: 175px;
   width: 100%;
   background: url("../assets/route-panels/newheain.JPG") no-repeat;
@@ -341,9 +341,9 @@ ul {
   margin-top: -10px;
 }
 
-.photo-track3::-webkit-scrollbar { width: 0 !important }
+.photo-track-heian::-webkit-scrollbar { width: 0 !important }
 
-.photo-track4 {
+.photo-track-old-kyoto {
   height: 175px;
   width: 100%;
   background: url("../assets/route-panels/oldkyotopath.JPG") no-repeat;
@@ -351,9 +351,9 @@ ul {
   margin-top: -10px;
 }
 
-.photo-track4::-webkit-scrollbar { width: 0 !important }
+.photo-track-old-kyoto::-webkit-scrollbar { width: 0 !important }
 
-.photo-track5 {
+.photo-track-yasaka {
   height: 175px;
   width: 100%;
   background: url("../assets/route-panels/yasakaPath.JPG") no-repeat;
@@ -361,7 +361,7 @@ ul {
   margin-top: -10px;
 }
 
-.photo-track5::-webkit-scrollbar { width: 0 !important }
+.photo-track-yasaka::-webkit-scrollbar { width: 0 !important }
 
 
 .path-preview {
@@ -385,6 +385,11 @@ ul {
 
 .catherine-pic {
 	background: url('../assets/catherine-profile.jpg') no-repeat;
+    background-size: contain;
+}
+
+.monk-pic {
+	background: url('../assets/monk-profile.jpg') no-repeat;
     background-size: contain;
 }
 
