@@ -2,12 +2,14 @@
 function wireFollow(){
     console.log("Wired follow.");
     $('.route-info-button').click(function() {
-            console.log("Follow clicked!");
-            hideSidebar();
-            showSidebar('following.html');
-            setTimeout(function(){
-                showPopup('new-marker.html')
-            },2000);
+        console.log("Follow clicked!");
+        hideSidebar();
+        showSidebar('following.html');
+        setTimeout(function() {
+            if (!sessionStorage.getItem('isFollowing')) {
+                showPopup('new-marker.html');
+            }
+        },2000);
     });
 }
 
@@ -24,7 +26,10 @@ function wirePickUp(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            showPopup('new-marker2.html');
+            if (!sessionStorage.getItem('isFollowing') || sessionStorage.isFollowing)
+                showPopup('new-marker2.html');
+            else
+                sessionStorage.setItem('isFollowing', true);
         },2000);
     });
 }
@@ -34,7 +39,10 @@ function wireOverlay(){
     $('#popup-overlay').click(function(){
         showSidebar();
         setTimeout(function(){
-            showPopup('new-marker2.html');
+            if (!sessionStorage.getItem('isFollowing') || sessionStorage.isFollowing)
+                showPopup('new-marker2.html');
+            else
+                sessionStorage.setItem('isFollowing', true);
         },2000);
     });
     $('#popup-overlay').click(function(){
@@ -55,10 +63,12 @@ function wirePickUp2(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            showPopup('new-marker3.html');
+            if (!sessionStorage.getItem('isFollowing') || sessionStorage.isFollowing)
+                showPopup('new-marker3.html');
+            else
+                sessionStorage.setItem('isFollowing', true);
         },2000);
     });
-
 }
 
 function wireOverlay2(){
@@ -87,10 +97,12 @@ function wirePickUp3(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            showPopup('path-complete.html');
+            if (!sessionStorage.getItem('isFollowing') || sessionStorage.isFollowing)
+                showPopup('path-complete.html');
+            else
+                sessionStorage.setItem('isFollowing', true);
         },2000);
     });
-
 }
 
 function wireOverlay3(){
@@ -98,7 +110,10 @@ function wireOverlay3(){
         console.log('show plz');
         showSidebar();
         setTimeout(function(){
-            showPopup('path-complete.html')
+            if (!sessionStorage.getItem('isFollowing') || sessionStorage.isFollowing)
+                showPopup('path-complete.html')
+            else
+                sessionStorage.setItem('isFollowing', true);
         },2000);
     });
 }

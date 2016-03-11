@@ -85,14 +85,17 @@ function showSidebar(html_file) {
 // Highlights a tag that is clicked in the filter's menu
 function highlightTag(id) {
     if( $('#' + id).hasClass('highlighted-tag') ) {
-        $('#' + id).removeClass('highlighted-tag')
-        sessionStorage.removeItem(id)
+        $('#' + id).removeClass('highlighted-tag');
+        sessionStorage.removeItem(id);
     } else {
-        $('#' + id).addClass('highlighted-tag')
-        sessionStorage.setItem(id, true)
+        $('#' + id).addClass('highlighted-tag');
+        sessionStorage.setItem(id, true);
     }
 }
 
-function loadMarkers() {
-    
+function stopFollowing() {
+    sessionStorage.setItem('isFollowing', false);
+    hideSidebar();
+    if ( isPopupVisible() )
+        hidePopup();
 }
