@@ -66,7 +66,7 @@ $(document).ready(function() {
         // This map option disables world wrapping. by default, it is false.
         continuousWorld: true
     });
-    map.setView([35.0176671,135.7743668], 14);
+    map.setView([35.0118157,135.7785749], 15);
     map.zoomControl.removeFrom(map);
     map.on("click", function(e) {
         hideSidebar();

@@ -751,11 +751,26 @@ ul {
 /**** Photo Discoverys ****/
 
 .photo-discovery1{
-	background: url('../assets/totem.jpg') no-repeat;
+	background: url('../assets/journey1.png') no-repeat;
 	background-size: cover;
   	width: 100%;
   	height: 250px;
 }
+
+.photo-discovery2{
+	background: url('../assets/journey2.JPG') no-repeat;
+	background-size: cover;
+  	width: 100%;
+  	height: 250px;
+}
+
+.photo-discovery3{
+	background: url('../assets/Journey3.JPG') no-repeat;
+	background-size: cover;
+  	width: 100%;
+  	height: 250px;
+}
+
 
 .photo-description{
 	font-size: 12px;
