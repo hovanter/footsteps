@@ -27,7 +27,7 @@ function isPopupVisible() {
 function showPopup(html_file) {
     $('#popup').load(html_file, function() {
         // Size to fit content.
-        height = $("#popup")[0].scrollHeight + 15;
+        height = $("#popup")[0].scrollHeight;
         $('#popup').css({
             height: height + "px",
             left: "15px",

@@ -1,17 +1,18 @@
 <script src="../js/following.js"></script>
 
 <div id="route-info" class="sidebar-content">
-    <div class="slider">
+    <div id="route-info-slider">
         <div class="slide">
             <div class="bar-content bar-inverted">
+    <a class="icon icon-close pull-left" href="#" onclick="javascript:hideSidebar()" data-ignore="push"></a>
     <a class="traveller-profile-pic-thumbnail catherine-pic"href="traveller-profile.html" data-ignore="push"></a>
-    <h1 class="title">Exploring Old Buildings</h1>
+    <h1 class="title">Temples Along the Canal</h1>
 </div>
 
-<div class="photo-track3">
+<div class="photo-track1">
     <div class="pic-info">
-        <div style="font-weight:bold;"><span class="path-start-end-label">Start:</span> <span style="font-weight:bold !important;" class ="path-start-end-label">Wilbur Dining</span></div>
-        <div style="font-weight:bold;"><span class="path-start-end-label">End:</span> <span class="path-start-end-label">Bluefish Ramen</span></div>    
+        <div class="path-start-end-label">Start:Heian Jingu</span></div>
+        <div class="path-start-end-label">End:End </div>    
         <a class="btn btn-primary-alpha route-info-button" style = "float:left;">Follow</a> 
     </div>
 </div>
@@ -40,50 +41,52 @@
         </div>
         <div class="slide">
             <div class="bar-content bar-inverted">
+    <a class="icon icon-close pull-left" href="#" onclick="javascript:hideSidebar()" data-ignore="push"></a>
+    <a class="traveller-profile-pic-thumbnail catherine-pic"href="traveller-profile.html" data-ignore="push"></a>
+    <h1 class="title">Riverside Stroll</h1>
+</div>
+
+<div class="photo-track2">
+    <div class="pic-info">
+        <div class="path-start-end-label">Start:Kyoto Imperial Palace</span></div>
+        <div class="path-start-end-label">End:End </div>    
+        <a class="btn btn-primary-alpha route-info-button" style = "float:left;">Follow</a> 
+    </div>
+</div>
+<div class="route-stats-container">
+<div class="route-snapshot-info-container">
+    <div class="traveller-snapshot-info-item">
+        <span class="metric-value">3</span> <br> <span class="metric-name">Discoveries</span>
+    </div>
+    <div class="traveller-snapshot-info-item">
+        <span class="metric-value">4</span> <br> <span class="metric-name">Markers</span>
+    </div>
+    <div class="traveller-snapshot-info-item">
+        <span class="metric-value">1.2 mi</span> <br> <span class="metric-name">Distance</span>
+    </div>
+</div>
+<div class="tags">
+    <span class="badge">architecture</span>
+    <span class="badge">fountains</span>
+    <span class="badge">museums</span>
+    <span class="badge">wine</span>
+</div>
+</div>
+
+
+
+        </div>
+        <div class="slide">
+            <div class="bar-content bar-inverted">
+    <a class="icon icon-close pull-left" href="#" onclick="javascript:hideSidebar()" data-ignore="push"></a>
     <a class="traveller-profile-pic-thumbnail ben-han-pic"href="traveller-profile.html" data-ignore="push"></a>
-    <h1 class="title">Stanford Tour</h1>
+    <h1 class="title">Meditation Walk</h1>
 </div>
 
 <div class="photo-track3">
     <div class="pic-info">
-        <div style="font-weight:bold;"><span class="path-start-end-label">Start:</span> <span style="font-weight:bold !important;" class ="path-start-end-label">Oak Creek</span></div>
-        <div style="font-weight:bold;"><span class="path-start-end-label">End:</span> <span class="path-start-end-label">Bluefish Ramen</span></div>    
-        <a class="btn btn-primary-alpha route-info-button" style = "float:left;">Follow</a> 
-    </div>
-</div>
-<div class="route-stats-container">
-<div class="route-snapshot-info-container">
-    <div class="traveller-snapshot-info-item">
-        <span class="metric-value">3</span> <br> <span class="metric-name">Discoveries</span>
-    </div>
-    <div class="traveller-snapshot-info-item">
-        <span class="metric-value">4</span> <br> <span class="metric-name">Markers</span>
-    </div>
-    <div class="traveller-snapshot-info-item">
-        <span class="metric-value">1.2 mi</span> <br> <span class="metric-name">Distance</span>
-    </div>
-</div>
-<div class="tags">
-    <span class="badge">architecture</span>
-    <span class="badge">fountains</span>
-    <span class="badge">museums</span>
-    <span class="badge">wine</span>
-</div>
-</div>
-
-
-
-        </div>
-        <div class="slide">
-            <div class="bar-content bar-inverted">
-    <a class="traveller-profile-pic-thumbnail andrei-pic"href="traveller-profile.html" data-ignore="push"></a>
-    <h1 class="title">Morning Stroll to Hoover</h1>
-</div>
-
-<div class="photo-track3">
-    <div class="pic-info">
-        <div style="font-weight:bold;"><span class="path-start-end-label">Start:</span> <span style="font-weight:bold !important;" class ="path-start-end-label">Tressider</span></div>
-        <div style="font-weight:bold;"><span class="path-start-end-label">End:</span> <span class="path-start-end-label">Bluefish Ramen</span></div>    
+        <div class="path-start-end-label">Start:Daimonji Base</span></div>
+        <div class="path-start-end-label">End:End </div>    
         <a class="btn btn-primary-alpha route-info-button" style = "float:left;">Follow</a> 
     </div>
 </div>
@@ -114,9 +117,10 @@
 </div>
 <script>
 // Slick init scripts.
-$('.slider').slick({
-    dots: true
+$('#route-info-slider').slick({
+    dots: true,
+    infinite: false
 });
-$('.slider button').remove(); 
+$('#route-info-slider button').remove(); 
 wireFollow();
 </script>
