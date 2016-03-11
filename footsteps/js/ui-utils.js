@@ -52,10 +52,6 @@ function hideSidebar() {
         bottom: "0px",
         "max-height": "0px"
     });
-    $('#sidebar-handle').css({
-        bottom: "15px",
-        transform: "none"
-    });
 }
 
 // Returns whether or not the sidebar is currently visible.
@@ -76,12 +72,6 @@ function showSidebar(html_file) {
                 "max-height": "1000px",
                 width: ($(window).width() - 30) + "px"
             });
-            setTimeout(function() {
-                $('#sidebar-handle').css({
-                    bottom: ($('#sidebar').height() + 30) + "px",
-                    transform: "rotate(180deg)"
-                });
-            }, 100);
         });
     }
     else {

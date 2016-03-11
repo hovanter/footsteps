@@ -1,13 +1,5 @@
 $(document).ready(function() {
     console.log('hello')
-    // Wire up chevron to show/hide filter menu.
-    $('#sidebar-handle-icon').click(function() {
-		if (isSidebarVisible()) { 
-	 		hideSidebar();
-	 	} else {
-            showSidebar('filters.html');
-	 	}
-    });
 
     // Wire up drop button to show marker menu popup.
     $('#drop-button').click(function() {
