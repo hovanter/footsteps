@@ -1013,6 +1013,9 @@ ul {
 #tutorial-content {
   padding: 15px; }
 
+#tutorial-content img {
+  max-width: 100%; }
+
 /**** Photo Discoverys ****/
 .photo-discovery1 {
   background: url("../assets/totem.jpg") no-repeat;
