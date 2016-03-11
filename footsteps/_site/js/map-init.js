@@ -4,33 +4,36 @@ function getUserLocation(callback) {
     map.locate();
     map.on('locationerror', null);
     map.on('locationfound', function(e) {
-        // Get user coordinates.
-        var coordinates = [35.0118157,135.7785749] //[e.latlng.lat, e.latlng.lng];
-
-        // Update (create if necessary) marker.
-        if (typeof userMarker === "undefined") {
-            var userIcon = L.divIcon({
-              className: 'user-location-icon',
-              iconSize: [30, 30],
-              shadowSize: [36, 36],
-              shadowAnchor: [15, 15]
-            });
-            userMarker = L.marker(coordinates, {icon: userIcon}).addTo(map);
-            layers["user"] = userMarker;
-        }
-        userMarker.setLatLng(coordinates);
-
-        if (typeof callback !== null) {
-            callback(coordinates[0], coordinates[1]);
-        }
+        /* Took code out of here and hard-coded it below. */
     });
+    // Get user coordinates.
+    var coordinates = [35.0118157,135.7785749] //[e.latlng.lat, e.latlng.lng];
+
+    // Update (create if necessary) marker.
+    if (typeof userMarker === "undefined") {
+        var userIcon = L.divIcon({
+          className: 'user-location-icon',
+          iconSize: [30, 30],
+          shadowSize: [36, 36],
+          shadowAnchor: [15, 15]
+        });
+        userMarker = L.marker(coordinates, {icon: userIcon}).addTo(map);
+        layers["user"] = userMarker;
+    }
+    userMarker.setLatLng(coordinates);
+
+    /*if (typeof callback !== null) {
+        callback(coordinates[0], coordinates[1]);
+    }*/
 }
 
 // Pans the map to the user location.
 function panToUserLocation() {
-    getUserLocation(function(lat, lng) {
+    /*getUserLocation(function(lat, lng) {
         map.panTo([lat, lng]);
-    });
+    });*/
+    getUserLocation(null);
+    map.panTo([35.0118157,135.7785749]);
 }
 
 // Turns the element identified by cssID into a
