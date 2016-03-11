@@ -729,6 +729,9 @@ ul {
   text-align: center;
   padding: 0px 10px 10px; }
 
+.highlighted-tag {
+  background-color: rgba(78, 187, 143, 0.3); }
+
 /**** Traveller Page ****/
 .catherine-pic {
   background: url("../assets/catherine-profile.jpg") no-repeat;

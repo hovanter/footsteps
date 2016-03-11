@@ -81,3 +81,11 @@ function showSidebar(html_file) {
         });
     }
 }
+
+// Highlights a tag that is clicked in the filter's menu
+function highlightTag(id) {
+    if( $('#' + id).hasClass('highlighted-tag') )
+        $('#' + id).removeClass('highlighted-tag')
+    else
+        $('#' + id).addClass('highlighted-tag')
+}
