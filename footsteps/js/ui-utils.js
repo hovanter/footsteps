@@ -92,3 +92,7 @@ function highlightTag(id) {
         sessionStorage.setItem(id, true)
     }
 }
+
+function loadMarkers() {
+    
+}
