@@ -63,7 +63,6 @@ $(document).ready(function() {
         showPopup("tutorial.html");
         sessionStorage.setItem("showed_tutorial", true);
     }
-
     // $('#tag1').click(function () {
     //     if( $('#tag1').hasClass('highlighted-tag') )
     //         $('#tag1').removeClass('highlighted-tag')

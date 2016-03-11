@@ -49,5 +49,20 @@
         <span class="badge" id="tag6" onclick='javascript:highlightTag("tag6")'>tourist</span>
         <span class="badge" id="tag7" onclick='javascript:highlightTag("tag7")'>music</span>
         <span class="badge badge-primary">+ add tag</span>
+        <script>
+            if (sessionStorage.getItem("tag1")) {
+                console.log('blah')
+                console.log(sessionStorage.tag1)
+                if(sessionStorage.tag1) {
+                    $('#tag1').addClass('highlighted-tag')
+                    console.log('added')
+                } else {
+                    $('#tag1').removeClass('highlighted-tag')
+                    console.log('removed?')
+                }
+            } else {
+                sessionStorage.setItem("tag1", false)
+            }
+        </script>
     </div>
 </div>
