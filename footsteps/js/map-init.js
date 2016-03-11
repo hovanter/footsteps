@@ -79,6 +79,7 @@ $(document).ready(function() {
 
     // Load data layers. Store them into a dictionary of
     // layer ID --> Mapbox layer object.
+    //'andreit1.pcf8aie1'
     layers = {
         "paths": L.mapbox.featureLayer('andreit1.pceemnjf'),
         "friends": L.mapbox.featureLayer('andreit1.pcf8aie1'),
