@@ -84,13 +84,11 @@ function showSidebar(html_file) {
 
 // Highlights a tag that is clicked in the filter's menu
 function highlightTag(id) {
-    console.log('clicked')
     if( $('#' + id).hasClass('highlighted-tag') ) {
         $('#' + id).removeClass('highlighted-tag')
-        sessionStorage.setItem(id, false)
+        sessionStorage.removeItem(id)
     } else {
         $('#' + id).addClass('highlighted-tag')
         sessionStorage.setItem(id, true)
     }
-    console.log(sessionStorage.getItem(id))
 }
