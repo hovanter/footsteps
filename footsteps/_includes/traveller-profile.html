@@ -1,28 +1,28 @@
 <div class="traveller-profile-pic-container">
-	<div class="traveller-profile-pic catherine-pic"></div>
+	<div class="traveller-profile-pic {{ include.profile-id }}"></div>
 	<div class="traveller-header-info">
-		<div class="traveller-name-text">Catherine</div>
-		<div class="traveller-home-text">Redwood City, CA, USA</div>
+		<div class="traveller-name-text">{{ include.name }}</div> <!-- Name -->
+		<div class="traveller-home-text">{{ include.hometown }}</div> <!-- Location -->
 	</div>
 </div>
 <div class="traveller-snapshot-info-container">
 	<div class="traveller-snapshot-info-item">
-		<span class="metric-value">Native</span> <br> <span class="metric-name">to Stanford</span>
+		<span class="metric-value">Native</span> <br> <span class="metric-name">to {{ include.nativeLoc }}</span> <!-- NativeLov -->
 	</div>
 	<div class="traveller-snapshot-info-item">
-		<span class="metric-value">3</span> <br> <span class="metric-name">Paths at Stanford</span>
+		<span class="metric-value">{{ include.numPaths }}</span> <br> <span class="metric-name">Paths in {{ include.nativeLoc }}</span> <!-- path num and loc -->
 	</div>
 	<div class="traveller-snapshot-info-item">
-		<span class="metric-value">14 </span> <br> <span class="metric-name">Path Followers</span>
+		<span class="metric-value">{{ include.numFollowers }}</span> <br> <span class="metric-name">Path Followers</span> <!-- followers num -->
 	</div>
 </div>
 <div class="traveller-details-container">
 	<h5>Expertise</h5>
 	
-	<p>Stanford Tour Guide 12'-13'</p> 
+	<p> {{ include.expertise }}</p> <!-- experties -->
 	<h5>About</h5>
 	<p>
-		I like discovering places and meeting new people.
+		{{ include.description }} <!-- Description--> 
 	</p>
 	<h5>Paths Created</h5>
 </div>

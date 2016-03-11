@@ -139,7 +139,7 @@ function _addStartAndEndIcons(parentLayer, pathLayer) {
         '82ae7d5a1c2ca50823aff861ecdedcd3': "assets/catherine-profile.jpg",
         '1aea3faec74e9dae067554d923f85080': "assets/ben-han-profile.jpg",
         '25e098ca164b5d9e29a4e068212984cc': "assets/andrei-profile.jpg",
-        '6764526f46d43d013f071abb14c6df03': "assets/andrei-profile.jpg",
+        '6764526f46d43d013f071abb14c6df03': "assets/monk-profile.jpg",
         'ffd89a07052364dd170334b970de8cc4': "assets/andrei-profile.jpg"
     };
     var iconURL = iconURLs[pathLayer.feature.id];
@@ -207,6 +207,11 @@ function _selectPath(path) {
     path.setStyle({color: '#f66', opacity: 0.8});
     //1aea3faec74e9dae067554d923f85080 - hiean Shrine
     //82ae7d5a1c2ca50823aff861ecdedcd3 - kamo river
+    //25e098ca164b5d9e29a4e068212984cc - old kyoto
+    //ffd89a07052364dd170334b970de8cc4 - yasaka
+    //6764526f46d43d013f071abb14c6df03 - meditation
+
+
     console.log(path.feature.id);
     if(path.feature.id === '82ae7d5a1c2ca50823aff861ecdedcd3'){//kamo
         showSidebar('route-info-single-kamo.html')
@@ -214,8 +219,14 @@ function _selectPath(path) {
     else if(path.feature.id === '1aea3faec74e9dae067554d923f85080'){//heian
         showSidebar('route-info-single-heian.html')
     }
+    else if (path.feature.id === '25e098ca164b5d9e29a4e068212984cc'){
+        showSidebar('route-info-single-oldKyoto.html');
+    }
+    else if(path.feature.id === 'ffd89a07052364dd170334b970de8cc4'){
+        showSidebar('route-info-single-yasaka.html');
+    }
     else{//cat
-        showSidebar('route-info-single-catherine.html')
+        showSidebar('route-info-single-meditation.html')
     }
     _panToPath(path, 308);
 }
