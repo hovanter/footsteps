@@ -958,18 +958,20 @@ ul {
   background-size: cover;
   height: 80%;
   width: 100%;
-  float: left;
   margin-right: 14px; }
 
 .photo-marker-text {
-  margin-left: 10px; }
+  margin-left: 15px;
+  margin-top: 5px;
+  font-size: smaller;
+  color: gray; }
 
 .sound-wave-image {
   background: url("../assets/sound-wave.png") no-repeat;
   background-size: cover;
+  background-position-y: -68px;
   height: 60%;
   width: 100%;
-  float: left;
   margin-right: 14px; }
 
 .extra-margin {

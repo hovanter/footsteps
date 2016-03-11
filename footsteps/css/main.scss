@@ -663,25 +663,29 @@ ul {
 
 
 /**** My Markers ****/
+
+
 .paris-marker-image{
 	background: url('../assets/paris-thumbnail.jpg') no-repeat;
 	background-size: cover;
-  height: 80%;
-  width: 100%;
-	float: left;
+	height: 80%;
+	width: 100%;
 	margin-right: 14px;
 }
 
 .photo-marker-text{
-	margin-left: 10px;
+	margin-left: 15px;
+	margin-top: 5px;
+	font-size: smaller;
+	color: gray;
 }
 
 .sound-wave-image{
 	background: url('../assets/sound-wave.png') no-repeat;
 	background-size: cover;
-  height: 60%;
-  width: 100%;
-	float: left;
+	background-position-y: -68px;
+  	height: 60%;
+  	width: 100%;
 	margin-right: 14px;
 }
 

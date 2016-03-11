@@ -132,15 +132,17 @@ a.btn:visited {
 
 #marker-photos-container .table-view-cell {
   padding: 0px;
+  padding-bottom: 10px;
   height: 200px; }
 
 #marker-audio-container .table-view-cell {
   padding: 0px;
+  padding-bottom: 10px;
   height: 100px; }
 
 #marker-text-container .table-view-cell {
   padding: 0px;
-  height: 80px; }
+  height: 70px; }
 
 #path-items-container a {
   padding-top: 11px;
