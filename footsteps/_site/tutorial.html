@@ -42,18 +42,18 @@
             <br />
             <h4>Popular tags</h4>
             <div class="tags">
-                <span class="badge" >museums</span>
-                <span class="badge" >ramen</span>
-                <span class="badge" >boba</span>
-                <span class="badge" >deer</span>
-                <span class="badge" >free</span>
-                <span class="badge" >short</span>
+                <span class="badge" id="tag1-tut" onclick='javascript:highlightTutTag("tag1-tut")'>museums</span>
+                <span class="badge" id="tag2-tut" onclick='javascript:highlightTutTag("tag2-tut")'>ramen</span>
+                <span class="badge" id="tag3-tut" onclick='javascript:highlightTutTag("tag3-tut")'>boba</span>
+                <span class="badge" id="tag4-tut" onclick='javascript:highlightTutTag("tag4-tut")'>wildlife</span>
+                <span class="badge" id="tag5-tut" onclick='javascript:highlightTutTag("tag5-tut")'>markets</span>
+                <span class="badge" id="tag6-tut" onclick='javascript:highlightTutTag("tag6-tut")'>castles</span>
             </div>
             <br />
             <input type="text" placeholder="Interests (comma separated tags)">
             <div style="text-align: center;">
                 <a class="btn btn-primary" id="search_button">Search</a>
-                <a class="btn btn-primary" id="skip-btn" href="#" onclick="javascript:$('#popup-overlay').trigger('click');">Skip</a>
+                <a class="btn btn-primary" id="skip-btn" href="#" onclick="javascript:$('#popup-overlay').trigger('click');">Done</a>
             </div>
         </div>
     </div>

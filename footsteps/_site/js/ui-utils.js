@@ -93,6 +93,16 @@ function highlightTag(id) {
     }
 }
 
+// Highlights a tag in the 'search for tags' tutorial screen
+function highlightTutTag(id) {
+    if( $('#' + id).hasClass('highlighted-tag') ) {
+        $('#' + id).removeClass('highlighted-tag');
+    } else {
+        $('#' + id).addClass('highlighted-tag');
+    }
+}
+
+// Stop following on path following frames 
 function stopFollowing() {
     sessionStorage.setItem('isFollowing', false);
     hideSidebar();
