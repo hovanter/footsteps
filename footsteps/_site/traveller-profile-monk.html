@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Footsteps</title>
+    <meta name="description" content="Explore where people have gone around you! Pick a path and have an adventure today!
+">
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Ratchet includes -->
+    <link href="lib/ratchet-v2.0.2/css/ratchet.css" rel="stylesheet">
+
+    <!-- Slick includes -->
+    <link rel="stylesheet" type="text/css" href="lib/slick-1.5.9/slick/slick.css"/>
+
+    <!-- Mapbox includes -->
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
+
+    <!-- Jekyll includes -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ui-utils.css">
+    <link rel="stylesheet" href="css/ratchet-mods.css">
+    <link rel="stylesheet" href="css/slick-mods.css">
+    <link rel="canonical" href="http://yourdomain.com/traveller-profile-monk.html">
+    <link rel="alternate" type="application/rss+xml" title="Footsteps" href="http://yourdomain.com/feed.xml">
+</head>
+
+<body>
+
+<header class="bar bar-nav bar-inverted">
+<!-- Header items go here -->
+<a class="icon icon-left-nav pull-left" href="javascript:window.history.back()" data-ignore="push"></a>
+<h1 class="title"></h1>
+
+</header>
+
+<div class="content">
+<div class="traveller-profile-pic-container">
+	<div class="traveller-profile-pic monk-pic"></div>
+	<div class="traveller-header-info">
+		<div class="traveller-name-text">Monk</div> <!-- Name -->
+		<div class="traveller-home-text">Kyoto, Jp</div> <!-- Location -->
+	</div>
+</div>
+<div class="traveller-snapshot-info-container">
+	<div class="traveller-snapshot-info-item">
+		<span class="metric-value">Native</span> <br> <span class="metric-name">to Kyoto</span> <!-- NativeLov -->
+	</div>
+	<div class="traveller-snapshot-info-item">
+		<span class="metric-value">6</span> <br> <span class="metric-name">Paths in Kyoto</span> <!-- path num and loc -->
+	</div>
+	<div class="traveller-snapshot-info-item">
+		<span class="metric-value">42</span> <br> <span class="metric-name">Path Followers</span> <!-- followers num -->
+	</div>
+</div>
+<div class="traveller-details-container">
+	<h5>Expertise</h5>
+	
+	<p> Studied zen buddhism in Kyoto for over 40 years</p> <!-- experties -->
+	<h5>About</h5>
+	<p>
+		I hope people will find my paths relaxing, and open their minds to the wonders of nature <!-- Description--> 
+	</p>
+	<h5>Paths Created</h5>
+</div>
+	<ul id="path-items-container" class="table-view">
+<li class="table-view-cell media table-view-cell-style-card">
+  <a href="markers.html" class="navigate-right" data-ignore="push">
+  <div class="path-thumbnail" id="paris-image-2"></div>
+  <div class="path-details-container">
+    <div class="media-body">
+      <span>Trek to Eiffel Tower</span>
+      <p class="location-text">Paris, France</p>
+      <div class="path-details-last-row">
+        <p class="num-followers-text">11 Followers</p>
+        <p class="date-text">Jan. 2016</p>
+      </div>
+    </div>
+  </div>
+  </a>
+<li class="table-view-cell media table-view-cell-style-card">
+  <a href="markers.html" data-ignore="push">
+  <div class="path-thumbnail" id="paris-image-1"></div>
+  <div class="path-details-container">
+    <div class="media-body">
+      <span>Cheese & Wine Hunt</span>
+      <p class="location-text">Bordeux, France</p>
+      <div class="path-details-last-row">
+        <p class="num-followers-text">5 Followers</p>
+        <p class="date-text">Jan. 2016</p>
+      </div>
+    </div>
+  </div>
+  </a>
+</li>
+<li class="table-view-cell media table-view-cell-style-card">
+  <a href="markers.html" data-ignore="push">
+  <div class="path-thumbnail" id="ireland-image"></div>
+  <div class="path-details-container">
+    <div class="media-body">
+      <span>Irish Adventure</span>
+      <p class="location-text">Dublin, Ireland</p>
+      <div class="path-details-last-row">
+        <p class="num-followers-text">5 Followers</p>
+        <p class="date-text">March 2015</p>
+      </div>
+    </div>
+  </div>
+  </a>
+</li>
+<li class="table-view-cell media table-view-cell-style-card">
+  <a href="markers.html" data-ignore="push">
+  <div class="path-thumbnail" id="tokyo-image"></div>
+  <div class="path-details-container">
+    <div class="media-body">
+      <span>Path for Andrei :D</span>
+      <p class="location-text">Tokyo, Japan</p>
+      <div class="path-details-last-row">
+        <p class="num-followers-text">1 Follower</p>
+        <p class="date-text">Feb. 2015</p>
+      </div>
+    </div>
+  </div>
+  </a>
+</li>
+</ul>
+
+
+
+<!-- Explanation of js-custom hack and why scripts must be here
+	instead of the header: http://stackoverflow.com/questions/23207741/-->
+<script src="js/jquery-1.12.1.min.js" class="js-custom"></script>
+<script src="lib/ratchet-v2.0.2/js/ratchet.js" class="js-custom"></script>
+<script type="text/javascript" src="lib/slick-1.5.9/slick/slick.min.js" class="js-custom"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.js' class="js-custom"></script>
+
+<!-- Our scripts -->
+<script src="js/search.js" class="js-custom"></script>
+<script src="js/ui-utils.js" class="js-custom"></script>
+<script src="js/ui-init.js" class="js-custom"></script>
+</div>
+
+</body>
+
+</html>
