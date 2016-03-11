@@ -565,7 +565,8 @@ ul {
   color: #4EBB8F; }
 
 .path-start-end-label {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  font-weight: bold; }
 
 .path-start-end-container {
   margin-bottom: 30px; }
@@ -621,7 +622,8 @@ ul {
   /*7px;*/
   position: relative;
   z-index: 10;
-  top: 15px; }
+  top: 184px;
+  right: -20px; }
 
 .traveller-profile-pic-thumbnail-follow {
   background: url("../assets/empty-profile.png") no-repeat;
@@ -786,7 +788,7 @@ ul {
   color: #fff;
   font-size: 12px;
   padding: 5px;
-  padding-top: 10px; }
+  padding-top: 19px; }
 
 .traveller-details-container {
   padding: 20px 20px 0px 20px; }
@@ -805,6 +807,10 @@ ul {
 
 .route-start-name {
   color: #FFFFFF; }
+
+.close-button {
+  float: right;
+  margin-top: 10px; }
 
 /**** My Paths page ****/
 .path-details-container {
@@ -990,9 +996,13 @@ ul {
 .new-marker-dialogue {
   margin-top: 20px; }
 
+.marker-content {
+  padding: 15px; }
+
 .marker-buttons {
   text-align: center;
-  clear: both; }
+  clear: both;
+  margin-bottom: 15px; }
 
 .skip {
   background-color: gray !important; }
@@ -1003,6 +1013,10 @@ ul {
 #route-info button {
   display: block;
   margin: 0 auto; }
+
+/**** Tutorial styles. ****/
+#tutorial-content {
+  padding: 15px; }
 
 /**** Photo Discoverys ****/
 .photo-discovery1 {
@@ -1018,12 +1032,5 @@ ul {
   margin-top: 10px; }
 
 /**** recording styes ****/
-.save-text {
-  text-align: center;
-  margin-top: 20px;
-  margin-left: 15px;
-  margin-right: 15px; }
-
-.share-button-container {
-  text-align: center;
-  padding: 10px 15px 15px; }
+.recording-content {
+  padding: 30px 15px 30px; }

@@ -1,13 +1,11 @@
 // Fetches the user location and calls the provided
 // callback function with the user location.
-
-
 function getUserLocation(callback) {
     map.locate();
     map.on('locationerror', null);
     map.on('locationfound', function(e) {
         // Get user coordinates.
-        var coordinates = [e.latlng.lat, e.latlng.lng];
+        var coordinates = [35.0176671,135.7743668]//[e.latlng.lat, e.latlng.lng];
 
         // Update (create if necessary) marker.
         if (typeof userMarker === "undefined") {
@@ -23,7 +21,7 @@ function getUserLocation(callback) {
         userMarker.setLatLng(coordinates);
 
         if (typeof callback !== null) {
-            callback(e.latlng.lat, e.latlng.lng);
+            callback(coordinates[0], coordinates[1]);
         }
     });
 }
@@ -32,11 +30,6 @@ function getUserLocation(callback) {
 function panToUserLocation() {
     getUserLocation(function(lat, lng) {
         map.panTo([lat, lng]);
-    });
-    layers["user"].eachLayer(function(marker) {
-        if (marker.feature.geometry.type == "Point") {
-            marker.openPopup();
-        }
     });
 }
 
@@ -68,8 +61,10 @@ $(document).ready(function() {
     L.mapbox.accessToken = 'pk.eyJ1IjoiYW5kcmVpdDEiLCJhIjoiY2lqbDBlbzc1MDAwenVmbTVxbWl2eGg1ZCJ9.aydIVbwdDbWM4bo-6oEdgg';
     map = L.mapbox.map('footstep-map', 'mapbox.streets', {
         maxZoom: 20,
-        minZoom: 10,
-        attributionControl: false
+        minZoom: 1,
+        attributionControl: false,
+        // This map option disables world wrapping. by default, it is false.
+        continuousWorld: true
     });
     map.setView([35.0176671,135.7743668], 14);
     map.zoomControl.removeFrom(map);
@@ -81,7 +76,7 @@ $(document).ready(function() {
     // layer ID --> Mapbox layer object.
     layers = {
         "paths": L.mapbox.featureLayer('andreit1.pceemnjf'),
-        "friends": L.mapbox.featureLayer('andreit1.pcf8aie1'),
+        "friends": L.mapbox.featureLayer('andreit1.pcgaelfg'),
         "places": L.mapbox.featureLayer('bhnascar.pa5806m2'),
         "user": L.mapbox.featureLayer()
     };
@@ -91,8 +86,8 @@ $(document).ready(function() {
     map.addLayer(layers["paths"]);
     map.addLayer(layers["user"]);
 
-    // Pan to user location. 
-    //panToUserLocation();
+    // Pan to user location.
+    panToUserLocation();
 
     /* Wire up clicks for map markers and polylines. (Show sidebar) */
     for (var key in layers) {
@@ -137,12 +132,16 @@ function _panToPath(path, sidebar_height) {
 function _addStartAndEndIcons(parentLayer, pathLayer) {
     var markerLayer = L.mapbox.featureLayer().addTo(map);
 
-    var iconURLs = [
-        "assets/catherine-profile.jpg",
-        "assets/ben-han-profile.jpg",
-        "assets/andrei-profile.jpg"
-    ];
-    var iconURL = iconURLs[Math.floor(Math.random() * iconURLs.length)];
+    //1aea3faec74e9dae067554d923f85080 - hiean Shrine
+    //82ae7d5a1c2ca50823aff861ecdedcd3 - kamo river
+    var iconURLs = {
+        '82ae7d5a1c2ca50823aff861ecdedcd3': "assets/catherine-profile.jpg",
+        '1aea3faec74e9dae067554d923f85080': "assets/ben-han-profile.jpg",
+        '25e098ca164b5d9e29a4e068212984cc': "assets/andrei-profile.jpg",
+        '6764526f46d43d013f071abb14c6df03': "assets/andrei-profile.jpg",
+        'ffd89a07052364dd170334b970de8cc4': "assets/andrei-profile.jpg"
+    };
+    var iconURL = iconURLs[pathLayer.feature.id];
     
     // Create markers using geoJSON
     var coordinates = pathLayer.feature.geometry.coordinates
@@ -205,11 +204,11 @@ function _loadLayerFromJSON(json) {
 function _selectPath(path) {
     console.log(path.feature.id);
     path.setStyle({color: '#f66', opacity: 0.8});
-    //1aea3faec74e9dae067554d923f85080 - hiean Shrien
+    //1aea3faec74e9dae067554d923f85080 - hiean Shrine
     //82ae7d5a1c2ca50823aff861ecdedcd3 - kamo river
     console.log(path.feature.id);
     if(path.feature.id === '82ae7d5a1c2ca50823aff861ecdedcd3'){//kamo
-        showSidebar('route-info-single-catherine.html')
+        showSidebar('route-info-single-kamo.html')
     }
     else if(path.feature.id === '1aea3faec74e9dae067554d923f85080'){//heian
         showSidebar('route-info-single-heian.html')

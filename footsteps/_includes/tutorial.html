@@ -1,28 +1,61 @@
 <div id="tutorial-content">
     <br />
-    <div class="slider">
+    <div id="tutorial-slider">
         <div class="slide">
             <h3>Welcome to Footsteps!</h3>
-            <h4>Swipe left for a brief a tutorial to help you get started.</h4>
+            <h4 style="margin-top: 230px">Swipe left for a quick start guide.</h4>
             <div class="marker-buttons">
-                <a class="btn btn-primary" id="skip-btn">Skip</a>
+                <a class="btn btn-primary" id="skip-btn" href="#" onclick="javascript:$('#popup-overlay').trigger('click');">Skip</a>
             </div>
         </div>
         <div class="slide">
-            <h3>Panel 2</h3>
+            <h3>Search for paths</h3>
+            <p>Use the search bar at the top to search for paths around you!</p>
+            <p>You can search by places or by interests. We'll find the most relevant paths through those places or paths tagged with those interests.</p>
         </div>
         <div class="slide">
-            <h3>Panel 3</h3>
+            <h3>Filter map items</h3>
+            <p>Too much information on the map? Show or hide map markers using the filter menu at the bottom.</p>
         </div>
         <div class="slide">
-            <h3>Panel 4</h3>
+            <h3>Create your own paths!</h3>
+            <p>Going somewhere no one else has gone before? Record your adventure by pressing the record button on the bottom right. Don't forget to drop markers for your future followers!</p>
+        </div>
+        <div class="slide">
+            <h3>We see you're in Kyoto!</h3>
+            <div style="padding: 0px 15px;">
+                <p>Let us help you find a nearby path to explore! What kind of things do you like?</p>
+                <br />
+                <h4>Popular tags</h4>
+                <div class="tags">
+                    <span class="badge">museums</span>
+                    <span class="badge">ramen</span>
+                    <span class="badge">boba</span>
+                    <span class="badge">deer</span>
+                    <span class="badge">free</span>
+                    <span class="badge">short</span>
+                </div>
+                <br />
+                <input type="text" placeholder="Interests (comma separated tags)">
+                <div style="text-align: center;">
+                    <a class="btn btn-primary" id="search_button">Search</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <script>
 // Slick init scripts.
-$('.slider').slick({
-    dots: true
+$('#tutorial-slider').slick({
+    dots: true,
+    infinite: false
 });
-$('.slider button').remove(); 
+$('#tutorial-slider button').remove(); 
+
+// Init search button.
+$("#search_button").click(function() {
+    hidePopup();
+    // TODO: Load relevant results, or dummy load something.
+    showSidebar("route-info.html");
+});
 </script>
