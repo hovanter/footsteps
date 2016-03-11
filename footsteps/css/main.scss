@@ -620,6 +620,7 @@ ul {
 	border-radius: 50%;
 	border: 1px solid #FFFFFF;
 	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+	z-index: 1000 !important;
 }
 
 .user-location-icon {
@@ -740,12 +741,16 @@ ul {
 
 /**** Tutorial styles. ****/
 
-#tutorial-content {
-	padding: 15px;
+.tutorial-content {
+	padding: 30px 15px 15px;
 }
 
-#tutorial-content img {
+.tutorial-content img {
 	max-width: 100%;
+}
+
+#logo-wrapper {
+	background-color: $accent-color;
 }
 
 /**** Photo Discoverys ****/

@@ -1,13 +1,5 @@
 $(document).ready(function() {
     console.log('hello')
-    // Wire up chevron to show/hide filter menu.
-    $('#sidebar-handle-icon').click(function() {
-		if (isSidebarVisible()) { 
-	 		hideSidebar();
-	 	} else {
-            showSidebar('filters.html');
-	 	}
-    });
 
     // Wire up drop button to show marker menu popup.
     $('#drop-button').click(function() {
@@ -67,9 +59,9 @@ $(document).ready(function() {
 
     // Show tutorial if this is the first time the user is
     // loading the page.
-    //if (!sessionStorage.getItem("showed_tutorial")) {
+    if (!sessionStorage.getItem("showed_tutorial")) {
         showPopup("tutorial.html");
         sessionStorage.setItem("showed_tutorial", true);
-    //}
+    }
 });
 

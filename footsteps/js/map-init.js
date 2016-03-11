@@ -5,7 +5,7 @@ function getUserLocation(callback) {
     map.on('locationerror', null);
     map.on('locationfound', function(e) {
         // Get user coordinates.
-        var coordinates = [35.0176671,135.7743668]//[e.latlng.lat, e.latlng.lng];
+        var coordinates = [35.0118157,135.7785749] //[e.latlng.lat, e.latlng.lng];
 
         // Update (create if necessary) marker.
         if (typeof userMarker === "undefined") {
@@ -117,7 +117,7 @@ $(document).ready(function() {
 // with the given height.
 function _panToPath(path, sidebar_height) {
     var bounds = path.getBounds();
-    var sb_top = $(window).height() - sidebar_height - 150;
+    var sb_top = $(window).height() - sidebar_height - 100;
     var sb_offset = sb_top / $(window).height();
     var lat_diff = bounds._northEast.lat - bounds._southWest.lat;
     var correct_diff = lat_diff / sb_offset;
@@ -131,7 +131,7 @@ function _panToPath(path, sidebar_height) {
 
 // Adds start and end icons to a given path.
 function _addStartAndEndIcons(parentLayer, pathLayer) {
-    var markerLayer = L.mapbox.featureLayer().addTo(map);
+    var markerLayer = L.mapbox.featureLayer().setZIndex(1000).addTo(map);
 
     //1aea3faec74e9dae067554d923f85080 - hiean Shrine
     //82ae7d5a1c2ca50823aff861ecdedcd3 - kamo river

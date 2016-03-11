@@ -3,7 +3,6 @@ function wireFollow(){
     console.log("Wired follow.");
     $('.route-info-button').click(function() {
             console.log("Follow clicked!");
-            $('#sidebar-handle-icon').hide();
             hideSidebar();
             showSidebar('following.html');
             setTimeout(function(){
@@ -109,6 +108,5 @@ function unwireOverlay(){
     $('#popup-overlay').click(function(){
         hidePopup();
         hideSidebar();
-        $('#sidebar-handle-icon').show();
     });
 }

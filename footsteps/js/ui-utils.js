@@ -7,7 +7,7 @@ function hidePopup() {
         "z-index": -3
     });
     $('#popup').css({
-        height: "0px",
+        "max-height": "0px",
         left: "15px",
         top: ($(window).height() / 2.0) + "px",
         width: ($(window).width() - 30) + "px"
@@ -26,10 +26,9 @@ function isPopupVisible() {
 // the popup is shown with previous content, if any.
 function showPopup(html_file) {
     $('#popup').load(html_file, function() {
-        // Size to fit content.
         height = $("#popup")[0].scrollHeight;
         $('#popup').css({
-            height: height + "px",
+            "max-height": "1000px",
             left: "15px",
             top: ($(window).height() / 2.0 - height / 2.0) + "px",
             width: ($(window).width() - 30) + "px"
@@ -52,10 +51,6 @@ function hideSidebar() {
         bottom: "0px",
         "max-height": "0px"
     });
-    $('#sidebar-handle').css({
-        bottom: "15px",
-        transform: "none"
-    });
 }
 
 // Returns whether or not the sidebar is currently visible.
@@ -76,12 +71,6 @@ function showSidebar(html_file) {
                 "max-height": "1000px",
                 width: ($(window).width() - 30) + "px"
             });
-            setTimeout(function() {
-                $('#sidebar-handle').css({
-                    bottom: ($('#sidebar').height() + 30) + "px",
-                    transform: "rotate(180deg)"
-                });
-            }, 100);
         });
     }
     else {
