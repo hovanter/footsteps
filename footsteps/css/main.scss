@@ -741,12 +741,16 @@ ul {
 
 /**** Tutorial styles. ****/
 
-#tutorial-content {
-	padding: 15px;
+.tutorial-content {
+	padding: 30px 15px 15px;
 }
 
-#tutorial-content img {
+.tutorial-content img {
 	max-width: 100%;
+}
+
+#logo-wrapper {
+	background-color: $accent-color;
 }
 
 /**** Photo Discoverys ****/

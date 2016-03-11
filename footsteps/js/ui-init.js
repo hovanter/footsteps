@@ -59,9 +59,9 @@ $(document).ready(function() {
 
     // Show tutorial if this is the first time the user is
     // loading the page.
-    if (!sessionStorage.getItem("showed_tutorial")) {
+    //if (!sessionStorage.getItem("showed_tutorial")) {
         showPopup("tutorial.html");
         sessionStorage.setItem("showed_tutorial", true);
-    }
+    //}
 });
 
