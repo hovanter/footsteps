@@ -268,7 +268,8 @@ ul {
     margin-top: 2px; /*7px;*/
     position: relative;
     z-index: 10;
-    top: 15px;
+    top: 184px;
+    right: -20px;
 }
 .traveller-profile-pic-thumbnail-follow {
 	background: url('../assets/empty-profile.png') no-repeat;
@@ -454,7 +455,7 @@ ul {
 	color: $color-on-accent;
 	font-size: 12px;
 	padding: 5px;
-	padding-top: 10px;
+	padding-top: 19px;
 }
 
 .traveller-details-container {
@@ -478,6 +479,11 @@ ul {
 
 .route-start-name {
 	color: #FFFFFF;
+}
+
+.close-button {
+	float:right;
+	margin-top: 10px;
 }
 
 
