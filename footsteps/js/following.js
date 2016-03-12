@@ -102,6 +102,5 @@ function unwireOverlay(){
     $('#popup-overlay').off("click");
     $('#popup-overlay').click(function(){
         hidePopup();
-        hideSidebar();
     });
 }
