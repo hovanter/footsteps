@@ -1,9 +1,3 @@
-/**** Disable highlighting and copying ****/
-* {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  /* Disable selection/copy in UIWebView */ }
-
 /**** Layout styles ****/
 .bar {
   z-index: 10;
