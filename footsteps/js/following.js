@@ -1,7 +1,9 @@
 //pick up three markers on the way, wire different templates for each stage
 function wireFollow(){
     $('.route-info-button').click(function() {
-        sessionStorage.removeItem('stopFollowing');
+        if (sessionStorage.getItem('stopFollowing')) {
+            sessionStorage.removeItem('stopFollowing');
+        }
         hideSidebar();
         showSidebar('following.html');
         setTimeout(function() {
