@@ -103,4 +103,5 @@ function unwireOverlay(){
     $('#popup-overlay').click(function(){
         hidePopup();
     });
+    hideSidebar();
 }
