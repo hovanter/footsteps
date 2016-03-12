@@ -3,11 +3,17 @@ function wireFollow(){
     console.log("Wired follow.");
     $('.route-info-button').click(function() {
         console.log("Follow clicked!");
+        sessionStorage.removeItem('stopFollowing');
         hideSidebar();
         showSidebar('following.html');
         setTimeout(function() {
-            if (!sessionStorage.getItem('isFollowing')) {
+            console.log(sessionStorage.getItem('stopFollowing'));
+            if (!sessionStorage.getItem('stopFollowing')) {
                 showPopup('new-marker.html');
+            }
+            else {
+                console.log("Aborted follow");
+                sessionStorage.removeItem('stopFollowing');
             }
         },2000);
     });
@@ -26,10 +32,11 @@ function wirePickUp(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            if (!sessionStorage.getItem('isFollowing') || sessionStorage.isFollowing)
+            console.log(sessionStorage.getItem('stopFollowing'));
+            if (!sessionStorage.getItem('stopFollowing'))
                 showPopup('new-marker2.html');
             else
-                sessionStorage.setItem('isFollowing', true);
+                sessionStorage.removeItem('stopFollowing');
         },2000);
     });
 }
@@ -39,10 +46,11 @@ function wireOverlay(){
     $('#popup-overlay').click(function(){
         showSidebar();
         setTimeout(function(){
-            if (!sessionStorage.getItem('isFollowing') || sessionStorage.isFollowing)
+            console.log(sessionStorage.getItem('stopFollowing'));
+            if (!sessionStorage.getItem('stopFollowing'))
                 showPopup('new-marker2.html');
             else
-                sessionStorage.setItem('isFollowing', true);
+                sessionStorage.removeItem('stopFollowing');
         },2000);
     });
     $('#popup-overlay').click(function(){
@@ -63,10 +71,11 @@ function wirePickUp2(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            if (!sessionStorage.getItem('isFollowing') || sessionStorage.isFollowing)
+            console.log(sessionStorage.getItem('stopFollowing'));
+            if (!sessionStorage.getItem('stopFollowing'))
                 showPopup('new-marker3.html');
             else
-                sessionStorage.setItem('isFollowing', true);
+                sessionStorage.removeItem('stopFollowing');
         },2000);
     });
 }
@@ -76,7 +85,13 @@ function wireOverlay2(){
     $('#popup-overlay').click(function(){
         showSidebar();
         setTimeout(function(){
-            showPopup('new-marker3.html')
+            console.log(sessionStorage.getItem('stopFollowing'));
+            if (!sessionStorage.getItem('stopFollowing')) {
+                showPopup('new-marker3.html')
+            }
+            else {
+                sessionStorage.removeItem('stopFollowing');
+            }
         },2000);
     });
     $('#popup-overlay').click(function(){
@@ -97,10 +112,11 @@ function wirePickUp3(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            if (!sessionStorage.getItem('isFollowing') || sessionStorage.isFollowing)
+            console.log(sessionStorage.getItem('stopFollowing'));
+            if (!sessionStorage.getItem('stopFollowing'))
                 showPopup('path-complete.html');
             else
-                sessionStorage.setItem('isFollowing', true);
+                sessionStorage.removeItem('stopFollowing');
         },2000);
     });
 }
@@ -110,10 +126,11 @@ function wireOverlay3(){
         console.log('show plz');
         showSidebar();
         setTimeout(function(){
-            if (!sessionStorage.getItem('isFollowing') || sessionStorage.isFollowing)
+            console.log(sessionStorage.getItem('stopFollowing'));
+            if (!sessionStorage.getItem('stopFollowing'))
                 showPopup('path-complete.html')
             else
-                sessionStorage.setItem('isFollowing', true);
+                sessionStorage.removeItem('stopFollowing');
         },2000);
     });
 }
