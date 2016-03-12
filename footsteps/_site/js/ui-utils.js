@@ -101,11 +101,3 @@ function highlightTutTag(id) {
         $('#' + id).addClass('highlighted-tag');
     }
 }
-
-// Stop following on path following frames 
-function stopFollowing() {
-    sessionStorage.setItem('stopFollowing', false);
-    hideSidebar();
-    if ( isPopupVisible() )
-        hidePopup();
-}
