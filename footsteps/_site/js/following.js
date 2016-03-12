@@ -5,11 +5,12 @@ function wireFollow(){
         hideSidebar();
         showSidebar('following.html');
         setTimeout(function() {
-            if (!sessionStorage.getItem('stopFollowing')) {
-                showPopup('new-marker.html');
+            console.log(sessionStorage.getItem('stopFollowing'));
+            if (sessionStorage.getItem('stopFollowing')) {
+                sessionStorage.removeItem('stopFollowing');
             }
             else {
-                sessionStorage.removeItem('stopFollowing');
+                showPopup('new-marker.html');
             }
         },2000);
     });
@@ -28,10 +29,10 @@ function wirePickUp(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            if (!sessionStorage.getItem('stopFollowing'))
-                showPopup('new-marker2.html');
-            else
+            if (sessionStorage.getItem('stopFollowing'))
                 sessionStorage.removeItem('stopFollowing');
+            else
+                showPopup('new-marker2.html');
         },2000);
     });
 }
@@ -41,10 +42,11 @@ function wireOverlay(){
     $('#popup-overlay').click(function(){
         showSidebar();
         setTimeout(function(){
-            if (!sessionStorage.getItem('stopFollowing'))
-                showPopup('new-marker2.html');
-            else
+            if (sessionStorage.getItem('stopFollowing'))
                 sessionStorage.removeItem('stopFollowing');
+            else
+                showPopup('new-marker2.html');
+                
         },2000);
     });
     $('#popup-overlay').click(function(){
@@ -65,10 +67,10 @@ function wirePickUp2(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            if (!sessionStorage.getItem('stopFollowing'))
-                showPopup('new-marker3.html');
-            else
+            if (sessionStorage.getItem('stopFollowing'))
                 sessionStorage.removeItem('stopFollowing');
+            else
+                showPopup('new-marker3.html');
         },2000);
     });
 }
@@ -78,11 +80,11 @@ function wireOverlay2(){
     $('#popup-overlay').click(function(){
         showSidebar();
         setTimeout(function(){
-            if (!sessionStorage.getItem('stopFollowing')) {
-                showPopup('new-marker3.html')
+            if (sessionStorage.getItem('stopFollowing')) {
+                sessionStorage.removeItem('stopFollowing');
             }
             else {
-                sessionStorage.removeItem('stopFollowing');
+                showPopup('new-marker3.html');
             }
         },2000);
     });
@@ -104,10 +106,10 @@ function wirePickUp3(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            if (!sessionStorage.getItem('stopFollowing'))
-                showPopup('path-complete.html');
-            else
+            if (sessionStorage.getItem('stopFollowing'))   
                 sessionStorage.removeItem('stopFollowing');
+            else
+                showPopup('path-complete.html');
         },2000);
     });
 }
@@ -116,10 +118,10 @@ function wireOverlay3(){
     $('#popup-overlay').click(function(){
         showSidebar();
         setTimeout(function(){
-            if (!sessionStorage.getItem('stopFollowing'))
-                showPopup('path-complete.html')
-            else
+            if (sessionStorage.getItem('stopFollowing'))
                 sessionStorage.removeItem('stopFollowing');
+            else
+                showPopup('path-complete.html')
         },2000);
     });
 }

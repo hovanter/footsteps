@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    console.log('hello')
-
     // Wire up drop button to show marker menu popup.
     $('#drop-button').click(function() {
         showPopup('drop-options.html')
@@ -31,7 +29,6 @@ $(document).ready(function() {
 
     // Wire up follow button on route info card
     $('#route-info-button').click(function() {
-       console.log('Hi');
        hideSidebar();
     });
 

@@ -104,7 +104,7 @@ function highlightTutTag(id) {
 
 // Stop following on path following frames 
 function stopFollowing() {
-    sessionStorage.setItem('isFollowing', false);
+    sessionStorage.setItem('stopFollowing', false);
     hideSidebar();
     if ( isPopupVisible() )
         hidePopup();
