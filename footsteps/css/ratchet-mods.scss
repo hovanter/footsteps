@@ -7,6 +7,13 @@ $accent-color: #4EBB8F;
 $sidebar-menu-color: #ffffff;
 $content-background-color: #eeeeee;
 
+/**** Disable highlighting and copying ****/
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; /* Disable selection/copy in UIWebView */
+}
+
 /**** Layout styles ****/
 
 .bar {
