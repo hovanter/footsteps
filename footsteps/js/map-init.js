@@ -207,16 +207,12 @@ function _loadLayerFromJSON(json) {
 
 // Selects a given path (marker).
 function _selectPath(path) {
-    console.log(path.feature.id);
     path.setStyle({color: '#f66', opacity: 0.8});
     //1aea3faec74e9dae067554d923f85080 - hiean Shrine
     //82ae7d5a1c2ca50823aff861ecdedcd3 - kamo river
     //25e098ca164b5d9e29a4e068212984cc - old kyoto
     //ffd89a07052364dd170334b970de8cc4 - yasaka
     //6764526f46d43d013f071abb14c6df03 - meditation
-
-
-    console.log(path.feature.id);
     if(path.feature.id === '82ae7d5a1c2ca50823aff861ecdedcd3'){//kamo
         showSidebar('route-info-single-kamo.html')
     }

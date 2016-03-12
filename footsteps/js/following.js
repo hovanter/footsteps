@@ -1,18 +1,14 @@
 //pick up three markers on the way, wire different templates for each stage
 function wireFollow(){
-    console.log("Wired follow.");
     $('.route-info-button').click(function() {
-        console.log("Follow clicked!");
         sessionStorage.removeItem('stopFollowing');
         hideSidebar();
         showSidebar('following.html');
         setTimeout(function() {
-            console.log(sessionStorage.getItem('stopFollowing'));
             if (!sessionStorage.getItem('stopFollowing')) {
                 showPopup('new-marker.html');
             }
             else {
-                console.log("Aborted follow");
                 sessionStorage.removeItem('stopFollowing');
             }
         },2000);
@@ -32,7 +28,6 @@ function wirePickUp(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            console.log(sessionStorage.getItem('stopFollowing'));
             if (!sessionStorage.getItem('stopFollowing'))
                 showPopup('new-marker2.html');
             else
@@ -46,7 +41,6 @@ function wireOverlay(){
     $('#popup-overlay').click(function(){
         showSidebar();
         setTimeout(function(){
-            console.log(sessionStorage.getItem('stopFollowing'));
             if (!sessionStorage.getItem('stopFollowing'))
                 showPopup('new-marker2.html');
             else
@@ -71,7 +65,6 @@ function wirePickUp2(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            console.log(sessionStorage.getItem('stopFollowing'));
             if (!sessionStorage.getItem('stopFollowing'))
                 showPopup('new-marker3.html');
             else
@@ -85,7 +78,6 @@ function wireOverlay2(){
     $('#popup-overlay').click(function(){
         showSidebar();
         setTimeout(function(){
-            console.log(sessionStorage.getItem('stopFollowing'));
             if (!sessionStorage.getItem('stopFollowing')) {
                 showPopup('new-marker3.html')
             }
@@ -112,7 +104,6 @@ function wirePickUp3(){
     $('#popup-overlay-btn').off("click");
     $('#popup-overlay').click(function(){
         setTimeout(function(){
-            console.log(sessionStorage.getItem('stopFollowing'));
             if (!sessionStorage.getItem('stopFollowing'))
                 showPopup('path-complete.html');
             else
@@ -123,10 +114,8 @@ function wirePickUp3(){
 
 function wireOverlay3(){
     $('#popup-overlay').click(function(){
-        console.log('show plz');
         showSidebar();
         setTimeout(function(){
-            console.log(sessionStorage.getItem('stopFollowing'));
             if (!sessionStorage.getItem('stopFollowing'))
                 showPopup('path-complete.html')
             else
